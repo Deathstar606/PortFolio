@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.6ff1d792.css",
-    "main.js": "/PortFolio/static/js/main.3865a568.js",
+    "main.css": "/PortFolio/static/css/main.3067ac07.css",
+    "main.js": "/PortFolio/static/js/main.64b6fe01.js",
     "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
     "static/media/demo.mp4": "/PortFolio/static/media/demo.7a2342bc214b9b1a640a.mp4",
     "static/media/Mern.png": "/PortFolio/static/media/Mern.c2a1ec59ccd76e20a6f7.png",
@@ -20,17 +20,16 @@
     "static/media/DBL.png": "/PortFolio/static/media/DBL.a85e83f37fcd4f2aaa40.png",
     "static/media/React.png": "/PortFolio/static/media/React.51facde924a156e47c39.png",
     "static/media/Mongo.png": "/PortFolio/static/media/Mongo.e3d303c414914d83effb.png",
-    "static/media/Discord.png": "/PortFolio/static/media/Discord.e377a0a6daa589626065.png",
     "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
     "static/media/Node.png": "/PortFolio/static/media/Node.93609dcb4487bd938dab.png",
     "static/media/front-end.png": "/PortFolio/static/media/front-end.8d9cfd5a9594f92d252f.png",
     "index.html": "/PortFolio/index.html",
-    "main.6ff1d792.css.map": "/PortFolio/static/css/main.6ff1d792.css.map",
-    "main.3865a568.js.map": "/PortFolio/static/js/main.3865a568.js.map",
+    "main.3067ac07.css.map": "/PortFolio/static/css/main.3067ac07.css.map",
+    "main.64b6fe01.js.map": "/PortFolio/static/js/main.64b6fe01.js.map",
     "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ff1d792.css",
-    "static/js/main.3865a568.js"
+    "static/css/main.3067ac07.css",
+    "static/js/main.64b6fe01.js"
   ]
 }
