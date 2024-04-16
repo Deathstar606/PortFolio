@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.3417991d.css",
-    "main.js": "/PortFolio/static/js/main.f89c67a3.js",
+    "main.css": "/PortFolio/static/css/main.b37b1b83.css",
+    "main.js": "/PortFolio/static/js/main.2dda5b58.js",
     "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
     "static/media/Mern.png": "/PortFolio/static/media/Mern.c2a1ec59ccd76e20a6f7.png",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
@@ -25,12 +25,12 @@
     "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
     "static/media/Node.png": "/PortFolio/static/media/Node.93609dcb4487bd938dab.png",
     "index.html": "/PortFolio/index.html",
-    "main.3417991d.css.map": "/PortFolio/static/css/main.3417991d.css.map",
-    "main.f89c67a3.js.map": "/PortFolio/static/js/main.f89c67a3.js.map",
+    "main.b37b1b83.css.map": "/PortFolio/static/css/main.b37b1b83.css.map",
+    "main.2dda5b58.js.map": "/PortFolio/static/js/main.2dda5b58.js.map",
     "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3417991d.css",
-    "static/js/main.f89c67a3.js"
+    "static/css/main.b37b1b83.css",
+    "static/js/main.2dda5b58.js"
   ]
 }
