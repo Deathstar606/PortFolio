@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from 'reactstrap';
+import { motion } from "framer-motion";
 import CodeImg from "../images/Case Images/Mern.png"
 import Rect from "../images/Comprised Off/React.png"
 import Mongo from "../images/Comprised Off/Mongo.png"
@@ -39,7 +40,9 @@ function Descreption() {
 const ConFusion = () => {
 
     return(
-        <>
+        <motion.div
+        transition={{delay: 0.2, duration: 1, type: "tween", ease: "easeIn"}}
+        exit= {{x: -1000, opacity: 0}}>
           <div style={{height: "65vh", backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${CodeImg})`, backgroundPosition:"center 20%", backgroundAttachment: "fixed"}}>
                 <div className="jumbotron">
                     <Container className="lg-container">
@@ -58,7 +61,7 @@ const ConFusion = () => {
                 </div>
           </div>
           <Descreption/>
-        </>
+        </motion.div>
     );
 }
 

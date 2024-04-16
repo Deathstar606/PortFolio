@@ -54,10 +54,10 @@ export default class Example extends React.Component {
                   <NavLink style={{color: "dark", fontSize: "18px", fontWeight: "500"}} onClick={this.handleDownload} className='text-dark mt-1'>CV</NavLink>
                 </NavItem>
                 <NavItem style={{marginTop: "12px", marginRight: "17px"}}>
-                  <Link style={{color: "dark", fontSize: "18px", fontWeight: "500"}} to="casestu" spy={true} smooth={true} offset={-40} duration={500}>Case Studies</Link>
+                  <Link style={{color: "dark", fontSize: "18px", fontWeight: "500"}} to="casestu" spy={true} smooth={true} offset={0} duration={500}>Case Studies</Link>
                 </NavItem>
                 <NavItem style={{marginTop: "12px", marginRight: "10px"}}>
-                  <Link style={{color: "dark", fontSize: "18px", fontWeight: "500"}} to="learn" spy={true} smooth={true} offset={-40} duration={500}>Learn</Link>
+                  <Link style={{color: "dark", fontSize: "18px", fontWeight: "500"}} to="learn" spy={true} smooth={true} offset={0} duration={500}>Learn</Link>
                 </NavItem>
               </Nav>
             </Collapse>

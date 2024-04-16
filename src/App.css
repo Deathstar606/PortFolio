@@ -120,6 +120,8 @@ body {
 }
 
 .headerdec {
+  font-size: clamp(50px, 8vw, 100px);
+  font-weight: 700;
   text-align: left;
 }
 

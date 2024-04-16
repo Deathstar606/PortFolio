@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import React from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Home from "./Home"
 import Codex from "./Codex"
 import ConFusion from './ConFusion';
@@ -9,35 +9,24 @@ import Example from './Navbar';
 import Footer from './Footer';
 import './transitions.css'; // Import your CSS file for transitions
 
-class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
+function Main () {
 
-  render() {
+  const location = useLocation()
+
     return (
       <>
         <Example />
-        <Route render={({ location }) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={300} 
-              classNames="slide" 
-            >
-              <Switch location={location}>
-                <Route path="/" exact component={Home} />
-                <Route path='/codex' component={Codex} />
-                <Route path="/confusion" component={ConFusion}/>
-                <Route path="/digi" component={Digi}/>
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )} />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.key}>
+            <Route path="/" exact element={<Home />} />
+            <Route path='/codex' exact element={<Codex />} />
+            <Route path="/confusion" exact element={<ConFusion />} />
+            <Route path="/digi" exact element={<Digi />} />
+          </Routes>
+        </AnimatePresence>
         <Footer />
       </>
     );
   }
-}
 
 export default Main;

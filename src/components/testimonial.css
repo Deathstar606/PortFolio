@@ -1,0 +1,38 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  position: relative;
+}
+
+.acrd {
+  scale: 0.97;
+  transition: scale 0.3s ease-in-out; /* Add this line */
+}
+
+.acrd:hover {
+  scale: 1;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}

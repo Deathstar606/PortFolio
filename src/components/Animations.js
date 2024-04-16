@@ -108,7 +108,7 @@ export const StaggeredText = ({ text }) => {
     initial="hidden" 
     animate={inView ? "visible" : "initial"}>
       {text.split("").map((letter, index) => (
-        <motion.span key={index} variants={letterVariants}>
+        <motion.span key={index} variants={letterVariants} style={{position: "relative"}}>
           {letter}
         </motion.span>
       ))}
