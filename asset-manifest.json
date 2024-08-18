@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.b37b1b83.css",
-    "main.js": "/PortFolio/static/js/main.2dda5b58.js",
+    "main.css": "/PortFolio/static/css/main.3958ea7f.css",
+    "main.js": "/PortFolio/static/js/main.581d8e4a.js",
     "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
-    "static/media/Mern.png": "/PortFolio/static/media/Mern.c2a1ec59ccd76e20a6f7.png",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
     "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/Digi.png": "/PortFolio/static/media/Digi.392dd864a6cb212a10cd.png",
     "static/media/fontawesome-webfont.eot": "/PortFolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/8901669.jpg": "/PortFolio/static/media/8901669.380c2b8a87e0429d3eac.jpg",
     "static/media/Hero.jpg": "/PortFolio/static/media/Hero.39ebd62144955e49501f.jpg",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/arrow.gif": "/PortFolio/static/media/arrow.a4fc9165dd79885962de.gif",
@@ -20,17 +18,18 @@
     "static/media/Vergo.png": "/PortFolio/static/media/Vergo.e4f13d2f8b35a1e2e0df.png",
     "static/media/16353_3867287_580791_image.jpg": "/PortFolio/static/media/16353_3867287_580791_image.795936bfedbbdf24062b.jpg",
     "static/media/hello.png": "/PortFolio/static/media/hello.a04cce29d16db11d588f.png",
+    "static/media/GlassCo.png": "/PortFolio/static/media/GlassCo.9b497f0abc35f247a012.png",
     "static/media/React.png": "/PortFolio/static/media/React.51facde924a156e47c39.png",
     "static/media/Mongo.png": "/PortFolio/static/media/Mongo.e3d303c414914d83effb.png",
+    "static/media/ConFusion.png": "/PortFolio/static/media/ConFusion.f9a2256075f9f1664b34.png",
     "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
-    "static/media/Node.png": "/PortFolio/static/media/Node.93609dcb4487bd938dab.png",
     "index.html": "/PortFolio/index.html",
-    "main.b37b1b83.css.map": "/PortFolio/static/css/main.b37b1b83.css.map",
-    "main.2dda5b58.js.map": "/PortFolio/static/js/main.2dda5b58.js.map",
+    "main.3958ea7f.css.map": "/PortFolio/static/css/main.3958ea7f.css.map",
+    "main.581d8e4a.js.map": "/PortFolio/static/js/main.581d8e4a.js.map",
     "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b37b1b83.css",
-    "static/js/main.2dda5b58.js"
+    "static/css/main.3958ea7f.css",
+    "static/js/main.581d8e4a.js"
   ]
 }
