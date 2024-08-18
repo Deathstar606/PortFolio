@@ -19,11 +19,17 @@ const SliderRev = {
 
 function Topics() {
 
-    const ref = useRef(null)
-    const isInview = Fview(ref, { once: true })
+    const refhead = useRef(null)
+    const isInview = Fview(refhead, { once: true })
 
-    const reRef = useRef(null)
-    const HinView = Fview(ref, { once: true })
+    const reWeb = useRef(null)
+    const isInviewWeb = Fview(reWeb, { once: true })
+
+    const refPy = useRef(null)
+    const isInviewPy = Fview(refPy, { once: true })
+
+    const refRec = useRef(null)
+    const isInviewRec = Fview(refRec, { once: true })
   
     const variants = {
       initial: {
@@ -47,10 +53,10 @@ function Topics() {
                 <h2 className="headerdec pt-5 pb-5" id="learn" style={{color: "#DD6410", position: "relative", display:"inline-block", overflow: "hidden"}}>
                   <StaggeredText text={"Learn"}></StaggeredText>
                     <motion.div
-                        ref={reRef}
+                        ref={refhead}
                         variants={SliderRev}
                         initial="hidden"
-                        animate={HinView ? "visible" : "hidden"}
+                        animate={isInview ? "visible" : "hidden"}
                         style={{
                             position: "absolute",
                             width: "100%",
@@ -71,7 +77,7 @@ function Topics() {
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
-                            ref={ref}
+                            ref={reWeb}
                             viewBox="-95 0 680 480" 
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +88,7 @@ function Topics() {
                                 stroke="#DD6410"
                                 strokeWidth="7"
                                 variants={variants} // Pass the variants prop to the motion.path component
-                                animate={isInview ? "animate" : "initial"}/>
+                                animate={isInviewWeb ? "animate" : "initial"}/>
                                 <path d="M101.067 163.6C90.6667 176.667 72.5333 199.2 61.0667 213.6L40 240L79.4667 289.467C101.333 316.667 119.733 339.2 120.533 339.467C121.467 339.867 130.533 339.867 140.933 339.733L159.733 339.333L119.867 289.733L80 240.133L118.133 192.4C139.2 166.133 157.2 143.6 158.4 142.267C160.267 140.133 159.333 140 140.267 140H120.133L101.067 163.6Z"
                                 fill="#DD6410"
                                 stroke="#DD6410"
@@ -109,7 +115,7 @@ function Topics() {
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
-                            ref={ref}
+                            ref={refPy}
                             viewBox="-120 -10 910 641"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -120,19 +126,19 @@ function Topics() {
                                 stroke="#DD6410"
                                 strokeWidth="10"
                                 variants={variants} // Pass the variants prop to the motion.path component
-                                animate={isInview ? "animate" : "initial"}/>
+                                animate={isInviewPy ? "animate" : "initial"}/>
                                 <motion.path d="M305.218 132.213C291.547 138.186 288.299 156.375 298.992 167.099C314.151 182.438 339.056 168.728 335.13 147.28C332.694 134.521 317.399 126.783 305.218 132.213Z"
                                 fill="none"
                                 stroke="#DD6410"
                                 strokeWidth="10"
                                 variants={variants} // Pass the variants prop to the motion.path component
-                                animate={isInview ? "animate" : "initial"}/>
+                                animate={isInviewPy ? "animate" : "initial"}/>
                                 <motion.path d="M370.187 523.15C356.516 529.123 353.268 547.312 363.96 558.036C372.758 566.859 385.211 566.859 394.008 558.036C410.792 541.204 391.978 513.648 370.187 523.15Z"
                                 fill="none"
                                 stroke="#DD6410"
                                 strokeWidth="10"
                                 variants={variants} // Pass the variants prop to the motion.path component
-                                animate={isInview ? "animate" : "initial"}/>
+                                animate={isInviewPy ? "animate" : "initial"}/>
                             </motion.svg>
                             <div>
                             <h5 className='ml-3' style={{color: "#BCBAB8"}}>Python</h5>
@@ -150,7 +156,8 @@ function Topics() {
                         style={{border: "3px solid #ccc", borderRadius: "20px", position: "relative"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
-                            <motion.svg 
+                            <motion.svg
+                                ref={refRec} 
                                 viewBox="-100 0 951 670" 
                                 fill="none" 
                                 initial={{scale: 0.7}}
@@ -161,7 +168,7 @@ function Topics() {
                                 stroke="#DD6410"
                                 strokeWidth="7"
                                 variants={variants} // Pass the variants prop to the motion.path component
-                                animate={isInview ? "animate" : "initial"}/>
+                                animate={isInviewRec ? "animate" : "initial"}/>
                                 <path d="M375 401.484C388.298 401.528 401.309 397.624 412.387 390.268C423.464 382.911 432.11 372.433 437.229 360.16C442.348 347.887 443.71 334.371 441.142 321.324C438.574 308.276 432.192 296.284 422.805 286.866C413.417 277.448 401.446 271.027 388.407 268.417C375.368 265.807 361.848 267.124 349.558 272.203C337.268 277.282 326.762 285.893 319.37 296.947C311.977 308.001 308.031 320.999 308.031 334.297C308.013 343.107 309.731 351.834 313.087 359.98C316.443 368.125 321.372 375.53 327.591 381.77C333.811 388.009 341.199 392.962 349.334 396.345C357.468 399.728 366.19 401.474 375 401.484Z"
                                 fill="#DD6410"
                                 stroke="#DD6410"

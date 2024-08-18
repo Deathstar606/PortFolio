@@ -6,8 +6,9 @@ import { StaggeredText } from "./Animations";
 import Rect from "../images/Comprised Off/React.png"
 import Json from "../images/Comprised Off/Json.png"
 import fire from "../images/Comprised Off/fire.png"
+import Glass from "../images/Case Logo/GlassCo.png";
 import mongo from "../images/Comprised Off/Mongo.png"
-import Mern from "../images/Case Logo/8901669.jpg"
+import ConFu from "../images/Case Logo/ConFusion.png";
 import Codex from "../images/Case Logo/16353_3867287_580791_image.jpg"
 import Digi from "../images/Case Logo/Digixwhitelogo.png"
 import Vergo from "../images/Case Logo/Vergo.png"
@@ -120,8 +121,9 @@ function RenderItem() {
               </h2>
             </Container>
             <HovRev text="Codex" text2="Project for varsity" src={Codex} src1={Rect} src2={Json} to={"/codex"}/>
-            <HovRev text="VerGo" text2="Personal Project" src={Vergo} src1={Rect} src2={fire} link={"https://deathstar606.github.io/VerGo/#/home"}/>
-            <HovRev text="ConFusion" text2="Course Project" src={Mern} src1={Rect} src2={mongo} to={"/confusion"}/>
+            <HovRev text="VerGo" text2="Clothing Brand App" src={Vergo} src1={Rect} src2={fire} link={"https://deathstar606.github.io/VerGo/#/home"}/>
+            <HovRev text="ConFusion" text2="Restaurant Application" src={ConFu} src1={Rect} src2={mongo} link={"https://deathstar606.github.io/ConFusion/#/home"}/>
+            <HovRev text="GlassCo" text2="Eyewear Store App" src={Glass} src1={Rect} src2={mongo} link={"https://deathstar606.github.io/GlassCo/#/home"}/>
             <HovRev text="Digix" text2="Ongoing project" src={Digi} src1={Rect} src2={Json} to={"/digi"}/>
             </>                   
     );
