@@ -32,7 +32,7 @@ const SliderRev = {
     exit: { opacity: 0, scale: 0.5 }
   };
   
-  function HovRev({text, text2, src, src1, src2, link, to}) {
+  function HovRev({ text, text2, src, src1, src2, link, to }) {
     const [yeet, setYeet] = useState(false);
   
     const handleYeet = () => {
@@ -45,33 +45,67 @@ const SliderRev = {
   
     return (
       <motion.div
-        className="border-bottom border-top"
-        style={{ backgroundColor: "#BCBAB8", position: "relative", display: "flex", alignItems: "center" }}
+        className="border-bottom border-top case-sec"
         onMouseEnter={handleYeet}
         onMouseLeave={handleMouseLeave}
       >
-        <img style={{height: "30px", width: "30px", marginLeft: "1%" }}  src={src1}/>
-        <img style={{height: "30px", width: "30px", marginLeft: "1%" }}  src={src2}/>
-        <h1 style={{fontWeight: "520", fontSize: "clamp(25px, 4vw, 100px)", padding: "20px"}}>{text}</h1>
-        <h4 style={{fontSize: "clamp(14px, 1vw, 100px)"}} className="mt-2 pr-1">{text2}</h4>
-        {link ? (
-        <Button className="ml-auto mr-4 btn-dark text-white">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'inherit', textDecoration: 'none' }}
+        {/* First Column */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            flex: "1",
+          }}
+        >
+          <img style={{ height: "30px", width: "30px" }} src={src1} />
+          <img style={{ height: "30px", width: "30px" }} src={src2} />
+          <h1
+            style={{
+              fontWeight: "520",
+              fontSize: "clamp(25px, 4vw, 100px)",
+              margin: 0,
+            }}
           >
-            Launch
-          </a>
-        </Button>
-      ) : (
-        <Button className="ml-auto mr-4 btn-dark text-white">
-          <Link to={to} style={{ color: 'inherit', textDecoration: 'none' }}>
-            Show
-          </Link>
-        </Button>
-      )}
+            {text}
+          </h1>
+        </div>
+  
+        {/* Second Column */}
+        <div style={{ flex: "1", textAlign: "left" }}>
+          <h4
+            style={{
+              fontSize: "clamp(14px, 1vw, 100px)",
+              margin: 0,
+            }}
+            className="pl-2 pr-1"
+          >
+            {text2}
+          </h4>
+        </div>
+  
+        {/* Third Column */}
+        <div style={{ flex: "1", textAlign: "right" }}>
+          {link ? (
+            <Button className="btn-dark text-white">
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                Launch
+              </a>
+            </Button>
+          ) : (
+            <Button className="btn-dark text-white">
+              <Link to={to} style={{ color: "inherit", textDecoration: "none" }}>
+                Show
+              </Link>
+            </Button>
+          )}
+        </div>
+  
         <AnimatePresence mode="wait">
           {yeet && (
             <motion.div
@@ -83,10 +117,16 @@ const SliderRev = {
                 position: "absolute",
                 top: -100,
                 left: "15%",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
-              <img style={{width: "300px", borderRadius: "20px"}} src={src}/>
+              <img
+                style={{
+                  width: "300px",
+                  borderRadius: "20px",
+                }}
+                src={src}
+              />
             </motion.div>
           )}
         </AnimatePresence>
