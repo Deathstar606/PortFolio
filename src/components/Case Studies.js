@@ -60,19 +60,22 @@ const SliderRev = {
         >
           <img style={{ height: "30px", width: "30px" }} src={src1} />
           <img style={{ height: "30px", width: "30px" }} src={src2} />
-          <h1
-            style={{
-              fontWeight: "520",
-              fontSize: "clamp(25px, 4vw, 100px)",
-              margin: 0,
-            }}
-          >
-            {text}
-          </h1>
+          <div className="pl-4">
+            <h1
+              style={{
+                fontWeight: "520",
+                fontSize: "clamp(25px, 4vw, 100px)",
+                margin: 0,
+              }}
+            >
+              {text}
+            </h1>
+            <p>{text2}</p>
+          </div>
         </div>
   
         {/* Second Column */}
-        <div style={{ flex: "1", textAlign: "left" }}>
+{/*         <div style={{ flex: "1", textAlign: "left" }}>
           <h4
             style={{
               fontSize: "clamp(14px, 1vw, 100px)",
@@ -80,9 +83,9 @@ const SliderRev = {
             }}
             className="pl-2 pr-1"
           >
-            {text2}
+            
           </h4>
-        </div>
+        </div> */}
   
         {/* Third Column */}
         <div style={{ flex: "1", textAlign: "right" }}>
