@@ -8,7 +8,7 @@ import "./Burger.css"
 class Burger extends React.Component {
   
   handleDownload = () => {
-    const url = 'https://raw.githubusercontent.com/Deathstar606/PortFolio/master/src/New%20CV-pages-1.pdf';
+    const url = 'https://raw.githubusercontent.com/Deathstar606/PortFolio/master/CV.pdf';
 
     axios({
       url,
