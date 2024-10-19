@@ -23,7 +23,7 @@ function Skills () {
                     <StaggeredText text={"Skills"}></StaggeredText>
                     <img src={arrowGif} alt="Arrow" className="ml-auto" style={{ width: '40px' }} />
                 </h2>
-                <Row className="mt-4">
+                <Row className="mt-5 mb-3" style={{paddingRight: "10%", paddingLeft: "10%"}}>
                     <MediaQuery minWidth={639}>
                         <Swiper
                             scrollbar={{

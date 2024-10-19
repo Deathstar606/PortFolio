@@ -47,19 +47,19 @@ function Cert () {
                 <Row className="d-flex justify-content-center">
                     <Col md={3} xs={6} className="text-center mb-3" style={{padding: '10px 0px 10px 0px', borderRadius: "25px"}}>
                         <h5 style={{fontWeight: "600", fontSize: "clamp(20px, 1vw, 40px)"}}>Frontend Development</h5>
-                        <CardImg style={{height: "80px", width: "80px"}} src={fr}/>
+                        <CardImg style={{width: "120px"}} src={fr}/>
                     </Col>
                     <Col md={3} xs={6} className="text-center mb-3" style={{padding: '10px 0px 10px 0px', borderRadius: "25px" }}>
                         <h5 style={{fontWeight: "600", fontSize: "clamp(20px, 1vw, 40px)"}}>Backend Development</h5>
-                        <CardImg style={{height: "80px", width: "80px"}} src={br}/>
+                        <CardImg style={{width: "120px"}} src={br}/>
                     </Col>
                     <Col md={3} xs={6} className="text-center mb-3" style={{padding: '10px 0px 10px 0px', borderRadius: "25px" }}>
                         <h5 style={{fontWeight: "600", fontSize: "clamp(20px, 1vw, 40px)"}}>UI/UX Design</h5>
-                        <CardImg style={{height: "80px", width: "80px"}} src={ui}/>
+                        <CardImg style={{width: "120px"}} src={ui}/>
                     </Col>
                     <Col md={3} xs={6} className="text-center mb-3" style={{padding: '10px 0px 10px 0px', borderRadius: "25px" }}>
                         <h5 style={{fontWeight: "600", fontSize: "clamp(20px, 1vw, 40px)"}}>Programing Course</h5>
-                        <CardImg style={{height: "80px", width: "80px"}} src={pr}/>
+                        <CardImg style={{width: "120px"}} src={pr}/>
                     </Col>
                 </Row>
             </Container>
