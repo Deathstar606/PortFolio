@@ -23,8 +23,8 @@ function Skills () {
                     <StaggeredText text={"Skills"}></StaggeredText>
                     <img src={arrowGif} alt="Arrow" className="ml-auto" style={{ width: '40px' }} />
                 </h2>
-                <Row className="mt-5 mb-3" style={{paddingRight: "10%", paddingLeft: "10%"}}>
                     <MediaQuery minWidth={639}>
+                        <Row className="mt-5 mb-3" style={{paddingRight: "10%", paddingLeft: "10%"}}>
                         <Swiper
                             scrollbar={{
                             hide: true,
@@ -64,8 +64,10 @@ function Skills () {
                                     <h5 className="d-flex justify-content-center mt-2 mb-5">Firebase</h5>
                             </SwiperSlide>
                         </Swiper>
+                        </Row>
                     </MediaQuery>
                     <MediaQuery maxWidth={638}>
+                        <Row className="mt-5 mb-3">
                         <Swiper
                             scrollbar={{
                             hide: true,
@@ -105,8 +107,8 @@ function Skills () {
                                     <h5 className="d-flex justify-content-center mt-2 mb-5">Firebase</h5>
                             </SwiperSlide>
                         </Swiper>
+                        </Row>
                     </MediaQuery>
-                </Row>
             </Container>
         </div>
     )
