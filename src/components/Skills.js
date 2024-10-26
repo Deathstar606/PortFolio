@@ -21,7 +21,7 @@ function Skills () {
             <Container style={{maxWidth: "95%"}}>
                 <h2 className="headerdec d-flex align-items-center">
                     <StaggeredText text={"Skills"}></StaggeredText>
-                    <img src={arrowGif} alt="Arrow" className="ml-auto" style={{ width: '40px' }} />
+                    <img src={arrowGif} alt="Arrow" className="ml-auto" style={{ width: '100px' }} />
                 </h2>
                     <MediaQuery minWidth={639}>
                         <Row className="mt-5 mb-3" style={{paddingRight: "10%", paddingLeft: "10%"}}>
