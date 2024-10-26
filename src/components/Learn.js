@@ -73,7 +73,7 @@ function Topics() {
                         <Col md={4} className="pb-3">
                         <motion.div
                         className='p-2' 
-                        style={{border: "3px solid #ccc", borderRadius: "20px", position: "relative"}}
+                        style={{position: "relative"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
@@ -111,7 +111,7 @@ function Topics() {
                         <Col md={4} className="pb-3">
                         <motion.div
                         className='p-2' 
-                        style={{border: "3px solid #ccc", borderRadius: "20px", position: "relative"}}
+                        style={{position: "relative"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
@@ -153,7 +153,7 @@ function Topics() {
                         <Col md={4} className="pb-3">
                         <motion.div
                         className='p-2' 
-                        style={{border: "3px solid #ccc", borderRadius: "20px", position: "relative"}}
+                        style={{position: "relative"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
@@ -186,7 +186,7 @@ function Topics() {
                         </Col>
                     </Row>
                     <div className="d-flex justify-content-center mt-5">
-                      <h2 className="p-3" style={{border: "2px solid #ccc", borderRadius: "20px", color: "#DD6410", display: "inline-block"}}>Contact if I may be of assistance</h2>
+                      <h2 className="p-3" style={{color: "#DD6410"}}><StaggeredText text={"Contact if I may be of assistance"}></StaggeredText></h2>
                     </div>
                 </Container>
             </Container>

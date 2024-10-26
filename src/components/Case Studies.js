@@ -12,6 +12,7 @@ import ConFu from "../images/Case Logo/ConFusion.png";
 import Codex from "../images/Case Logo/16353_3867287_580791_image.jpg"
 import Digi from "../images/Case Logo/Digixwhitelogo.png"
 import Vergo from "../images/Case Logo/Vergo.png"
+import MediaQuery from "react-responsive";
 
 const SliderRev = {
     hidden : {
@@ -123,13 +124,24 @@ const SliderRev = {
                 zIndex: 1,
               }}
             >
-              <img
-                style={{
-                  width: "300px",
-                  borderRadius: "20px",
-                }}
-                src={src}
-              />
+              <MediaQuery maxWidth={639}>
+                <img
+                  style={{
+                    width: "200px",
+                    borderRadius: "20px",
+                  }}
+                  src={src}
+                />
+              </MediaQuery>
+              <MediaQuery minWidth={640}>
+                <img
+                  style={{
+                    width: "300px",
+                    borderRadius: "20px",
+                  }}
+                  src={src}
+                />
+              </MediaQuery>
             </motion.div>
           )}
         </AnimatePresence>

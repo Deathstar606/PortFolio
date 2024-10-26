@@ -44,7 +44,7 @@ function Cert () {
                     />
             </h2>
             <Container style={{maxWidth: "95%", color: "#DD6410"}}>
-                <Row className="d-flex justify-content-center pt-4 pb-4">
+                <Row className="d-flex justify-content-center pb-4">
                     <Col md={3} xs={6} className="text-center mb-3" style={{padding: '10px 0px 10px 0px', borderRadius: "25px"}}>
                         <h5 style={{fontWeight: "600", fontSize: "clamp(20px, 1vw, 40px)"}}>Frontend Development</h5>
                         <CardImg style={{width: "120px"}} src={fr}/>

@@ -3,7 +3,6 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from "./Home"
 import Codex from "./Codex"
-import Digi from './Digi';
 import Example from './Navbar';
 import Footer from './Footer';
 import './transitions.css'; // Import your CSS file for transitions
@@ -19,7 +18,6 @@ function Main () {
           <Routes location={location} key={location.key}>
             <Route path="/" exact element={<Home />} />
             <Route path='/codex' exact element={<Codex />} />
-            <Route path="/digi" exact element={<Digi />} />
           </Routes>
         </AnimatePresence>
         <Footer />
