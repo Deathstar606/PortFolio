@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.2b5df7fc.css",
-    "main.js": "/PortFolio/static/js/main.e00b6ced.js",
+    "main.css": "/PortFolio/static/css/main.9c5ded7f.css",
+    "main.js": "/PortFolio/static/js/main.a125626f.js",
     "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
     "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/Digi.png": "/PortFolio/static/media/Digi.392dd864a6cb212a10cd.png",
     "static/media/fontawesome-webfont.eot": "/PortFolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/Hero.jpg": "/PortFolio/static/media/Hero.39ebd62144955e49501f.jpg",
@@ -24,12 +23,12 @@
     "static/media/ConFusion.png": "/PortFolio/static/media/ConFusion.f9a2256075f9f1664b34.png",
     "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
     "index.html": "/PortFolio/index.html",
-    "main.2b5df7fc.css.map": "/PortFolio/static/css/main.2b5df7fc.css.map",
-    "main.e00b6ced.js.map": "/PortFolio/static/js/main.e00b6ced.js.map",
+    "main.9c5ded7f.css.map": "/PortFolio/static/css/main.9c5ded7f.css.map",
+    "main.a125626f.js.map": "/PortFolio/static/js/main.a125626f.js.map",
     "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b5df7fc.css",
-    "static/js/main.e00b6ced.js"
+    "static/css/main.9c5ded7f.css",
+    "static/js/main.a125626f.js"
   ]
 }
