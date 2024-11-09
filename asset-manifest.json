@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.9c5ded7f.css",
-    "main.js": "/PortFolio/static/js/main.a125626f.js",
+    "main.css": "/PortFolio/static/css/main.cd6c4141.css",
+    "main.js": "/PortFolio/static/js/main.f0fa1691.js",
     "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
     "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
@@ -23,12 +23,12 @@
     "static/media/ConFusion.png": "/PortFolio/static/media/ConFusion.f9a2256075f9f1664b34.png",
     "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
     "index.html": "/PortFolio/index.html",
-    "main.9c5ded7f.css.map": "/PortFolio/static/css/main.9c5ded7f.css.map",
-    "main.a125626f.js.map": "/PortFolio/static/js/main.a125626f.js.map",
+    "main.cd6c4141.css.map": "/PortFolio/static/css/main.cd6c4141.css.map",
+    "main.f0fa1691.js.map": "/PortFolio/static/js/main.f0fa1691.js.map",
     "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c5ded7f.css",
-    "static/js/main.a125626f.js"
+    "static/css/main.cd6c4141.css",
+    "static/js/main.f0fa1691.js"
   ]
 }
