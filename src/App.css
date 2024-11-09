@@ -79,6 +79,7 @@ body {
   background-image: url("../src//images/Hero_Mobile.jpg");
   background-size: cover;
   background-attachment: fixed;
+  height: auto;
 }
 
 @media (min-width: 1279px) {
