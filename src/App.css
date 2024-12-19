@@ -78,7 +78,6 @@ body {
 .headerback {
   background-image: url("../src//images/Hero_Mobile.jpg");
   background-size: cover;
-  background-attachment: fixed;
   height: auto;
 }
 
@@ -86,6 +85,7 @@ body {
   .headerback {
     background-image: url("../src//images/Hero.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
   }
 }
