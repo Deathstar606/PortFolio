@@ -185,9 +185,6 @@ function Topics() {
                         </motion.div>
                         </Col>
                     </Row>
-                    <div className="d-flex justify-content-center mt-5">
-                      <h2 className="p-3" style={{color: "#DD6410"}}><StaggeredText text={"Contact if I may be of assistance"}></StaggeredText></h2>
-                    </div>
                 </Container>
             </Container>
             </>
