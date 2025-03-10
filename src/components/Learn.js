@@ -67,8 +67,11 @@ function Topics() {
                         }}
                         />
                 </h2>
-                <h3 className="text-center pb-5" style={{color: "#DD6410", fontWeight: "500", fontSize: "clamp(25px, 2vw, 65px)"}}>"The best way to learn is to teach" -Richard Feynman</h3>
-                <Container>
+                <h1 className="text-center" style={{color: "#BCBAB8"}}>"</h1>
+                <h3 className="text-center" style={{color: "#DD6410", fontWeight: "500", fontSize: "clamp(25px, 2vw, 65px)"}}><StaggeredText text={"The best way to learn is to teach"}/></h3>
+                <h1 className="text-center mt-4" style={{color: "#BCBAB8"}}>"</h1>
+                <h4 className="text-center" style={{color: "#DD6410"}}>Richard Feynman</h4>
+                <Container className="mt-4">
                     <Row>
                         <Col md={4} className="pb-3">
                         <motion.div

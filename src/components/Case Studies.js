@@ -181,7 +181,7 @@ function RenderItem() {
             <HovRev text="ConFusion" text2="Restaurant Application" src={ConFu} src1={Rect} src2={mongo} link={"https://deathstar606.github.io/ConFusion/#/home"}/>
             <HovRev text="GlassCo" text2="Eyewear Store App" src={Glass} src1={Rect} src2={mongo} link={"https://deathstar606.github.io/GlassCo/#/home"}/>
             <HovRev text="Digix" text2="Ongoing project" src={Digi} src1={Rect} src2={Json} link={"https://deathstar606.github.io/Digix/#/home"}/>
-            <HovRev text="Galaxy Renovations" text2="Renovation Corporation" src={Gren} src1={Rect} src2={mongo} link={" https://deathstar606.github.io/GalaxyRen/#/home"}/>
+            <HovRev text="Galaxy Reno" text2="Renovation Corporation" src={Gren} src1={Rect} src2={mongo} link={" https://deathstar606.github.io/GalaxyRen/#/home"}/>
             </>                   
     );
 }
