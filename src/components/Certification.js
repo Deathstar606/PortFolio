@@ -325,7 +325,7 @@ export const StaggeredText = ({ texts }) => {
                 viewBox="-195 -50 910 641"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                key="svg2"
+                key="svg3"
                 initial="initial"
                 animate="animate"
                 exit="exit"
