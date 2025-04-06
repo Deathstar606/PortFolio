@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { SectionYPos } from "./Animations";
 import { StaggeredText } from "./Animations";
 import { motion, AnimatePresence } from "framer-motion"
+import { ScrollLink } from "react-scroll";
 import Head from "../images/Header.png"
 import Amper from "../images/ampersand.png"
 import Fb from "../images/Socials/facebook light.png"

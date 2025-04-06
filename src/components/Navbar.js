@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {
-  Collapse,
   Navbar,
   NavLink,
   NavbarBrand,
@@ -132,17 +131,26 @@ function Example() {
       </MediaQuery>
       <div className='nav-c'>
         <Navbar light expand="md">
-          <NavbarBrand href="/" className='text-white mt-2'>FM</NavbarBrand>
+          <NavbarBrand href="https://deathstar606.github.io/PortFolio/" className='text-white mt-2'>FM</NavbarBrand>
             <MediaQuery minWidth={640}>
               <Nav className="ml-auto" navbar>
-                <NavItem style={{ marginRight: "10px" }}>
-                  <NavLink style={{ color: "dark", fontSize: "18px", fontWeight: "500" }} onClick={handleDownload} className='text-dark mt-1'>CV</NavLink>
+                <NavItem style={{ marginTop: "12px", marginRight: "17px", textDecoration: "none" }}>
+                  <Link onClick={handleDownload} style={{ textDecoration: "none" }} className='nav-items'>
+                    CV
+                      <div className='nav-items-inner'/>
+                  </Link>
                 </NavItem>
-                <NavItem style={{ marginTop: "12px", marginRight: "17px" }}>
-                  <Link style={{ color: "dark", fontSize: "18px", fontWeight: "500" }} to="casestu" spy={true} smooth={true} offset={0} duration={500}>Case Studies</Link>
+                <NavItem style={{ marginTop: "12px", marginRight: "17px", textDecoration: "none" }}>
+                  <Link style={{ textDecoration: "none" }} className='nav-items' to="casestu" spy={true} smooth={true} offset={0} duration={500}>
+                    Case Studies
+                      <div className='nav-items-inner'/>
+                  </Link>
                 </NavItem>
-                <NavItem style={{ marginTop: "12px", marginRight: "10px" }}>
-                  <Link style={{ color: "dark", fontSize: "18px", fontWeight: "500" }} to="learn" spy={true} smooth={true} offset={0} duration={500}>Learn</Link>
+                <NavItem style={{ marginTop: "12px", marginRight: "17px", textDecoration: "none" }}>
+                  <Link style={{ textDecoration: "none" }} className='nav-items' to="learn" spy={true} smooth={true} offset={0} duration={500}>
+                    Learn
+                      <div className='nav-items-inner'/>
+                  </Link>
                 </NavItem>
               </Nav>
             </MediaQuery>

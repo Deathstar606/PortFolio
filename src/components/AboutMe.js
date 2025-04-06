@@ -24,7 +24,7 @@ function AboutMe () {
 
     return (
         <Container style={{maxWidth: "95%"}}>
-              <h2 className="headerdec pt-5 pb-5" style={{color: "#DD6410", position: "relative", display:"inline-block", overflow: "hidden"}}>
+              <h2 className="headerdec pt-5 pb-5" id="about" style={{color: "#DD6410", position: "relative", display:"inline-block", overflow: "hidden"}}>
                   <StaggeredText text={"Know Me..."}></StaggeredText>
                   <motion.div
                       ref={ref}

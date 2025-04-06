@@ -68,15 +68,14 @@ function Topics() {
                         />
                 </h2>
                 <h1 className="text-center" style={{color: "#BCBAB8"}}>"</h1>
-                <h3 className="text-center" style={{color: "#DD6410", fontWeight: "500", fontSize: "clamp(25px, 2vw, 65px)"}}><StaggeredText text={"The best way to learn is to teach"}/></h3>
-                <h1 className="text-center mt-4" style={{color: "#BCBAB8"}}>"</h1>
-                <h4 className="text-center" style={{color: "#DD6410"}}>Richard Feynman</h4>
-                <Container className="mt-4">
+                <h3 className="text-center" style={{color: "#DD6410", fontWeight: "500", fontSize: "clamp(25px, 2vw, 65px)"}}><StaggeredText text={"The best way to learn is to teach - Richard Feynman"}/></h3>
+                <h1 className="text-center pt-4" style={{color: "#BCBAB8"}}>"</h1>
+                <Container className="mt-5">
                     <Row>
-                        <Col md={4} className="pb-3">
+                        <Col md={4} className="pb-5">
                         <motion.div
-                        className='p-2' 
-                        style={{position: "relative"}}
+                        className='p-2 border border-1' 
+                        style={{position: "relative", borderRadius: "15px"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
@@ -101,7 +100,7 @@ function Topics() {
                                 stroke="#DD6410"
                                 strokeWidth="1"/> 
                             </motion.svg>
-                            <div>
+                            <div className="p-1">
                             <h5 className='ml-3' style={{color: "#BCBAB8"}}>Html/Css/Js</h5>
                             <ul style={{color: "#BCBAB8", fontWeight: "550"}}>
                                 <li>Basics of the web development concept</li>
@@ -111,10 +110,10 @@ function Topics() {
                             </div>
                         </motion.div>
                         </Col>
-                        <Col md={4} className="pb-3">
+                        <Col md={4} className="pb-5">
                         <motion.div
-                        className='p-2' 
-                        style={{position: "relative"}}
+                        className='p-2 border border-1' 
+                        style={{position: "relative", borderRadius: "15px"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
@@ -143,7 +142,7 @@ function Topics() {
                                 variants={variants} // Pass the variants prop to the motion.path component
                                 animate={isInviewPy ? "animate" : "initial"}/>
                             </motion.svg>
-                            <div>
+                            <div className="p-1">
                             <h5 className='ml-3' style={{color: "#BCBAB8"}}>Python</h5>
                             <ul style={{color: "#BCBAB8", fontWeight: "550"}}>
                                 <li>Dive deep into the fundamental building blocks of programming</li>
@@ -153,10 +152,10 @@ function Topics() {
                             </div>
                         </motion.div>
                         </Col>
-                        <Col md={4} className="pb-3">
+                        <Col md={4} className="pb-5">
                         <motion.div
-                        className='p-2' 
-                        style={{position: "relative"}}
+                        className='p-2 border border-1' 
+                        style={{position: "relative", borderRadius: "15px", height: "100%"}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: 0.75}}>
                             <motion.svg
@@ -177,7 +176,7 @@ function Topics() {
                                 stroke="#DD6410"
                                 strokeWidth="7"/>
                             </motion.svg>
-                            <div>
+                            <div className="p-1">
                             <h5 className='ml-3' style={{color: "#BCBAB8"}}>React</h5>
                             <ul style={{color: "#BCBAB8", fontWeight: "550"}}>
                                 <li>States, Functional components and Redux</li>
