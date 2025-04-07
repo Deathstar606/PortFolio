@@ -43,6 +43,13 @@ body {
   color: #F1593A;
 }
 
+@media (max-width: 639px) {
+  .jumbotron {
+    align-items: normal;
+    padding-top: 27vh;
+  }
+}
+
 .headerback {
   background-image: url("../src//images/Hero_Mobile.jpg");
   background-size: cover;
