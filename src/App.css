@@ -48,7 +48,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100dvh;
+  height: 100svh;
 }
 
 @media (min-width: 1279px) {
