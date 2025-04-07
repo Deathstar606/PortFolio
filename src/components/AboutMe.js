@@ -49,12 +49,9 @@ function AboutMe () {
                 </Col>
                 <Col className="d-flex align-items-center border-right pb-4" md={4} style={{color: "#BCBAB8", fontWeight: "400", fontSize: "20px"}}>
                     <SectionXNeg>
-                        I am a fresher in the aspect of taking profesional projects.
-                        I have never achived or learnt anything easily, rather I have seen that
-                        I need more time and effort to achive something, than the people beside
-                        me.Through these hardships I realized how stubburn I am, the never giving
-                        up mentality, the unyielding patience and the sheer will to never lose my
-                        focus until I have reached my goal.    
+                        I have 4 years of experience as a full-stack developer, ready to give life to your imagination.
+                        I’ve never achieved or learned anything easily. Instead, I’ve found that I often need more time and effort to accomplish something than the people around me.
+                        Through these hardships, I realized how stubborn I am, the never-giving-up mentality, the unyielding patience and the sheer will to stay focused until I reach my goal.
                     </SectionXNeg>
                 </Col>
                 <Col md={4} style={{color: "#BCBAB8", fontWeight: "400", fontSize: "20px", overflow: "hidden"}}>

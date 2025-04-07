@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import { SectionYPos } from "./Animations";
 import { StaggeredText } from "./Animations";
 import { motion, AnimatePresence } from "framer-motion"
-import { ScrollLink } from "react-scroll";
 import Head from "../images/Header.png"
 import Amper from "../images/ampersand.png"
 import Fb from "../images/Socials/facebook light.png"
@@ -31,7 +30,19 @@ const headerImg = {
     }
 };
   
-  
+const scrollTarget = (tid) => {
+  const element = document.getElementById(tid);
+  if (element) {
+    const offset = 100; // Set your desired offset here
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY; // Get element position
+    const offsetPosition = elementPosition - offset; // Adjust for offset
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  }
+}  
 
 function TestHead() {
     const nameArr = ["Python", "C++"];
@@ -76,7 +87,7 @@ const HeroSec = () => {
                     <Container className="lg-container">
                         <Row className="mt-3">
                             <Col md={6} xs={12} className="d-flex justify-content-center align-items-center">
-                                <div>
+                                <div className="text-center">
                                     <h6 style={{color: "#BCBAB8"}}>I am...</h6>
                                     <h1><StaggeredText text={"Fardin Rahman"}></StaggeredText></h1>
                                     <h2 style={{color: "#BCBAB8"}}>Fullstack developer</h2>
@@ -85,7 +96,7 @@ const HeroSec = () => {
                                     <a href="https://www.facebook.com/profile.php?id=100007104457895" target="_blank"><img style={{height: "40px", width: "40px", marginTop: "15px", marginRight: "10px" }}  src={Fb} alt="Facebook" /></a>
                                     <a href="https://www.linkedin.com/in/fardin-rahman-2311942bb" target="_blank"><img style={{height: "40px", width: "40px", marginTop: "15px", marginRight: "10px" }}  src={Lin} alt="LinkedIn" /></a>
                                     <a href="/"><img style={{height: "40px", width: "40px", marginTop: "15px", marginRight: "10px" }}  src={Dis} alt="Discord" /></a>
-                                    <img style={{width: "80px"}} src={Arrow} alt="arrow"/>
+                                    <img onClick={() => scrollTarget("about")} style={{width: "80px", cursor: "pointer"}} src={Arrow} alt="arrow"/>
                                 </div>                 
                             </Col>
                             <Col md={6} xs={12} className="d-flex justify-content-center">

@@ -42,7 +42,7 @@ function TestiPhn() {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                    <Card style={{borderRadius: "20px", backgroundColor: "#353935"}}>
+                    <Card style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent"}}>
                       <Card.Body>
                             <div className='d-flex justify-content-center'>
                                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -59,7 +59,7 @@ function TestiPhn() {
                     </Card>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Card style={{borderRadius: "20px", backgroundColor: "#353935"}}>
+                    <Card style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent"}}>
                       <Card.Body>
                             <div className='d-flex justify-content-center'>
                                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -88,7 +88,7 @@ function TestiMonial1() {
   return (
     <div className='d-flex logos'>
       <div className="d-flex logos-slide" style={{position: "relative"}}>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -103,7 +103,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -118,7 +118,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -133,7 +133,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -148,7 +148,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -163,7 +163,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -181,7 +181,7 @@ function TestiMonial1() {
     </div>
 
     <div className="d-flex logos-slide" style={{position: "relative"}}>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -196,7 +196,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -211,7 +211,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -226,7 +226,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -241,7 +241,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>
@@ -256,7 +256,7 @@ function TestiMonial1() {
             <Card.Subtitle className='mt-2 text-muted'>5🌟</Card.Subtitle>
         </Card.Body>
       </Card>
-      <Card className='acrd' style={{borderRadius: "20px", backgroundColor: "#353935", position: "relative", overflow: "hidden", width: "350px"}}>
+      <Card className='acrd' style={{borderRadius: "20px", border: "1px solid #BCBAB8", backgroundColor: "transparent", position: "relative", overflow: "hidden", width: "350px"}}>
         <Card.Body>
             <div className='d-flex justify-content-center'>
                 <img src={Fard} style={{ width: '4rem', borderRadius: "120px"}}/>

@@ -120,7 +120,7 @@ function Example() {
       <MediaQuery maxWidth={639}>
           <div onClick={burgerToggle} style={{ cursor: 'pointer', position: "fixed", top: "20px", right: "20px", zIndex: "100" }}>
             <div className="bar" style={{ width: '30px', height: '2px', backgroundColor: '#DD6410', margin: '5px' }}></div>
-            <div className="bar" style={{ width: '30px', height: '2px', backgroundColor: '#DD6410', margin: '5px' }}></div>
+            <div className="bar" style={{ width: '15px', height: '2px', backgroundColor: '#DD6410', margin: '5px' }}></div>
             <div className="bar" style={{ width: '30px', height: '2px', backgroundColor: '#DD6410', margin: '5px' }}></div>
           </div>
           <AnimatePresence mode='wait'>

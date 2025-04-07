@@ -48,7 +48,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100dvh;
 }
 
 @media (min-width: 1279px) {
@@ -120,7 +120,7 @@ body {
   width: 100%;
   left: -110px;
   bottom: 0;
-  background: whitesmoke;
+  background: #BCBAB8;
   z-index: -1;
   transition: left 0.3s ease;
 }
