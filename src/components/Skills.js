@@ -217,7 +217,7 @@ function Skills () {
                                                 }}
                                             />
                                         </motion.div>
-                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Node JS</h5>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Node</h5>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                         <motion.div className="d-flex justify-content-center">
@@ -236,7 +236,7 @@ function Skills () {
                                                 }}
                                             />
                                         </motion.div>
-                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Mongo DB</h5>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Mongo</h5>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                         <motion.div className="d-flex justify-content-center">
