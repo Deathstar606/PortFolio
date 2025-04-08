@@ -1,12 +1,14 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
 import { StaggeredText } from "./Animations";
+import { motion } from "framer-motion";
 import MediaQuery from "react-responsive";
-import Prog from "../images/Skills/terminal.png"
-import Front from "../images/Skills/front-end.png"
-import Back from "../images/Skills/backend.png"
-import Serve from "../images/Skills/DBL.png"
-import Fire from "../images/Skills/firebase.png"
+import Prog from "../images/Skill_Icons/icons8-python-50.png"
+import Rect from "../images/Skill_Icons/icons8-react-96.png"
+import Node from "../images/Skill_Icons/icons8-node-js-96.png"
+import Mongo from "../images/Skill_Icons/icons8-mongo-db-96.png"
+import Redu from "../images/Skill_Icons/icons8-redux-100.png"
+import Fire from "../images/Skill_Icons/firebase.png"
 import arrowGif from "../images/RigtArrow.gif"
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -34,33 +36,117 @@ function Skills () {
                             className="mySwiper"
                         >
                             <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Prog} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Python & C++</h5>
+                                    <motion.div className="d-flex justify-content-center">
+                                        <motion.img
+                                            src={Prog}
+                                            alt="back"
+                                            className="skill"
+                                            animate={{
+                                            rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                            }}
+                                            transition={{
+                                            duration: 1.2,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: 'easeInOut'
+                                            }}
+                                        />
+                                    </motion.div>
+                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Python</h5>
                             </SwiperSlide>
                             <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Front} alt="back" className="skill"/>
-                                    </div>
+                                    <motion.div className="d-flex justify-content-center">
+                                        <motion.img
+                                            src={Rect}
+                                            alt="back"
+                                            className="skill"
+                                            animate={{
+                                            rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                            }}
+                                            transition={{
+                                            duration: 1.2,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: 'easeInOut'
+                                            }}
+                                        />
+                                    </motion.div>
                                     <h5 className="d-flex justify-content-center mt-2 mb-5">React</h5>
                             </SwiperSlide>
                             <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Back} alt="back" className="skill"/>
-                                    </div>
+                                    <motion.div className="d-flex justify-content-center">
+                                        <motion.img
+                                            src={Node}
+                                            alt="back"
+                                            className="skill"
+                                            animate={{
+                                            rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                            }}
+                                            transition={{
+                                            duration: 1.2,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: 'easeInOut'
+                                            }}
+                                        />
+                                    </motion.div>
                                     <h5 className="d-flex justify-content-center mt-2 mb-5">Node JS</h5>
                             </SwiperSlide>
                             <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Serve} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">MongoDB</h5>
+                                    <motion.div className="d-flex justify-content-center">
+                                        <motion.img
+                                            src={Mongo}
+                                            alt="back"
+                                            className="skill"
+                                            animate={{
+                                            rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                            }}
+                                            transition={{
+                                            duration: 1.2,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: 'easeInOut'
+                                            }}
+                                        />
+                                    </motion.div>
+                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Mongo DB</h5>
                             </SwiperSlide>
                             <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Fire} alt="back" className="skill"/>
-                                    </div>
+                                    <motion.div className="d-flex justify-content-center">
+                                        <motion.img
+                                            src={Redu}
+                                            alt="back"
+                                            className="skill"
+                                            animate={{
+                                            rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                            }}
+                                            transition={{
+                                            duration: 1.2,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: 'easeInOut'
+                                            }}
+                                        />
+                                    </motion.div>
+                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Redux</h5>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                    <motion.div className="d-flex justify-content-center">
+                                        <motion.img
+                                            src={Fire}
+                                            alt="back"
+                                            className="skill"
+                                            animate={{
+                                            rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                            }}
+                                            transition={{
+                                            duration: 1.2,
+                                            repeat: Infinity,
+                                            repeatType: 'loop',
+                                            ease: 'easeInOut'
+                                            }}
+                                        />
+                                    </motion.div>
                                     <h5 className="d-flex justify-content-center mt-2 mb-5">Firebase</h5>
                             </SwiperSlide>
                         </Swiper>
@@ -68,45 +154,129 @@ function Skills () {
                     </MediaQuery>
                     <MediaQuery maxWidth={638}>
                         <Row className="mt-5 mb-3">
-                        <Swiper
-                            scrollbar={{
-                            hide: true,
-                            }}
-                            modules={[Scrollbar]}
-                            slidesPerView={3}
-                            className="mySwiper pr-2 pl-2"
-                        >
-                            <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Prog} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Python</h5>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Front} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">React</h5>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Back} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Node JS</h5>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Serve} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">MongoDB</h5>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                    <div className="d-flex justify-content-center">
-                                        <img src={Fire} alt="back" className="skill"/>
-                                    </div>
-                                    <h5 className="d-flex justify-content-center mt-2 mb-5">Firebase</h5>
-                            </SwiperSlide>
-                        </Swiper>
+                            <Swiper
+                                scrollbar={{
+                                hide: true,
+                                }}
+                                modules={[Scrollbar]}
+                                slidesPerView={4}
+                                className="mySwiper"
+                            >
+                                <SwiperSlide>
+                                        <motion.div className="d-flex justify-content-center">
+                                            <motion.img
+                                                src={Prog}
+                                                alt="back"
+                                                className="skill"
+                                                animate={{
+                                                rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                                }}
+                                                transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                repeatType: 'loop',
+                                                ease: 'easeInOut'
+                                                }}
+                                            />
+                                        </motion.div>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Python</h5>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                        <motion.div className="d-flex justify-content-center">
+                                            <motion.img
+                                                src={Rect}
+                                                alt="back"
+                                                className="skill"
+                                                animate={{
+                                                rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                                }}
+                                                transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                repeatType: 'loop',
+                                                ease: 'easeInOut'
+                                                }}
+                                            />
+                                        </motion.div>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">React</h5>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                        <motion.div className="d-flex justify-content-center">
+                                            <motion.img
+                                                src={Node}
+                                                alt="back"
+                                                className="skill"
+                                                animate={{
+                                                rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                                }}
+                                                transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                repeatType: 'loop',
+                                                ease: 'easeInOut'
+                                                }}
+                                            />
+                                        </motion.div>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Node JS</h5>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                        <motion.div className="d-flex justify-content-center">
+                                            <motion.img
+                                                src={Mongo}
+                                                alt="back"
+                                                className="skill"
+                                                animate={{
+                                                rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                                }}
+                                                transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                repeatType: 'loop',
+                                                ease: 'easeInOut'
+                                                }}
+                                            />
+                                        </motion.div>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Mongo DB</h5>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                        <motion.div className="d-flex justify-content-center">
+                                            <motion.img
+                                                src={Redu}
+                                                alt="back"
+                                                className="skill"
+                                                animate={{
+                                                rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                                }}
+                                                transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                repeatType: 'loop',
+                                                ease: 'easeInOut'
+                                                }}
+                                            />
+                                        </motion.div>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Redux</h5>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                        <motion.div className="d-flex justify-content-center">
+                                            <motion.img
+                                                src={Fire}
+                                                alt="back"
+                                                className="skill"
+                                                animate={{
+                                                rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                                                }}
+                                                transition={{
+                                                duration: 1.2,
+                                                repeat: Infinity,
+                                                repeatType: 'loop',
+                                                ease: 'easeInOut'
+                                                }}
+                                            />
+                                        </motion.div>
+                                        <h5 className="d-flex justify-content-center mt-2 mb-5">Firebase</h5>
+                                </SwiperSlide>
+                            </Swiper>
                         </Row>
                     </MediaQuery>
             </Container>
