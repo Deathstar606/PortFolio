@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/PortFolio/static/css/main.e68f4875.css",
+    "main.js": "/PortFolio/static/js/main.983f8572.js",
+    "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
+    "static/media/GALAXY_WEBSITE_Transparent.svg": "/PortFolio/static/media/GALAXY_WEBSITE_Transparent.0b9184e298b46ba1c98938aaeba62f15.svg",
+    "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
+    "static/media/Velou.PNG": "/PortFolio/static/media/Velou.4cc31dad649754a68037.PNG",
+    "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/PortFolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/Hero.jpg": "/PortFolio/static/media/Hero.39ebd62144955e49501f.jpg",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/arrow.gif": "/PortFolio/static/media/arrow.a4fc9165dd79885962de.gif",
+    "static/media/RigtArrow.gif": "/PortFolio/static/media/RigtArrow.f2965bb8cb7a15ba892d.gif",
+    "static/media/Hero_Mobile.jpg": "/PortFolio/static/media/Hero_Mobile.3e57e7f9dc5cd677c644.jpg",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/Vergo.png": "/PortFolio/static/media/Vergo.e4f13d2f8b35a1e2e0df.png",
+    "static/media/16353_3867287_580791_image.jpg": "/PortFolio/static/media/16353_3867287_580791_image.795936bfedbbdf24062b.jpg",
+    "static/media/hello.png": "/PortFolio/static/media/hello.a04cce29d16db11d588f.png",
+    "static/media/GlassCo.png": "/PortFolio/static/media/GlassCo.9b497f0abc35f247a012.png",
+    "static/media/React.png": "/PortFolio/static/media/React.51facde924a156e47c39.png",
+    "static/media/Mongo.png": "/PortFolio/static/media/Mongo.e3d303c414914d83effb.png",
+    "static/media/ConFusion.png": "/PortFolio/static/media/ConFusion.f9a2256075f9f1664b34.png",
+    "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
+    "index.html": "/PortFolio/index.html",
+    "main.e68f4875.css.map": "/PortFolio/static/css/main.e68f4875.css.map",
+    "main.983f8572.js.map": "/PortFolio/static/js/main.983f8572.js.map",
+    "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e68f4875.css",
+    "static/js/main.983f8572.js"
+  ]
+}
