@@ -178,7 +178,7 @@ function RenderItem() {
               </h2>
             </Container>
             <HovRev text="ConFusion" text2="Restaurant Application" src={ConFu} src1={Rect} src2={mongo} link={"https://deathstar606.github.io/ConFusion/#/home"}/>
-            <HovRev text="Galaxy Reno" text2="Renovation Corporation" src={Gren} src1={Rect} src2={mongo} link={"https://deathstar606.github.io/GalaxyRen/#/home"}/>
+            <HovRev text="Galaxy Reno" text2="Renovation Corporation" src={Gren} src1={Rect} src2={mongo} link={"https://www.galaxyhomesolutions.ca/#/home"}/>
             <HovRev text="Veloura" text2="Ecommerce Web Application" src={Velou} src1={Rect} src2={mongo} link={"https://www.velourabd.com/"}/>
             <HovRev text="Digix" text2="Ongoing project" src={Digi} src1={Rect} src2={Json} link={"https://deathstar606.github.io/Digix/#/home"}/>
             <HovRev text="VerGo" text2="Clothing Brand App" src={Vergo} src1={Rect} src2={fire} link={"https://deathstar606.github.io/VerGo/#/home"}/>
