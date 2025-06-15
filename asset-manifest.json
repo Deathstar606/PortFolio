@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.e68f4875.css",
-    "main.js": "/PortFolio/static/js/main.2e0e8520.js",
+    "main.js": "/PortFolio/static/js/main.7a263552.js",
     "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
     "static/media/GALAXY_WEBSITE_Transparent.svg": "/PortFolio/static/media/GALAXY_WEBSITE_Transparent.0b9184e298b46ba1c98938aaeba62f15.svg",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
-    "static/media/Velou.PNG": "/PortFolio/static/media/Velou.4cc31dad649754a68037.PNG",
     "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/Velou.ico": "/PortFolio/static/media/Velou.5678ad6c904bdc2ce7a7.ico",
     "static/media/fontawesome-webfont.eot": "/PortFolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/Hero.jpg": "/PortFolio/static/media/Hero.39ebd62144955e49501f.jpg",
@@ -26,11 +26,11 @@
     "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
     "index.html": "/PortFolio/index.html",
     "main.e68f4875.css.map": "/PortFolio/static/css/main.e68f4875.css.map",
-    "main.2e0e8520.js.map": "/PortFolio/static/js/main.2e0e8520.js.map",
+    "main.7a263552.js.map": "/PortFolio/static/js/main.7a263552.js.map",
     "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e68f4875.css",
-    "static/js/main.2e0e8520.js"
+    "static/js/main.7a263552.js"
   ]
 }
