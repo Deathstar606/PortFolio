@@ -13,7 +13,7 @@ import Codex from "../images/Case Logo/16353_3867287_580791_image.jpg"
 import Digi from "../images/Case Logo/Digixwhitelogo.png"
 import Vergo from "../images/Case Logo/Vergo.png"
 import Gren from "../images/Case Logo/GALAXY_WEBSITE_Transparent.svg"
-import Velou from "../images/Case Logo/Velou.PNG"
+import Velou from "../images/Case Logo/Velou.ico"
 import MediaQuery from "react-responsive";
 
 const SliderRev = {
