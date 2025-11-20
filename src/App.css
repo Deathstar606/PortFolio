@@ -3,6 +3,10 @@ body {
   font-family: "Titillium", sans-serif;
 }
 
+.nav-container {
+  max-width: 100%;
+}
+
 @media (min-width: 1368px) {
   .lg-container {
     max-width: 85%;
@@ -39,8 +43,8 @@ body {
   align-items: center;
   height: 100vh;
   background-color: transparent;
-  margin:0px auto;
-  color: #F1593A;
+  margin: 0px auto;
+  color: #f1593a;
 }
 
 @media (max-width: 639px) {
@@ -82,7 +86,7 @@ body {
   .desigt {
     color: black;
   }
-} 
+}
 
 .modal-back {
   position: fixed;
@@ -101,10 +105,16 @@ body {
   z-index: 9999;
 }
 
+@media (max-width: 639px) {
+  .nav-c {
+    width: 50%;
+  }
+}
+
 .nav-items {
   color: black;
-  font-size: 18px;
-  font-weight: 500;
+  padding-bottom: 3px;
+  font-size: 20px;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -125,15 +135,15 @@ body {
   position: absolute;
   display: inline-block;
   width: 100%;
-  left: -110px;
+  left: -100%;
   bottom: 0;
-  background: #BCBAB8;
+  background: #bcbab8;
   z-index: -1;
   transition: left 0.3s ease;
 }
 
 .nav-items:hover .nav-items-inner {
-  left: 0px; 
+  left: 0px;
 }
 
 .headerdec {
@@ -194,7 +204,7 @@ body {
 }
 
 .case-sec {
-  background-color: #BCBAB8;
+  background-color: #bcbab8;
   position: relative;
   display: flex;
   align-items: center;
@@ -210,7 +220,7 @@ body {
 
 .mySwiper .swiper-button-next::after,
 .mySwiper .swiper-button-prev::after {
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .mySwiper .swiper-pagination-bullet {
