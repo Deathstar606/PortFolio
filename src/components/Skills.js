@@ -8,6 +8,7 @@ import Rect from "../images/Skill_Icons/icons8-react-96.png";
 import Node from "../images/Skill_Icons/icons8-node-js-96.png";
 import wp from "../images/Skill_Icons/icons8-wordpress-50.png";
 import next from "../images/Skill_Icons/icons8-nextjs-48.png";
+import fig from "../images/Skill_Icons/icons8-figma-100.png";
 import Mongo from "../images/Skill_Icons/icons8-mongo-db-96.png";
 import Redu from "../images/Skill_Icons/icons8-redux-100.png";
 import Fire from "../images/Skill_Icons/firebase.png";
@@ -175,6 +176,27 @@ function Skills() {
                 </motion.div>
                 <h5 className="d-flex justify-content-center mt-2 mb-5">
                   NextJs
+                </h5>
+              </SwiperSlide>
+              <SwiperSlide>
+                <motion.div className="d-flex justify-content-center">
+                  <motion.img
+                    src={fig}
+                    alt="back"
+                    className="skill"
+                    animate={{
+                      rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                    }}
+                    transition={{
+                      duration: 1.2,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "easeInOut",
+                    }}
+                  />
+                </motion.div>
+                <h5 className="d-flex justify-content-center mt-2 mb-5">
+                  Figma
                 </h5>
               </SwiperSlide>
               <SwiperSlide>
@@ -356,6 +378,27 @@ function Skills() {
                 </motion.div>
                 <h5 className="d-flex justify-content-center mt-2 mb-5">
                   NextJs
+                </h5>
+              </SwiperSlide>
+              <SwiperSlide>
+                <motion.div className="d-flex justify-content-center">
+                  <motion.img
+                    src={fig}
+                    alt="back"
+                    className="skill"
+                    animate={{
+                      rotate: [0, -5, 5, -5, 5, 0], // slight rotation back and forth
+                    }}
+                    transition={{
+                      duration: 1.2,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "easeInOut",
+                    }}
+                  />
+                </motion.div>
+                <h5 className="d-flex justify-content-center mt-2 mb-5">
+                  Figma
                 </h5>
               </SwiperSlide>
               <SwiperSlide>
