@@ -161,14 +161,13 @@ function RenderItem() {
     <>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-5"
+          className="headerdec pt-5 pb-5"
           id="casestu"
           style={{
             color: "#DD6410",
             position: "relative",
             display: "inline-block",
             overflow: "hidden",
-            whiteSpace: "nowrap",
           }}
         >
           <StaggeredText text={"Case Studies"}></StaggeredText>
@@ -187,7 +186,10 @@ function RenderItem() {
             }}
           />
         </h2>
-        <p className="pb-5 pl-2" style={{ color: "#DD6410" }}>
+        <p
+          className="pb-4 pl-2 text-center"
+          style={{ color: "#DD6410", width: "100%" }}
+        >
           "Some of the projects are in pre-production state"
         </p>
       </Container>
