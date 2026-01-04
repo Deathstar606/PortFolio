@@ -12,6 +12,127 @@ import "swiper/css/effect-coverflow";
 import "../components/testimonial.css";
 import { Pagination, Navigation, EffectCoverflow } from "swiper/modules";
 
+const testiData = [
+  {
+    name: "Fardin Rahman 1",
+    img: Fard,
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    rating: "5",
+  },
+  {
+    name: "Fardin Rahman 2",
+    img: Fard,
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    rating: "5",
+  },
+  {
+    name: "Fardin Rahman 3",
+    img: Fard,
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    rating: "5",
+  },
+  {
+    name: "Fardin Rahman 4",
+    img: Fard,
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    rating: "5",
+  },
+  {
+    name: "Fardin Rahman 5",
+    img: Fard,
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    rating: "5",
+  },
+  {
+    name: "Fardin Rahman 6",
+    img: Fard,
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    rating: "5",
+  },
+];
+
+function TestimonialCard({ data }) {
+  return (
+    <Card
+      className="acrd"
+      style={{
+        borderRadius: "20px",
+        border: "1px solid #BCBAB8",
+        backgroundColor: "transparent",
+        position: "relative",
+        overflow: "hidden",
+        width: "350px",
+      }}
+    >
+      <Card.Body>
+        <div className="d-flex justify-content-center">
+          <img
+            src={data.img}
+            alt={data.name}
+            style={{ width: "4rem", borderRadius: "120px" }}
+          />
+        </div>
+
+        <div
+          className="d-flex justify-content-center mt-2 mb-5"
+          style={{ color: "#F5F5F5" }}
+        >
+          {data.name}
+        </div>
+
+        <Card.Text style={{ color: "#F5F5F5" }}>{data.description}</Card.Text>
+
+        <Card.Subtitle className="mt-2 text-muted">
+          {data.rating} 🌟
+        </Card.Subtitle>
+      </Card.Body>
+    </Card>
+  );
+}
+
+function TestimonialCardPhn({ data }) {
+  return (
+    <Card
+      style={{
+        borderRadius: "20px",
+        border: "1px solid #BCBAB8",
+        backgroundColor: "transparent",
+      }}
+    >
+      <Card.Body>
+        <div className="d-flex justify-content-center">
+          <img
+            src={data.img}
+            alt={data.name}
+            style={{ width: "4rem", borderRadius: "120px" }}
+          />
+        </div>
+
+        <div
+          className="d-flex justify-content-center mt-2 mb-5"
+          style={{ color: "#F5F5F5" }}
+        >
+          {data.name}
+        </div>
+
+        <Card.Text style={{ color: "#F5F5F5", paddingTop: "20px" }}>
+          {data.description}
+        </Card.Text>
+
+        <Card.Subtitle className="mt-2 text-muted">
+          {data.rating} 🌟
+        </Card.Subtitle>
+      </Card.Body>
+    </Card>
+  );
+}
+
 function TestiPhn() {
   return (
     <>
@@ -44,68 +165,11 @@ function TestiPhn() {
               modules={[Pagination, Navigation, EffectCoverflow]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <Card
-                  style={{
-                    borderRadius: "20px",
-                    border: "1px solid #BCBAB8",
-                    backgroundColor: "transparent",
-                  }}
-                >
-                  <Card.Body>
-                    <div className="d-flex justify-content-center">
-                      <img
-                        src={Fard}
-                        style={{ width: "4rem", borderRadius: "120px" }}
-                      />
-                    </div>
-                    <div
-                      className="d-flex justify-content-center mt-2 mb-5"
-                      style={{ color: "#F5F5F5" }}
-                    >
-                      Fardin Rahman
-                    </div>
-                    <Card.Text style={{ color: "#F5F5F5" }}>
-                      "Some quick example text to build on the card title and
-                      make up the bulk of the card's content".
-                    </Card.Text>
-                    <Card.Subtitle className="mt-2 text-muted">
-                      5🌟
-                    </Card.Subtitle>
-                  </Card.Body>
-                </Card>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Card
-                  style={{
-                    borderRadius: "20px",
-                    border: "1px solid #BCBAB8",
-                    backgroundColor: "transparent",
-                  }}
-                >
-                  <Card.Body>
-                    <div className="d-flex justify-content-center">
-                      <img
-                        src={Fard}
-                        style={{ width: "4rem", borderRadius: "120px" }}
-                      />
-                    </div>
-                    <div
-                      className="d-flex justify-content-center mt-2 mb-5"
-                      style={{ color: "#F5F5F5" }}
-                    >
-                      Fardin Rahman
-                    </div>
-                    <Card.Text style={{ color: "#F5F5F5" }}>
-                      "Some quick example text to build on the card title and
-                      make up the bulk of the card's content".
-                    </Card.Text>
-                    <Card.Subtitle className="mt-2 text-muted">
-                      5🌟
-                    </Card.Subtitle>
-                  </Card.Body>
-                </Card>
-              </SwiperSlide>
+              {testiData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <TestimonialCardPhn data={item} />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Col>
         </Row>
@@ -118,381 +182,14 @@ function TestiMonial1() {
   return (
     <div className="d-flex logos pb-5">
       <div className="d-flex logos-slide" style={{ position: "relative" }}>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 1
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 2
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 3
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 4
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 5
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 6
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
+        {testiData.map((item, index) => (
+          <TestimonialCard key={index} data={item} />
+        ))}
       </div>
-
       <div className="d-flex logos-slide" style={{ position: "relative" }}>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 1
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 2
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 3
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 4
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 5
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
-        <Card
-          className="acrd"
-          style={{
-            borderRadius: "20px",
-            border: "1px solid #BCBAB8",
-            backgroundColor: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            width: "350px",
-          }}
-        >
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <img
-                src={Fard}
-                style={{ width: "4rem", borderRadius: "120px" }}
-              />
-            </div>
-            <div
-              className="d-flex justify-content-center mt-2 mb-5"
-              style={{ color: "#F5F5F5" }}
-            >
-              Fardin Rahman 6
-            </div>
-            <Card.Text style={{ color: "#F5F5F5" }}>
-              "Some quick example text to build on the card title and make up
-              the bulk of the card's content".
-            </Card.Text>
-            <Card.Subtitle className="mt-2 text-muted">5🌟</Card.Subtitle>
-          </Card.Body>
-        </Card>
+        {testiData.map((item, index) => (
+          <TestimonialCard key={index} data={item} />
+        ))}
       </div>
     </div>
   );

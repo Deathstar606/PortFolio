@@ -7,7 +7,7 @@ import Head from "../images/Header.png";
 import Amper from "../images/ampersand.png";
 import Fb from "../images/Socials/facebook light.png";
 import Lin from "../images/Socials/linkedin light.png";
-import Dis from "../images/Socials/discord light.png";
+import git from "../images/Socials/github light.png";
 import Arrow from "../images/arrow.gif";
 
 const LangVariants = {
@@ -147,7 +147,10 @@ const HeroSec = () => {
                         alt="LinkedIn"
                       />
                     </a>
-                    <a href="/">
+                    <a
+                      href="https://github.com/Deathstar606?tab=repositories"
+                      target="_blank"
+                    >
                       <img
                         style={{
                           height: "40px",
@@ -155,8 +158,8 @@ const HeroSec = () => {
                           marginTop: "15px",
                           marginRight: "10px",
                         }}
-                        src={Dis}
-                        alt="Discord"
+                        src={git}
+                        alt="GitHub"
                       />
                     </a>
                     <img

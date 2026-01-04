@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import fm from "../images/FM_BL.png";
 import Contact from "./ContactMe";
 import Fb from "../images/Socials/facebook dark.png";
-import Dis from "../images/Socials/discord dark.png";
+import Git from "../images/Socials/github dark.png";
 import Lin from "../images/Socials/linkedin dark.png";
 
 function Footer() {
@@ -42,11 +42,14 @@ function Footer() {
                 alt="linkedin"
               />
             </a>
-            <a href="/">
+            <a
+              href="https://github.com/Deathstar606?tab=repositories"
+              target="_blank"
+            >
               <img
                 style={{ height: "40px", width: "40px" }}
-                src={Dis}
-                alt="discord"
+                src={Git}
+                alt="GitHub"
               />
             </a>
           </Col>

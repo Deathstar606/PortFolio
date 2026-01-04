@@ -13,8 +13,8 @@ import ConFu from "../images/Case Logo/ConFusion.png";
 import Codex from "../images/Case Logo/16353_3867287_580791_image.jpg";
 import Digi from "../images/Case Logo/Digixwhitelogo.png";
 import Vergo from "../images/Case Logo/Vergo.png";
-import Gren from "../images/Case Logo/GALAXY_WEBSITE_Transparent.svg";
-import Velou from "../images/Case Logo/Velou.ico";
+import Gren from "../images/Case Logo/galaxyreno.png";
+import Velou from "../images/Case Logo/velou.png";
 import Techno from "../images/Case Logo/TechnoWave.jpg";
 import MediaQuery from "react-responsive";
 
@@ -161,13 +161,14 @@ function RenderItem() {
     <>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-5 pb-5"
+          className="headerdec pt-5"
           id="casestu"
           style={{
             color: "#DD6410",
             position: "relative",
             display: "inline-block",
             overflow: "hidden",
+            whiteSpace: "nowrap",
           }}
         >
           <StaggeredText text={"Case Studies"}></StaggeredText>
@@ -186,6 +187,9 @@ function RenderItem() {
             }}
           />
         </h2>
+        <p className="pb-5 pl-2" style={{ color: "#DD6410" }}>
+          "Some of the projects are in pre-production state"
+        </p>
       </Container>
       <HovRev
         text="ConFusion"
