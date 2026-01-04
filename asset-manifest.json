@@ -1,14 +1,12 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.0eb18e99.css",
-    "main.js": "/PortFolio/static/js/main.7b3de2d5.js",
-    "static/js/787.2e4ac314.chunk.js": "/PortFolio/static/js/787.2e4ac314.chunk.js",
+    "main.js": "/PortFolio/static/js/main.98e88edd.js",
+    "static/js/787.bc93fc76.chunk.js": "/PortFolio/static/js/787.bc93fc76.chunk.js",
     "static/media/demo.mp4": "/PortFolio/static/media/demo.92fd2149b997e7c5cd00.mp4",
-    "static/media/GALAXY_WEBSITE_Transparent.svg": "/PortFolio/static/media/GALAXY_WEBSITE_Transparent.0b9184e298b46ba1c98938aaeba62f15.svg",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
     "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/Velou.ico": "/PortFolio/static/media/Velou.5678ad6c904bdc2ce7a7.ico",
     "static/media/fontawesome-webfont.eot": "/PortFolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/Hero.jpg": "/PortFolio/static/media/Hero.39ebd62144955e49501f.jpg",
@@ -19,20 +17,22 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/Vergo.png": "/PortFolio/static/media/Vergo.e4f13d2f8b35a1e2e0df.png",
     "static/media/16353_3867287_580791_image.jpg": "/PortFolio/static/media/16353_3867287_580791_image.795936bfedbbdf24062b.jpg",
+    "static/media/galaxyreno.png": "/PortFolio/static/media/galaxyreno.eccffadbda5149c769a8.png",
     "static/media/hello.png": "/PortFolio/static/media/hello.a04cce29d16db11d588f.png",
+    "static/media/velou.png": "/PortFolio/static/media/velou.8e976614e52c0c4d8b04.png",
+    "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.2ae59786107145067148.png",
     "static/media/GlassCo.png": "/PortFolio/static/media/GlassCo.9b497f0abc35f247a012.png",
     "static/media/React.png": "/PortFolio/static/media/React.51facde924a156e47c39.png",
     "static/media/Mongo.png": "/PortFolio/static/media/Mongo.e3d303c414914d83effb.png",
     "static/media/ConFusion.png": "/PortFolio/static/media/ConFusion.f9a2256075f9f1664b34.png",
-    "static/media/Digixwhitelogo.png": "/PortFolio/static/media/Digixwhitelogo.c2d410111f75f915efcf.png",
     "static/media/TechnoWave.jpg": "/PortFolio/static/media/TechnoWave.21bfbef30f400f8898de.jpg",
     "index.html": "/PortFolio/index.html",
     "main.0eb18e99.css.map": "/PortFolio/static/css/main.0eb18e99.css.map",
-    "main.7b3de2d5.js.map": "/PortFolio/static/js/main.7b3de2d5.js.map",
-    "787.2e4ac314.chunk.js.map": "/PortFolio/static/js/787.2e4ac314.chunk.js.map"
+    "main.98e88edd.js.map": "/PortFolio/static/js/main.98e88edd.js.map",
+    "787.bc93fc76.chunk.js.map": "/PortFolio/static/js/787.bc93fc76.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0eb18e99.css",
-    "static/js/main.7b3de2d5.js"
+    "static/js/main.98e88edd.js"
   ]
 }
