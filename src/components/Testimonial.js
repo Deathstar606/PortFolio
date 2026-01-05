@@ -16,6 +16,7 @@ const testiData = [
   {
     name: "Fardin Rahman 1",
     img: Fard,
+    designation: "CEO, Company",
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     rating: "5",
@@ -23,6 +24,7 @@ const testiData = [
   {
     name: "Fardin Rahman 2",
     img: Fard,
+    designation: "CEO, Company",
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     rating: "5",
@@ -30,6 +32,7 @@ const testiData = [
   {
     name: "Fardin Rahman 3",
     img: Fard,
+    designation: "CEO, Company",
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     rating: "5",
@@ -37,6 +40,7 @@ const testiData = [
   {
     name: "Fardin Rahman 4",
     img: Fard,
+    designation: "CEO, Company",
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     rating: "5",
@@ -44,6 +48,7 @@ const testiData = [
   {
     name: "Fardin Rahman 5",
     img: Fard,
+    designation: "CEO, Company",
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     rating: "5",
@@ -51,6 +56,7 @@ const testiData = [
   {
     name: "Fardin Rahman 6",
     img: Fard,
+    designation: "CEO, Company",
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     rating: "5",
@@ -79,13 +85,10 @@ function TestimonialCard({ data }) {
           />
         </div>
 
-        <div
-          className="d-flex justify-content-center mt-2 mb-5"
-          style={{ color: "#F5F5F5" }}
-        >
+        <div className="text-center mt-2 mb-3" style={{ color: "#F5F5F5" }}>
           {data.name}
+          <p className="mt-2 text-muted">{data.designation}</p>
         </div>
-
         <Card.Text style={{ color: "#F5F5F5" }}>{data.description}</Card.Text>
 
         <Card.Subtitle className="mt-2 text-muted">
@@ -114,11 +117,9 @@ function TestimonialCardPhn({ data }) {
           />
         </div>
 
-        <div
-          className="d-flex justify-content-center mt-2 mb-5"
-          style={{ color: "#F5F5F5" }}
-        >
+        <div className="text-center mt-2 mb-2" style={{ color: "#F5F5F5" }}>
           {data.name}
+          <p className="mt-2 text-muted">{data.designation}</p>
         </div>
 
         <Card.Text style={{ color: "#F5F5F5", paddingTop: "20px" }}>
