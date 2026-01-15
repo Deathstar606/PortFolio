@@ -6,6 +6,8 @@ import Fb from "../images/Socials/facebook dark.png";
 import Git from "../images/Socials/github dark.png";
 import Lin from "../images/Socials/linkedin dark.png";
 
+import { Link } from "react-scroll";
+
 function Footer() {
   return (
     <div style={{ backgroundColor: "darkgrey" }}>
@@ -13,11 +15,18 @@ function Footer() {
       <Container className="lg-container">
         <Row>
           <Col xs={4} className="d-flex justify-content-center p-5">
-            <img
-              src={fm}
-              alt="Logo"
-              style={{ height: "40px", width: "40px" }}
-            />
+            <Link
+              to="hero"
+              smooth={true}
+              duration={500}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={fm}
+                alt="Logo"
+                style={{ height: "40px", width: "40px" }}
+              />
+            </Link>
           </Col>
           <Col xs={3}></Col>
           <Col xs={4} className="d-flex justify-content-center p-5">

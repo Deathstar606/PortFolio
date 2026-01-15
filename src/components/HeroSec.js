@@ -82,7 +82,7 @@ function TestHead() {
 const HeroSec = () => {
   return (
     <>
-      <div className="headerback">
+      <div className="headerback" id="hero">
         <SectionYPos>
           <div className="jumbotron">
             <Container className="lg-container">
@@ -94,7 +94,7 @@ const HeroSec = () => {
                 >
                   <div className="text-center">
                     <h6 style={{ color: "#BCBAB8" }}>I am...</h6>
-                    <h1>
+                    <h1 className="headertext">
                       <StaggeredText text={"Fardin Rahman"}></StaggeredText>
                     </h1>
                     <h2 style={{ color: "#BCBAB8" }}>Fullstack developer</h2>

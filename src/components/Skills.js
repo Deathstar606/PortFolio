@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container, Row } from "reactstrap";
 import { StaggeredText } from "./Animations";
 import { motion } from "framer-motion";
@@ -21,6 +21,7 @@ import "swiper/css/scrollbar";
 import { Scrollbar } from "swiper/modules";
 
 function Skills() {
+  const swiperRef = useRef(null);
   return (
     <div
       style={{
@@ -37,6 +38,7 @@ function Skills() {
             alt="Arrow"
             className="ml-auto"
             style={{ width: "100px" }}
+            onClick={() => swiperRef.current?.slideNext()}
           />
         </h2>
         <MediaQuery minWidth={639}>
@@ -45,6 +47,7 @@ function Skills() {
             style={{ paddingRight: "10%", paddingLeft: "10%" }}
           >
             <Swiper
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
               scrollbar={{
                 hide: true,
               }}
@@ -247,6 +250,7 @@ function Skills() {
         <MediaQuery maxWidth={638}>
           <Row className="mt-5 mb-3">
             <Swiper
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
               scrollbar={{
                 hide: true,
               }}
