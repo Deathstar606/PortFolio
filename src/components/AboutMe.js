@@ -2,6 +2,7 @@ import { Container, Row, Col } from "reactstrap";
 import { SectionXPos, SectionXNeg, StaggeredText } from "./Animations";
 import { useInView as InObs } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import intro from "../images/Introduction.mp4";
 import MediaQuery from "react-responsive";
 
 const SliderRev = {
@@ -56,15 +57,25 @@ function AboutMe() {
       <Row style={{ padding: "5vh 0px 5vh 0px" }}>
         <Col md={4} className="pb-4">
           <div
-            className="embed-responsive embed-responsive-16by9"
-            style={{ borderRadius: "15px" }}
+            style={{
+              width: "100%",
+              overflow: "hidden", // Forces the video to respect the rounded corners
+              backgroundColor: "#000", // Clean black background while loading
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)", // Optional: adds a slight shadow for depth
+            }}
           >
-            <iframe
-              src="https://drive.google.com/file/d/14XdYlzpEwsEc-TvDc8EHmJALQUKdfsAo/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
-            ></iframe>
+            <video
+              width="100%"
+              height="auto"
+              style={{ display: "block" }} // Removes the default inline gap below the video
+              controls // Adds standard play/pause/volume controls
+              muted // Optional: Required if you want to use autoPlay in modern browsers
+              playsInline
+            >
+              {/* Point this src to where you placed the file in your public folder */}
+              <source src={intro} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </Col>
         <Col
