@@ -185,6 +185,7 @@ function RenderItem() {
             style={{
               position: "absolute",
               width: "100%",
+              height: "100%",
               top: 0,
               bottom: -7,
               background: "#A9A9A9",

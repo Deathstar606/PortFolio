@@ -85,46 +85,54 @@ export const SectionXPos = ({ children }) => {
 
 export const StaggeredText = ({ text }) => {
   const [ref, inView] = InObs({
-    threshold: 0.5,
+    threshold: 0.1, // Reduced from 0.5 to trigger easier on small mobile screens
     triggerOnce: true,
   });
 
   const textVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2,
+        delayChildren: 0.2, // Make sure this syncs with your parent slider delay
       },
     },
   };
 
   const letterVariants = {
-    hidden: { opacity: 0, y: 50 },
+    // FIX 1: Use 100% instead of 50px. It dynamically adjusts to the font size
+    // instead of a massive hardcoded pixel drop.
+    hidden: { opacity: 0, y: "100%" },
     visible: {
       opacity: 1,
       y: 0,
+      transition: { ease: "easeOut", duration: 0.4 },
     },
   };
 
   return (
-    <motion.div
+    <motion.span
       ref={ref}
       variants={textVariants}
       initial="hidden"
-      animate={inView ? "visible" : "initial"}
+      animate={inView ? "visible" : "hidden"}
+      style={{ display: "inline-block", position: "relative", zIndex: 30 }} // Keep above slider
     >
-      {text.split("").map((letter, index) => (
+      {text.split("").map((char, index) => (
         <motion.span
           key={index}
           variants={letterVariants}
-          style={{ position: "relative" }}
+          style={{
+            // FIX 2: display: inline-block is STRICTLY REQUIRED for 'y' transforms to work
+            display: "inline-block",
+            // FIX 3: Prevents Framer Motion from collapsing empty spaces between words
+            whiteSpace: char === " " ? "pre" : "normal",
+          }}
         >
-          {letter}
+          {char}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.span>
   );
 };

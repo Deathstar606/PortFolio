@@ -26,13 +26,15 @@ function AboutMe() {
   return (
     <Container style={{ maxWidth: "95%" }}>
       <h2
-        className="headerdec pt-3 pb-3"
+        className="headerdec pt-3 pb-3" // You can now safely reduce padding here
         id="about"
         style={{
           color: "#DD6410",
           position: "relative",
           display: "inline-block",
           overflow: "hidden",
+          lineHeight: "1.2", // FIX 1: Ensures the bounding box calculates the text height correctly
+          marginBottom: "0", // FIX 2: Prevents margin collapse from clipping inside hidden overflow
         }}
       >
         <StaggeredText text={"Know Me..."}></StaggeredText>
@@ -45,7 +47,7 @@ function AboutMe() {
             position: "absolute",
             width: "100%",
             top: 0,
-            bottom: -7,
+            bottom: 0, // FIX 3: Removed the -7 hack. It now perfectly aligns with the h2 boundaries
             background: "#A9A9A9",
             zIndex: 20,
           }}
