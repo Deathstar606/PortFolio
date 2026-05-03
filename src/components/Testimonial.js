@@ -68,8 +68,7 @@ function TestimonialCard({ data }) {
     <Card
       className="acrd"
       style={{
-        borderRadius: "20px",
-        border: "1px solid #BCBAB8",
+        border: "3px solid #BCBAB8",
         backgroundColor: "transparent",
         position: "relative",
         overflow: "hidden",
@@ -103,8 +102,7 @@ function TestimonialCardPhn({ data }) {
   return (
     <Card
       style={{
-        borderRadius: "20px",
-        border: "1px solid #BCBAB8",
+        border: "3px solid #BCBAB8",
         backgroundColor: "transparent",
       }}
     >

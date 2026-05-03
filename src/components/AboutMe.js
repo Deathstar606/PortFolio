@@ -2,6 +2,7 @@ import { Container, Row, Col } from "reactstrap";
 import { SectionXPos, SectionXNeg, StaggeredText } from "./Animations";
 import { useInView as InObs } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import MediaQuery from "react-responsive";
 
 const SliderRev = {
   hidden: {
@@ -25,7 +26,7 @@ function AboutMe() {
   return (
     <Container style={{ maxWidth: "95%" }}>
       <h2
-        className="headerdec pt-5 pb-5"
+        className="headerdec pt-3 pb-3"
         id="about"
         style={{
           color: "#DD6410",
@@ -65,9 +66,16 @@ function AboutMe() {
           </div>
         </Col>
         <Col
-          className="d-flex align-items-center border-right pb-4"
+          className="d-flex align-items-center pb-4" // Removed 'border-right' class
           md={4}
-          style={{ color: "#BCBAB8", fontWeight: "400", fontSize: "20px" }}
+          style={{
+            color: "#BCBAB8",
+            fontWeight: "400",
+            fontSize: "20px",
+            borderWidth: "0 2px 0 0", // Sets width only for the right border (Top Right Bottom Left)
+            borderStyle: "solid",
+            borderImage: "linear-gradient(to bottom, #BCBAB8, #DD6410) 1", // Applies the gradient
+          }}
         >
           <SectionXNeg>
             I have 4 years of experience as a full-stack developer, ready to
@@ -91,26 +99,50 @@ function AboutMe() {
         >
           <SectionXPos>
             <div>
-              <h3
-                className="pl-3 mt-3"
-                style={{ fontWeight: "500", color: "#DD6410" }}
-              >
-                Core Competencies
-              </h3>
-              <ul className="list-group list-group-flush d-flex">
-                <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                  High work ethic, not able to rest until I am satisfied with my
-                  progress.
-                </li>
-                <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                  Quick learner, easily able to adapt to new situations and
-                  thrive in dynamic work environments.
-                </li>
-                <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                  Skilled problem solver, finding out new ways of thinking and
-                  implementing the best solution.
-                </li>
-              </ul>
+              <MediaQuery maxWidth={639}>
+                <h3
+                  className="mt-3 text-center"
+                  style={{ fontWeight: "500", color: "#DD6410" }}
+                >
+                  Core Competencies
+                </h3>
+                <ul className="list-group list-group-flush d-flex text-center">
+                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
+                    High work ethic, not able to rest until I am satisfied with
+                    my progress.
+                  </li>
+                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
+                    Quick learner, easily able to adapt to new situations and
+                    thrive in dynamic work environments.
+                  </li>
+                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
+                    Skilled problem solver, finding out new ways of thinking and
+                    implementing the best solution.
+                  </li>
+                </ul>
+              </MediaQuery>
+              <MediaQuery minWidth={640}>
+                <h3
+                  className="pl-3 mt-3"
+                  style={{ fontWeight: "500", color: "#DD6410" }}
+                >
+                  Core Competencies
+                </h3>
+                <ul className="list-group list-group-flush d-flex">
+                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
+                    High work ethic, not able to rest until I am satisfied with
+                    my progress.
+                  </li>
+                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
+                    Quick learner, easily able to adapt to new situations and
+                    thrive in dynamic work environments.
+                  </li>
+                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
+                    Skilled problem solver, finding out new ways of thinking and
+                    implementing the best solution.
+                  </li>
+                </ul>
+              </MediaQuery>
             </div>
           </SectionXPos>
         </Col>

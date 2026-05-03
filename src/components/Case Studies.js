@@ -50,7 +50,7 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
 
   return (
     <motion.div
-      className="border-bottom border-top case-sec"
+      className="case-sec"
       onMouseEnter={handleYeet}
       onMouseLeave={handleMouseLeave}
     >
@@ -59,7 +59,7 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "10px",
+          gap: "3px",
           flex: "1",
         }}
       >
@@ -100,9 +100,15 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "inherit", textDecoration: "none" }}
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px", // Keeps the text and icon perfectly spaced
+              }}
             >
-              Launch
+              Launch <i className="fa fa-external-link" aria-hidden="true"></i>
             </a>
           </Button>
         ) : (
@@ -161,7 +167,7 @@ function RenderItem() {
     <>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-5 pb-5"
+          className="headerdec pt-3 pb-3"
           id="casestu"
           style={{
             color: "#DD6410",
@@ -187,8 +193,14 @@ function RenderItem() {
           />
         </h2>
         <p
-          className="pb-4 pl-2 text-center"
-          style={{ color: "#DD6410", width: "100%" }}
+          className="pb-4 pl-2"
+          style={{
+            color: "#DD6410",
+            width: "100%",
+            whiteSpace: "nowrap",
+            overflowX: "auto", // Allows horizontal scrolling
+            scrollbarWidth: "none", // Hides the scrollbar on Firefox
+          }}
         >
           "Some of the projects are in pre-production state"
         </p>
