@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { StaggeredText } from "./Animations";
@@ -129,16 +129,17 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
             exit="exit"
             style={{
               position: "absolute",
-              top: -100,
+              top: -70,
               left: "15%",
-              zIndex: 1,
+              zIndex: 100,
             }}
           >
             <MediaQuery maxWidth={639}>
               <img
                 style={{
-                  width: "200px",
-                  borderRadius: "20px",
+                  marginTop: "50px",
+                  width: "150px",
+                  borderRadius: "5px",
                 }}
                 src={src}
               />
@@ -147,7 +148,7 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
               <img
                 style={{
                   width: "300px",
-                  borderRadius: "20px",
+                  borderRadius: "10px",
                 }}
                 src={src}
               />
@@ -193,18 +194,36 @@ function RenderItem() {
             }}
           />
         </h2>
-        <p
-          className="pb-4 pl-2"
-          style={{
-            color: "#DD6410",
-            width: "100%",
-            whiteSpace: "nowrap",
-            overflowX: "auto", // Allows horizontal scrolling
-            scrollbarWidth: "none", // Hides the scrollbar on Firefox
-          }}
+        <div
+          className="d-flex justify-content-center flex-column pb-5"
+          style={{ width: "fit-content" }}
         >
-          "Some of the projects are in pre-production state"
-        </p>
+          <Row className="no-gutters align-items-start flex-nowrap">
+            {/* Quote Content */}
+            <Col style={{ width: "fit-content" }}>
+              <div className="py-1">
+                <h5
+                  style={{
+                    color: "#DD6410",
+                    fontWeight: "500",
+                    fontSize: "clamp(0.9rem, 2vw, 1rem)",
+                    lineHeight: "1.4",
+                    margin: 0,
+                  }}
+                >
+                  {/* Main Quote Body */}
+                  <div className="mb-1">
+                    <StaggeredText
+                      text={
+                        "Some are in pre-production state. Click on the launch button to see the live project or click on show to see the prototype and wireframes."
+                      }
+                    />
+                  </div>
+                </h5>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </Container>
       <HovRev
         text="ConFusion"

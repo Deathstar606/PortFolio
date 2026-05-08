@@ -79,7 +79,7 @@ function AboutMe() {
           </div>
         </Col>
         <Col
-          className="d-flex align-items-center pb-4" // Removed 'border-right' class
+          className="d-flex align-items-center text-center pb-4" // Removed 'border-right' class
           md={4}
           style={{
             color: "#BCBAB8",

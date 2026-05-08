@@ -52,7 +52,7 @@ function Topics() {
     <>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-5 pb-5"
+          className="headerdec pt-3 pb-3"
           id="learn"
           style={{
             color: "#DD6410",
@@ -77,51 +77,71 @@ function Topics() {
             }}
           />
         </h2>
-        <MediaQuery maxWidth={639}>
-          <div className="d-flex justify-content-center">
-            <h1 style={{ color: "#BCBAB8" }}>"</h1>
-          </div>
 
-          <h3
-            className="text-center"
-            style={{
-              color: "#DD6410",
-              fontWeight: "500",
-              fontSize: "clamp(25px, 2vw, 35px)",
-            }}
-          >
-            <StaggeredText
-              text={"The best way to learn is to teach - Richard Feynman"}
-            />
-          </h3>
-          <div className="d-flex justify-content-center pt-4">
-            <h1 style={{ color: "#BCBAB8" }}>"</h1>
-          </div>
-        </MediaQuery>
+        <div
+          className="d-flex flex-column pb-5"
+          style={{ width: "fit-content" }}
+        >
+          <Row className="no-gutters align-items-start flex-nowrap">
+            {/* Left Quote Mark - Scaled down */}
+            <Col xs="auto">
+              <h3
+                style={{
+                  color: "#BCBAB8",
+                  marginRight: "8px",
+                  fontSize: "1.8rem",
+                  lineHeight: "1",
+                }}
+              >
+                "
+              </h3>
+            </Col>
 
-        <MediaQuery minWidth={640}>
-          <div className="d-flex pb-5">
-            <h1 className="mr-2" style={{ color: "#BCBAB8" }}>
-              "
-            </h1>
-            <h3
-              /* className="text-center" */ style={{
-                color: "#DD6410",
-                fontWeight: "500",
-                fontSize: "clamp(25px, 2vw, 35px)",
-              }}
-            >
-              <StaggeredText
-                text={"The best way to learn is to teach - Richard Feynman"}
-              />
-            </h3>
-            <h1 className="ml-2" style={{ color: "#BCBAB8" }}>
-              "
-            </h1>
-          </div>
-        </MediaQuery>
+            {/* Quote Content */}
+            <Col style={{ width: "fit-content" }}>
+              <div>
+                <h4
+                  style={{
+                    color: "#DD6410",
+                    fontWeight: "500",
+                    fontSize: "clamp(1.2rem, 2vw, 1.5rem)",
+                    lineHeight: "1.4",
+                    margin: 0,
+                  }}
+                >
+                  {/* Main Quote Body */}
+                  <div className="mb-1">
+                    <StaggeredText text={"The best way to learn is to teach"} />
+                  </div>
 
-        <Container className="mt-5">
+                  {/* NEW FEATURE: Quote Sayer justified to the end */}
+                  <div
+                    className="d-flex justify-content-end mt-1"
+                    style={{ fontStyle: "italic", fontSize: "0.85rem" }}
+                  >
+                    <StaggeredText text={"- Richard Feynman"} />
+                  </div>
+                </h4>
+              </div>
+            </Col>
+
+            {/* Right Quote Mark - Scaled down */}
+            <Col xs="auto">
+              <h3
+                style={{
+                  color: "#BCBAB8",
+                  marginLeft: "8px",
+                  fontSize: "1.8rem",
+                  lineHeight: "1",
+                }}
+              >
+                "
+              </h3>
+            </Col>
+          </Row>
+        </div>
+
+        <Container className="mt-3">
           <Row>
             <Col md={4} className="pb-5">
               <motion.div

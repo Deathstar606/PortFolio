@@ -212,10 +212,10 @@ function TestiSlide() {
   const isInview = useInView(ref, { once: true });
 
   return (
-    <div className="pb-5" style={{ overflow: "hidden" }}>
+    <div className="pb-2" style={{ overflow: "hidden" }}>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-5 pb-5"
+          className="headerdec pt-3 pb-3 mb-4"
           style={{
             color: "#DD6410",
             position: "relative",
