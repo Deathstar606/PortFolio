@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.46675006.css",
-    "main.js": "/PortFolio/static/js/main.c079e8fa.js",
+    "main.css": "/PortFolio/static/css/main.17b03468.css",
+    "main.js": "/PortFolio/static/js/main.9c36c04b.js",
     "static/js/787.bc93fc76.chunk.js": "/PortFolio/static/js/787.bc93fc76.chunk.js",
     "static/media/Introduction.mp4": "/PortFolio/static/media/Introduction.a56c463eeed20a79d49b.mp4",
     "static/media/demo.mp4": "/PortFolio/static/media/demo.92fd2149b997e7c5cd00.mp4",
     "static/media/Codex.png": "/PortFolio/static/media/Codex.99680e33f1eb0570c805.png",
-    "static/media/Header.png": "/PortFolio/static/media/Header.6b3a0cb95259e1f4be43.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/HeroSection.png": "/PortFolio/static/media/HeroSection.250d78e9a06e3946c428.png",
     "static/media/fontawesome-webfont.eot": "/PortFolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/Hero.jpg": "/PortFolio/static/media/Hero.39ebd62144955e49501f.jpg",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/arrow.gif": "/PortFolio/static/media/arrow.a4fc9165dd79885962de.gif",
     "static/media/RigtArrow.gif": "/PortFolio/static/media/RigtArrow.f2965bb8cb7a15ba892d.gif",
-    "static/media/Hero_Mobile.jpg": "/PortFolio/static/media/Hero_Mobile.3e57e7f9dc5cd677c644.jpg",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/PortFolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/Vergo.png": "/PortFolio/static/media/Vergo.e4f13d2f8b35a1e2e0df.png",
     "static/media/16353_3867287_580791_image.jpg": "/PortFolio/static/media/16353_3867287_580791_image.795936bfedbbdf24062b.jpg",
@@ -28,12 +26,12 @@
     "static/media/ConFusion.png": "/PortFolio/static/media/ConFusion.f9a2256075f9f1664b34.png",
     "static/media/TechnoWave.jpg": "/PortFolio/static/media/TechnoWave.21bfbef30f400f8898de.jpg",
     "index.html": "/PortFolio/index.html",
-    "main.46675006.css.map": "/PortFolio/static/css/main.46675006.css.map",
-    "main.c079e8fa.js.map": "/PortFolio/static/js/main.c079e8fa.js.map",
+    "main.17b03468.css.map": "/PortFolio/static/css/main.17b03468.css.map",
+    "main.9c36c04b.js.map": "/PortFolio/static/js/main.9c36c04b.js.map",
     "787.bc93fc76.chunk.js.map": "/PortFolio/static/js/787.bc93fc76.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46675006.css",
-    "static/js/main.c079e8fa.js"
+    "static/css/main.17b03468.css",
+    "static/js/main.9c36c04b.js"
   ]
 }
