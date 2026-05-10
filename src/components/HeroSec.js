@@ -140,9 +140,9 @@ const HeroSec = () => {
                             transition={{ duration: 0.6, ease: "easeInOut" }}
                             whileHover={{ filter: "brightness(130%)" }}
                             style={{
-                              color: "#A9A9A9",
+                              color: "#3b1811",
                               fontSize: "clamp(22px, 4vw, 32px)",
-                              fontWeight: "400",
+                              fontWeight: "700",
                               textAlign: "center",
                               width: "100%",
                               cursor: "default",
@@ -162,7 +162,7 @@ const HeroSec = () => {
                         <h5
                           className="mb-0"
                           style={{
-                            color: "#A9A9A9",
+                            color: "#BCBAB8",
                             fontSize: "clamp(16px, 2.5vw, 22px)",
                             // Reverted: whiteSpace property removed to allow natural responsive behavior
                           }}

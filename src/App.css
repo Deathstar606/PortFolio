@@ -65,13 +65,6 @@ body {
   padding-top: 23vh;
 }
 
-@media (max-width: 639px) {
-  .jumbotron {
-    align-items: center;
-    padding-top: 0px;
-  }
-}
-
 .headerback {
   position: sticky;
   top: 0; /* CRITICAL FIX: Tells the browser to freeze the component at the very top of the viewport */
