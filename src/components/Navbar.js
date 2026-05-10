@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, Nav, NavItem, Container } from "reactstrap";
 import { motion, AnimatePresence } from "framer-motion";
 import MediaQuery from "react-responsive";
 import { Link } from "react-scroll";
-import fm from "../images/FM.png";
+import fm from "../images/FM_BL.png";
 import axios from "axios";
 
 export const Burger = ({ handleOrdPage, DownCv }) => {
@@ -160,7 +160,7 @@ function Example() {
             style={{
               width: "30px",
               height: "2px",
-              backgroundColor: "#DD6410",
+              backgroundColor: "#893805",
               margin: "5px",
             }}
           ></div>
@@ -169,7 +169,7 @@ function Example() {
             style={{
               width: "15px",
               height: "2px",
-              backgroundColor: "#DD6410",
+              backgroundColor: "#893805",
               margin: "5px",
             }}
           ></div>
@@ -178,7 +178,7 @@ function Example() {
             style={{
               width: "30px",
               height: "2px",
-              backgroundColor: "#DD6410",
+              backgroundColor: "#893805",
               margin: "5px",
             }}
           ></div>

@@ -15,7 +15,16 @@ function Home() {
       exit={{ x: -1000, opacity: 0 }}
     >
       <HeroSec />
-      <div style={{ backgroundColor: "#181818" }}>
+
+      {/* CRITICAL FIX: Promoted to a relative stacking context with zIndex: 10. 
+          This forces the solid black container to slide OVER the sticky hero. */}
+      <div
+        style={{
+          backgroundColor: "#181818",
+          position: "relative",
+          zIndex: 10,
+        }}
+      >
         <AboutMe />
         <RenderItem />
         <Topics />

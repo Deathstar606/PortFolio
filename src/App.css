@@ -31,49 +31,60 @@ body {
   }
 }
 
-@media (max-width: 1368px) {
-  .headertext {
-    justify-content: center;
-    margin-top: 20px;
-  }
+.headertext {
+  display: flex; /* Required for justify-content to function */
+  justify-content: center;
+  align-items: center;
+
+  /* Responsive typography */
+  font-size: clamp(50px, 8vw, 100px);
+  font-weight: 700;
+
+  /* CRITICAL: Force single line behavior */
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  word-break: keep-all; /* Prevents breaking at hyphens or spaces */
+  overflow: hidden; /* Ensures animation artifacts don't cause scrollbars */
+
+  /* Maintain layout integrity */
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Ensure children of StaggeredText (motion elements) don't force wraps */
+.headertext > * {
+  display: inline-flex;
+  flex-shrink: 0;
 }
 
 .jumbotron {
   display: flex;
-  align-items: center;
+  align-items: normal;
   height: 100vh;
   background-color: transparent;
   margin: 0px auto;
-  color: #f1593a;
+  padding-top: 23vh;
 }
 
 @media (max-width: 639px) {
   .jumbotron {
-    align-items: normal;
-    padding-top: 27vh;
+    align-items: center;
+    padding-top: 0px;
   }
 }
 
 .headerback {
-  background-image: url("../src//images/Hero_Mobile.jpg");
+  position: sticky;
+  top: 0; /* CRITICAL FIX: Tells the browser to freeze the component at the very top of the viewport */
+  background-image: url("../src//images/HeroSection.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100svh;
+  z-index: 1; /* Keeps the hero strictly underneath the z-index: 10 sliding content */
 }
 
 .headertext {
-  color: #f1593a;
+  color: #3b1811;
   -webkit-text-stroke: black 0.5px;
-}
-
-@media (min-width: 1279px) {
-  .headerback {
-    background-image: url("../src//images/Hero.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-  }
 }
 
 .headerimg {

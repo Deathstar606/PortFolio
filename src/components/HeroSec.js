@@ -1,42 +1,25 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
-import { SectionYPos } from "./Animations";
-import { StaggeredText } from "./Animations";
+import { SectionYPos, StaggeredText } from "./Animations";
 import { motion, AnimatePresence } from "framer-motion";
-import Head from "../images/Header.png";
-import Amper from "../images/ampersand.png";
 import Fb from "../images/Socials/facebook light.png";
 import Lin from "../images/Socials/linkedin light.png";
 import git from "../images/Socials/github light.png";
 import Arrow from "../images/arrow.gif";
 
-const LangVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 50 },
-};
-
-const headerImg = {
-  hidden: { y: 0 },
-  visible: {
-    y: [10, -10, 10, -10, 10],
-    transition: {
-      duration: 10,
-      ease: "easeInOut", // Can use other easing functions like "linear", "easeOut", etc.
-      repeat: Infinity,
-      repeatType: "loop",
-      delay: 0,
-    },
-  },
+const TitleVariants = {
+  hidden: { opacity: 0, x: 80 },
+  visible: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: -80 },
 };
 
 const scrollTarget = (tid) => {
   const element = document.getElementById(tid);
   if (element) {
-    const offset = 100; // Set your desired offset here
+    const offset = 100;
     const elementPosition =
-      element.getBoundingClientRect().top + window.scrollY; // Get element position
-    const offsetPosition = elementPosition - offset; // Adjust for offset
+      element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
 
     window.scrollTo({
       top: offsetPosition,
@@ -45,146 +28,214 @@ const scrollTarget = (tid) => {
   }
 };
 
-function TestHead() {
-  const nameArr = ["Python", "C++"];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [name, setName] = useState(nameArr[0]);
+const titleArr = ["Fullstack Developer", "Machine Learning Engineer"];
+
+const HeroSec = () => {
+  const [activeTitle, setActiveTitle] = useState(titleArr[0]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % nameArr.length);
-      setName(nameArr[currentIndex]);
-    }, 3000);
+      setActiveTitle((prevTitle) => {
+        const currentIndex = titleArr.indexOf(prevTitle);
+        const nextIndex = (currentIndex + 1) % titleArr.length;
+        return titleArr[nextIndex];
+      });
+    }, 4000);
 
     return () => clearInterval(intervalId);
-  }, [currentIndex, nameArr]);
+  }, []);
 
-  return (
-    <span>
-      <AnimatePresence mode="wait">
-        <motion.div
-          style={{ width: "75px" }}
-          className="ml-2"
-          key={name}
-          variants={LangVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          {name}
-        </motion.div>
-      </AnimatePresence>
-    </span>
-  );
-}
-
-const HeroSec = () => {
   return (
     <>
-      <div className="headerback" id="hero">
-        <SectionYPos>
-          <div className="jumbotron">
-            <Container className="lg-container">
-              <Row className="mt-3">
-                <Col
-                  md={6}
-                  xs={12}
-                  className="d-flex justify-content-center align-items-center"
-                >
-                  <div className="text-center">
-                    <h6 style={{ color: "#BCBAB8" }}>I am...</h6>
-                    <h1 className="headertext">
-                      <StaggeredText text={"Fardin Rahman"}></StaggeredText>
-                    </h1>
-                    <h2 style={{ color: "#BCBAB8" }}>Fullstack developer</h2>
-                    <h3 className="d-flex justify-content-center">
-                      <img
-                        className="mr-1"
-                        style={{
-                          color: "white",
-                          height: "40px",
-                          width: "40px",
-                          marginBottom: "10px",
-                        }}
-                        src={Amper}
-                      />
-                      <span style={{ color: "#BCBAB8" }}> Instructor in </span>
-                      <span className="desigt">
-                        <TestHead />
-                      </span>
-                    </h3>
-                    <h5 className="mt-2" style={{ color: "#BCBAB8" }}>
-                      Let's start our epic journey together 😁
-                    </h5>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100007104457895"
-                      target="_blank"
-                    >
-                      <img
-                        style={{
-                          height: "40px",
-                          width: "40px",
-                          marginTop: "15px",
-                          marginRight: "10px",
-                        }}
-                        src={Fb}
-                        alt="Facebook"
-                      />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/fardin-rahman-2311942bb"
-                      target="_blank"
-                    >
-                      <img
-                        style={{
-                          height: "40px",
-                          width: "40px",
-                          marginTop: "15px",
-                          marginRight: "10px",
-                        }}
-                        src={Lin}
-                        alt="LinkedIn"
-                      />
-                    </a>
-                    <a
-                      href="https://github.com/Deathstar606?tab=repositories"
-                      target="_blank"
-                    >
-                      <img
-                        style={{
-                          height: "40px",
-                          width: "40px",
-                          marginTop: "15px",
-                          marginRight: "10px",
-                        }}
-                        src={git}
-                        alt="GitHub"
-                      />
-                    </a>
-                    <img
-                      onClick={() => scrollTarget("about")}
-                      style={{ width: "80px", cursor: "pointer" }}
-                      src={Arrow}
-                      alt="arrow"
-                    />
-                  </div>
-                </Col>
-                <Col md={6} xs={12} className="d-flex justify-content-center">
-                  <motion.div
-                    className="d-flex justify-content-center"
-                    style={{ width: "100%" }}
-                    variants={headerImg}
-                    initial="hidden"
-                    animate="visible"
+      {/* CRITICAL ARCHITECTURAL CHANGE: Sticky Stacking Container
+        1. 'height: 100vh' reserves the exact space for the scroll.
+        2. Sub-components lower in the application MUST have a solid background 
+           and a z-index > 1 to successfully slide over this frozen section.
+      */}
+      <div
+        className="headerback"
+        id="hero"
+        style={{
+          height: "100vh",
+          zIndex: 1,
+        }}
+      >
+        {/* The inner container freezes at the top of the viewport when scrolling */}
+        <div
+          style={{
+            position: "sticky",
+            top: 0,
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <SectionYPos>
+            <div className="jumbotron" style={{ background: "transparent" }}>
+              <Container className="lg-container">
+                <Row className="d-flex flex-column justify-content-center align-items-center">
+                  <Col
+                    md={8}
+                    xs={12}
+                    className="d-flex justify-content-center align-items-center"
                   >
-                    <img className="headerimg" src={Head} />
-                  </motion.div>
-                </Col>
-              </Row>
-            </Container>
+                    <div className="text-center w-100">
+                      <h4
+                        style={{
+                          color: "#3b1811",
+                          fontSize: "clamp(20px, 3vw, 32px)",
+                        }}
+                      >
+                        I am...
+                      </h4>
+
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          width: "100%",
+                          marginTop: "1rem",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "inline-flex",
+                            justifyContent: "center",
+                            borderBottom: "3px solid #BCBAB8",
+                            paddingBottom: "10px",
+                            maxWidth: "100%",
+                          }}
+                        >
+                          <h1
+                            className="headertext"
+                            style={{
+                              margin: 0,
+                              color: "#3b1811",
+                            }}
+                          >
+                            <StaggeredText text={"Fardin Mridul"} />
+                          </h1>
+                        </div>
+                      </div>
+
+                      {/* Animated Title Container */}
+                      <div
+                        style={{
+                          // NEW FEATURE: Fluid margin scales from 1rem (mobile) to 1.5rem (large screens)
+                          marginTop: "clamp(0.7rem, 2.5vw, 1.5em)",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <AnimatePresence mode="wait">
+                          <motion.h2
+                            key={activeTitle}
+                            variants={TitleVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            transition={{ duration: 0.6, ease: "easeInOut" }}
+                            whileHover={{ filter: "brightness(130%)" }}
+                            style={{
+                              color: "#A9A9A9",
+                              fontSize: "clamp(22px, 4vw, 32px)",
+                              fontWeight: "400",
+                              textAlign: "center",
+                              width: "100%",
+                              cursor: "default",
+                              margin: 0,
+                            }}
+                          >
+                            {activeTitle}
+                          </motion.h2>
+                        </AnimatePresence>
+                      </div>
+
+                      {/* Arrow & Journey Text */}
+                      <div
+                        className="d-flex flex-column flex-md-row justify-content-center align-items-center mt-3 text-center"
+                        style={{ gap: "15px" }}
+                      >
+                        <h5
+                          className="mb-0"
+                          style={{
+                            color: "#A9A9A9",
+                            fontSize: "clamp(16px, 2.5vw, 22px)",
+                            // Reverted: whiteSpace property removed to allow natural responsive behavior
+                          }}
+                        >
+                          Let's start our epic journey together 🌌
+                        </h5>
+                        <motion.img
+                          onClick={() => scrollTarget("about")}
+                          whileHover={{ filter: "brightness(140%)" }}
+                          style={{
+                            width: "60px",
+                            cursor: "pointer",
+                            transition: "filter 0.3s ease",
+                          }}
+                          src={Arrow}
+                          alt="arrow"
+                        />
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </SectionYPos>
+
+          {/* Social Links securely anchored to the bottom of the sticky viewport */}
+          <div
+            className="position-absolute w-100 d-flex justify-content-center align-items-center"
+            style={{ bottom: "30px", left: 0, gap: "20px" }}
+          >
+            <motion.a
+              href="https://www.facebook.com/profile.php?id=100007104457895"
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ filter: "brightness(150%)" }}
+              style={{ transition: "filter 0.3s ease" }}
+            >
+              <img
+                style={{ height: "35px", width: "35px" }}
+                src={Fb}
+                alt="Facebook"
+              />
+            </motion.a>
+
+            <motion.a
+              href="https://www.linkedin.com/in/fardin-rahman-2311942bb"
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ filter: "brightness(150%)" }}
+              style={{ transition: "filter 0.3s ease" }}
+            >
+              <img
+                style={{ height: "35px", width: "35px" }}
+                src={Lin}
+                alt="LinkedIn"
+              />
+            </motion.a>
+
+            <motion.a
+              href="https://github.com/Deathstar606?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ filter: "brightness(150%)" }}
+              style={{ transition: "filter 0.3s ease" }}
+            >
+              <img
+                style={{ height: "35px", width: "35px" }}
+                src={git}
+                alt="GitHub"
+              />
+            </motion.a>
           </div>
-        </SectionYPos>
+        </div>
       </div>
     </>
   );
