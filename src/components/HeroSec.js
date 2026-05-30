@@ -189,10 +189,7 @@ const HeroSec = () => {
           </SectionYPos>
 
           {/* Social Links securely anchored to the bottom of the sticky viewport */}
-          <div
-            className="position-absolute w-100 d-flex justify-content-center align-items-center"
-            style={{ bottom: "120px", left: 0, gap: "20px" }}
-          >
+          <div className="position-absolute w-100 d-flex justify-content-center align-items-center hero-socials">
             <motion.a
               href="https://www.facebook.com/profile.php?id=100007104457895"
               target="_blank"

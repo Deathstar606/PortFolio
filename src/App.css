@@ -31,6 +31,18 @@ body {
   }
 }
 
+.hero-socials {
+  bottom: 120px;
+  left: 0;
+  gap: 20px;
+}
+
+@media (max-width: 639px) {
+  .hero-socials {
+    bottom: 140px;
+  }
+}
+
 .headertext {
   display: flex; /* Required for justify-content to function */
   justify-content: center;
