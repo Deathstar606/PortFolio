@@ -239,7 +239,9 @@ function RenderItem() {
         src={Gren}
         src1={Rect}
         src2={mongo}
-        link={"https://www.galaxyhomesolutions.ca/#/home"}
+        link={
+          "hhttps://galaxyreno-git-main-deathstar606s-projects.vercel.app/#/home"
+        }
       />
       <HovRev
         text="Veloura"
