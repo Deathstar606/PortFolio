@@ -240,7 +240,7 @@ function RenderItem() {
         src1={Rect}
         src2={mongo}
         link={
-          "hhttps://galaxyreno-git-main-deathstar606s-projects.vercel.app/#/home"
+          "https://galaxyreno-git-main-deathstar606s-projects.vercel.app/#/home"
         }
       />
       <HovRev
