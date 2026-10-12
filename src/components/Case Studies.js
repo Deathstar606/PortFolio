@@ -22,7 +22,7 @@ import Vergo from "../images/Case Logo/Vergo.png";
 import Gren from "../images/Case Logo/galaxyreno.png";
 import Velou from "../images/Case Logo/velou.png";
 import Techno from "../images/Case Logo/TechnoWave.jpg";
-import MediaQuery from "react-responsive";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 
 const SliderRev = {
   hidden: {
@@ -52,6 +52,7 @@ const Appear = {
 };
 
 function HovRev({ text, text2, src, src1, src2, link, to }) {
+  const isMobile = useMediaQuery({ maxWidth: 639 });
   const [yeet, setYeet] = useState(false);
   const [btnHover, setBtnHover] = useState(false);
 
@@ -186,19 +187,32 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              x: cursorX,
-              y: cursorY,
-              pointerEvents: "none",
-              zIndex: 1000,
-            }}
+            style={
+              isMobile
+                ? {
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    pointerEvents: "none",
+                    zIndex: 1000,
+                  }
+                : {
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    x: cursorX,
+                    y: cursorY,
+                    pointerEvents: "none",
+                    zIndex: 1000,
+                  }
+            }
           >
             <div
               style={{
-                transform: "translate(calc(-100% - 20px), -50%)",
+                transform: isMobile
+                  ? "none"
+                  : "translate(calc(-100% - 20px), -50%)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -258,7 +272,7 @@ function RenderItem() {
   const isInview = useInView(ref, { once: true });
 
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div style={{ overflow: "hidden" }}>
       <Container style={{ maxWidth: "95%" }}>
         <h2
           className="headerdec pt-3 pb-3"

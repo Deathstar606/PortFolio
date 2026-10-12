@@ -80,21 +80,24 @@ function Topics() {
 
         <div
           className="d-flex flex-column pb-5"
-          style={{ width: "fit-content" }}
+          style={{ width: "fit-content", maxWidth: "100%" }}
         >
-          <Row className="no-gutters align-items-start flex-nowrap">
-            {/* Left Quote Mark - Scaled down */}
+          <Row className="no-gutters align-items-center flex-nowrap">
+            {/* Left Quote Mark */}
             <Col xs="auto">
-              <h3
+              <span
                 style={{
-                  color: "#BCBAB8",
-                  marginRight: "8px",
-                  fontSize: "1.8rem",
+                  color: "#DD6410",
+                  opacity: 0.85,
+                  marginRight: "10px",
+                  fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                  fontFamily: "Georgia, serif",
                   lineHeight: "1",
+                  userSelect: "none",
                 }}
               >
-                "
-              </h3>
+                “
+              </span>
             </Col>
 
             {/* Quote Content */}
@@ -104,20 +107,28 @@ function Topics() {
                   style={{
                     color: "#DD6410",
                     fontWeight: "500",
-                    fontSize: "clamp(1.2rem, 2vw, 1.5rem)",
+                    fontSize: "clamp(0.85rem, 2.5vw, 1.4rem)",
                     lineHeight: "1.4",
                     margin: 0,
+                    whiteSpace: "nowrap",
+                    letterSpacing: "0.4px",
                   }}
                 >
-                  {/* Main Quote Body */}
-                  <div className="mb-1">
+                  {/* Main Quote Body - Enforced single line */}
+                  <div className="mb-1" style={{ whiteSpace: "nowrap" }}>
                     <StaggeredText text={"The best way to learn is to teach"} />
                   </div>
 
-                  {/* NEW FEATURE: Quote Sayer justified to the end */}
+                  {/* Quote Sayer justified to the end */}
                   <div
                     className="d-flex justify-content-end mt-1"
-                    style={{ fontStyle: "italic", fontSize: "0.85rem" }}
+                    style={{
+                      fontStyle: "italic",
+                      fontSize: "clamp(0.75rem, 1.5vw, 0.88rem)",
+                      color: "#BCBAB8",
+                      letterSpacing: "0.5px",
+                      whiteSpace: "nowrap",
+                    }}
                   >
                     <StaggeredText text={"- Richard Feynman"} />
                   </div>
@@ -125,18 +136,21 @@ function Topics() {
               </div>
             </Col>
 
-            {/* Right Quote Mark - Scaled down */}
+            {/* Right Quote Mark */}
             <Col xs="auto">
-              <h3
+              <span
                 style={{
-                  color: "#BCBAB8",
-                  marginLeft: "8px",
-                  fontSize: "1.8rem",
+                  color: "#DD6410",
+                  opacity: 0.85,
+                  marginLeft: "10px",
+                  fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                  fontFamily: "Georgia, serif",
                   lineHeight: "1",
+                  userSelect: "none",
                 }}
               >
-                "
-              </h3>
+                ”
+              </span>
             </Col>
           </Row>
         </div>
@@ -145,10 +159,20 @@ function Topics() {
           <Row>
             <Col md={4} className="pb-5">
               <motion.div
-                className="p-2"
-                style={{ position: "relative", border: "4px solid #DD6410" }}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.75 }}
+                className="p-3"
+                style={{
+                  position: "relative",
+                  height: "100%",
+                  border: "2px solid #DD6410",
+                  borderRadius: "12px",
+                  backgroundColor: "rgba(221, 100, 16, 0.04)",
+                  boxShadow: "0 6px 20px rgba(0, 0, 0, 0.25)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.4 }}
               >
                 <motion.svg
                   ref={reWeb}
@@ -156,7 +180,8 @@ function Topics() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileHover={{ scale: 1.08, rotate: 3 }}
+                  style={{ maxHeight: "180px", width: "100%" }}
                 >
                   <motion.path
                     d="M259.333 101.6C259.067 102.533 241.333 164.8 219.867 240C198.533 315.2 180.667 377.467 180.267 378.4C179.867 379.733 184 380 200 379.733L220.267 379.333L260.133 240C282 163.333 300 100.533 300 100.267C300 100.133 290.933 100 280 100C265.067 100 259.733 100.4 259.333 101.6Z"
@@ -179,24 +204,59 @@ function Topics() {
                     strokeWidth="1"
                   />
                 </motion.svg>
-                <div className="p-1">
-                  <h5 className="ml-3" style={{ color: "#BCBAB8" }}>
-                    Html/Css/Js
-                  </h5>
-                  <ul style={{ color: "#BCBAB8", fontWeight: "550" }}>
-                    <li>Basics of the web development concept</li>
-                    <li>Live examples with easy code implimentation</li>
-                    <li>Source Code</li>
+                <div className="pt-3">
+                  <h4
+                    style={{
+                      color: "#DD6410",
+                      fontWeight: "600",
+                      fontSize: "1.25rem",
+                      letterSpacing: "0.5px",
+                      marginBottom: "12px",
+                      borderBottom: "1px solid rgba(221, 100, 16, 0.25)",
+                      paddingBottom: "8px",
+                    }}
+                  >
+                    HTML / CSS / JavaScript
+                  </h4>
+                  <ul
+                    style={{
+                      color: "#D0CECB",
+                      fontWeight: "400",
+                      fontSize: "0.95rem",
+                      lineHeight: "1.7",
+                      paddingLeft: "1.25rem",
+                      margin: 0,
+                    }}
+                  >
+                    <li style={{ marginBottom: "6px" }}>
+                      Basics of modern web development concepts
+                    </li>
+                    <li style={{ marginBottom: "6px" }}>
+                      Live examples with easy code implementation
+                    </li>
+                    <li style={{ marginBottom: "6px" }}>
+                      Source code & documentation
+                    </li>
                   </ul>
                 </div>
               </motion.div>
             </Col>
             <Col md={4} className="pb-5">
               <motion.div
-                className="p-2"
-                style={{ position: "relative", border: "4px solid #DD6410" }}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.75 }}
+                className="p-3"
+                style={{
+                  position: "relative",
+                  height: "100%",
+                  border: "2px solid #DD6410",
+                  borderRadius: "12px",
+                  backgroundColor: "rgba(221, 100, 16, 0.04)",
+                  boxShadow: "0 6px 20px rgba(0, 0, 0, 0.25)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.4 }}
               >
                 <motion.svg
                   ref={refPy}
@@ -204,7 +264,8 @@ function Topics() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   initial={{ scale: 0.8 }}
-                  whileHover={{ scale: 0.9, rotate: 5 }}
+                  whileHover={{ scale: 0.88, rotate: 3 }}
+                  style={{ maxHeight: "180px", width: "100%" }}
                 >
                   <motion.path
                     d="M279.636 77.5088C271.245 79.5449 258.928 86.7393 252.972 93.2549C249.994 96.5127 245.528 103.3 243.227 108.322L238.896 117.417L238.489 161.805L238.083 206.192L177.581 206.6L117.079 207.007L108.011 211.351C95.4229 217.323 87.5725 224.925 81.4816 237.277L76.4736 247.594V336.641V425.688L81.4816 436.004C87.5725 448.356 95.4229 455.958 108.011 461.931L117.079 466.274L155.925 466.682L194.771 467.089L195.177 522.472L195.583 577.719L200.591 588.035C206.682 600.388 214.532 607.989 227.12 613.962L236.188 618.306H324.844H413.499L422.568 613.962C435.155 607.989 443.006 600.388 449.097 588.035L454.105 577.719L454.511 533.331L454.917 488.808L515.419 488.4L575.921 487.993L584.989 483.649C597.577 477.677 605.428 470.075 611.518 457.723L616.526 447.406V358.359V269.312L611.518 258.996C605.428 246.644 597.577 239.042 584.989 233.069L575.921 228.726L537.075 228.318L498.229 227.911L497.823 172.528L497.417 117.281L492.409 106.965C486.318 94.6123 478.468 87.0107 465.88 81.0381L456.812 76.6943L370.863 76.4229C321.731 76.2871 282.614 76.8301 279.636 77.5088ZM453.969 99.3633C461.413 101.535 472.648 112.802 474.813 120.268C477.114 128.141 477.114 306.099 474.813 313.836C472.783 320.487 464.527 330.125 457.894 333.383C453.022 335.826 446.931 335.962 344.334 336.641L236.053 337.319L225.766 342.342C213.449 348.45 205.87 356.323 199.914 368.947L195.583 378.042L195.177 411.57L194.636 445.234H160.121C136.84 445.234 123.711 444.691 119.921 443.605C112.477 441.434 101.243 430.167 99.0773 422.701C96.7764 414.692 96.7764 258.589 99.0773 250.58C101.243 243.114 112.477 231.848 119.921 229.676C124.117 228.454 155.925 228.047 248.912 228.047H372.352L375.601 224.653C377.766 222.617 378.984 219.767 378.984 217.188C378.984 214.608 377.766 211.758 375.601 209.722L372.352 206.328H316.046H259.875V166.148C259.875 138.457 260.416 124.068 261.499 120.268C263.53 113.345 274.899 101.671 281.531 99.499C288.57 97.3271 446.525 97.1914 453.969 99.3633ZM573.079 251.395C580.523 253.566 591.757 264.833 593.923 272.299C596.224 280.308 596.224 436.411 593.923 444.42C591.757 451.886 580.523 463.152 573.079 465.324C568.883 466.546 537.075 466.953 444.088 466.953H320.648L317.399 470.347C312.933 474.69 312.933 480.935 317.399 485.278L320.648 488.672H376.954H433.125V528.852C433.125 556.543 432.584 570.932 431.501 574.732C429.335 582.198 418.101 593.465 410.657 595.637C402.671 597.944 247.017 597.944 239.031 595.637C231.587 593.465 220.352 582.198 218.187 574.732C215.886 566.859 215.886 388.901 218.187 381.164C220.217 374.513 228.473 364.875 235.106 361.617C239.978 359.174 246.069 359.038 348.53 358.359L456.812 357.681L465.88 353.337C478.468 347.364 486.318 339.763 492.409 327.41L497.417 317.094L497.823 283.43L498.364 249.766H532.879C556.16 249.766 569.289 250.309 573.079 251.395Z"
@@ -231,40 +292,67 @@ function Topics() {
                     animate={isInviewPy ? "animate" : "initial"}
                   />
                 </motion.svg>
-                <div className="p-1">
-                  <h5 className="ml-3" style={{ color: "#BCBAB8" }}>
+                <div className="pt-3">
+                  <h4
+                    style={{
+                      color: "#DD6410",
+                      fontWeight: "600",
+                      fontSize: "1.25rem",
+                      letterSpacing: "0.5px",
+                      marginBottom: "12px",
+                      borderBottom: "1px solid rgba(221, 100, 16, 0.25)",
+                      paddingBottom: "8px",
+                    }}
+                  >
                     Python
-                  </h5>
-                  <ul style={{ color: "#BCBAB8", fontWeight: "550" }}>
-                    <li>
-                      Dive deep into the fundamental building blocks of
-                      programming
+                  </h4>
+                  <ul
+                    style={{
+                      color: "#D0CECB",
+                      fontWeight: "400",
+                      fontSize: "0.95rem",
+                      lineHeight: "1.7",
+                      paddingLeft: "1.25rem",
+                      margin: 0,
+                    }}
+                  >
+                    <li style={{ marginBottom: "6px" }}>
+                      Dive deep into fundamental programming building blocks
                     </li>
-                    <li>
-                      Unlock the power to bring your ideas to life effortlessly
+                    <li style={{ marginBottom: "6px" }}>
+                      Unlock the power to bring ideas to life effortlessly
                     </li>
-                    <li>Real world projects</li>
+                    <li style={{ marginBottom: "6px" }}>
+                      Real-world projects & automation
+                    </li>
                   </ul>
                 </div>
               </motion.div>
             </Col>
             <Col md={4} className="pb-5">
               <motion.div
-                className="p-2"
+                className="p-3"
                 style={{
                   position: "relative",
                   height: "100%",
-                  border: "4px solid #DD6410",
+                  border: "2px solid #DD6410",
+                  borderRadius: "12px",
+                  backgroundColor: "rgba(221, 100, 16, 0.04)",
+                  boxShadow: "0 6px 20px rgba(0, 0, 0, 0.25)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
                 }}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.75 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.4 }}
               >
                 <motion.svg
                   ref={refRec}
                   viewBox="-100 0 951 670"
                   fill="none"
                   initial={{ scale: 0.7 }}
-                  whileHover={{ scale: 0.8, rotate: 5 }}
+                  whileHover={{ scale: 0.78, rotate: 3 }}
+                  style={{ maxHeight: "180px", width: "100%" }}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <motion.path
@@ -282,14 +370,39 @@ function Topics() {
                     strokeWidth="7"
                   />
                 </motion.svg>
-                <div className="p-1">
-                  <h5 className="ml-3" style={{ color: "#BCBAB8" }}>
+                <div className="pt-3">
+                  <h4
+                    style={{
+                      color: "#DD6410",
+                      fontWeight: "600",
+                      fontSize: "1.25rem",
+                      letterSpacing: "0.5px",
+                      marginBottom: "12px",
+                      borderBottom: "1px solid rgba(221, 100, 16, 0.25)",
+                      paddingBottom: "8px",
+                    }}
+                  >
                     React
-                  </h5>
-                  <ul style={{ color: "#BCBAB8", fontWeight: "550" }}>
-                    <li>States, Functional components and Redux</li>
-                    <li>Dynamic Ui designs</li>
-                    <li>Front-end to Back-end intrigation</li>
+                  </h4>
+                  <ul
+                    style={{
+                      color: "#D0CECB",
+                      fontWeight: "400",
+                      fontSize: "0.95rem",
+                      lineHeight: "1.7",
+                      paddingLeft: "1.25rem",
+                      margin: 0,
+                    }}
+                  >
+                    <li style={{ marginBottom: "6px" }}>
+                      States, Functional Components & Redux architecture
+                    </li>
+                    <li style={{ marginBottom: "6px" }}>
+                      Dynamic & responsive UI design patterns
+                    </li>
+                    <li style={{ marginBottom: "6px" }}>
+                      Front-end to Back-end API integration
+                    </li>
                   </ul>
                 </div>
               </motion.div>

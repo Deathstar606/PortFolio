@@ -36,12 +36,25 @@ const EmailForm = () => {
     <div>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail" className="mb-3">
-          <Form.Label>Mail Address:</Form.Label>
+          <Form.Label
+            style={{
+              color: "#181818",
+              fontWeight: "600",
+              fontSize: "0.95rem",
+              letterSpacing: "0.3px",
+            }}
+          >
+            Mail Address:
+          </Form.Label>
           <Form.Control
             style={{
-              borderWidth: "4px",
+              borderWidth: "2px",
               height: "50px",
-              borderColor: "#353935",
+              borderColor: "#cfcac0",
+              backgroundColor: "#ffffff",
+              color: "#181818",
+              borderRadius: "6px",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
             }}
             placeholder="Your Mail Address"
             type="email"
@@ -52,12 +65,25 @@ const EmailForm = () => {
           />
         </Form.Group>
         <Form.Group controlId="formBasicMessage" className="mb-3">
-          <Form.Label>Message:</Form.Label>
+          <Form.Label
+            style={{
+              color: "#181818",
+              fontWeight: "600",
+              fontSize: "0.95rem",
+              letterSpacing: "0.3px",
+            }}
+          >
+            Message:
+          </Form.Label>
           <Form.Control
             style={{
-              borderWidth: "4px",
-              height: "200px",
-              borderColor: "#353935",
+              borderWidth: "2px",
+              height: "180px",
+              borderColor: "#cfcac0",
+              backgroundColor: "#ffffff",
+              color: "#181818",
+              borderRadius: "6px",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
             }}
             placeholder="Type Message"
             as="textarea"
@@ -68,7 +94,29 @@ const EmailForm = () => {
             required
           />
         </Form.Group>
-        <Button variant="dark" type="submit">
+        <Button
+          type="submit"
+          style={{
+            backgroundColor: "#DD6410",
+            borderColor: "#DD6410",
+            color: "#ffffff",
+            fontWeight: "600",
+            padding: "10px 24px",
+            borderRadius: "6px",
+            boxShadow: "0 4px 12px rgba(221, 100, 16, 0.25)",
+            transition: "all 0.2s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "#c45408";
+            e.currentTarget.style.borderColor = "#c45408";
+            e.currentTarget.style.transform = "translateY(-1px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "#DD6410";
+            e.currentTarget.style.borderColor = "#DD6410";
+            e.currentTarget.style.transform = "translateY(0)";
+          }}
+        >
           Send Email
         </Button>
       </Form>
