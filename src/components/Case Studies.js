@@ -1,6 +1,12 @@
 import { useState, useRef } from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useInView,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import { Link } from "react-router-dom";
 import { StaggeredText } from "./Animations";
 import Rect from "../images/Comprised Off/React.png";
@@ -32,16 +38,45 @@ const SliderRev = {
 };
 
 const Appear = {
-  hidden: { opacity: 0, scale: 0.5 },
-  visible: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.5 },
+  hidden: { opacity: 0, scale: 0.6 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.25, ease: "easeOut" },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.6,
+    transition: { duration: 0.2, ease: "easeIn" },
+  },
 };
 
 function HovRev({ text, text2, src, src1, src2, link, to }) {
   const [yeet, setYeet] = useState(false);
+  const [btnHover, setBtnHover] = useState(false);
 
-  const handleYeet = () => {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
+  const cursorX = useSpring(mouseX, springConfig);
+  const cursorY = useSpring(mouseY, springConfig);
+
+  const handleMouseEnter = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    mouseX.jump(x);
+    mouseY.jump(y);
     setYeet(true);
+  };
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    mouseX.set(x);
+    mouseY.set(y);
   };
 
   const handleMouseLeave = () => {
@@ -51,8 +86,24 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
   return (
     <motion.div
       className="case-sec"
-      onMouseEnter={handleYeet}
+      onMouseEnter={handleMouseEnter}
+      onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      animate={{
+        y: yeet ? -4 : 0,
+        boxShadow: yeet
+          ? "0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3)"
+          : "0 0px 0px rgba(0, 0, 0, 0)",
+        zIndex: yeet ? 1000 : 1,
+      }}
+      transition={{
+        y: { duration: 0.25, ease: "easeOut" },
+        boxShadow: { duration: 0.25, ease: "easeOut" },
+      }}
+      style={{
+        position: "relative",
+        zIndex: yeet ? 1000 : 1,
+      }}
     >
       {/* First Column */}
       <div
@@ -63,39 +114,43 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
           flex: "1",
         }}
       >
-        <img style={{ height: "30px", width: "30px" }} src={src1} />
-        <img style={{ height: "30px", width: "30px" }} src={src2} />
-        <div className="pl-4">
-          <h1
+        <img style={{ height: "30px", width: "30px" }} src={src1} alt="" />
+        <img style={{ height: "30px", width: "30px" }} src={src2} alt="" />
+        <div className="pl-2 pl-md-4">
+          <motion.h1
+            animate={{
+              color: yeet ? "#DD6410" : "#000000",
+              scale: yeet ? 1.04 : 1,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeOut",
+            }}
             style={{
               fontWeight: "520",
-              fontSize: "clamp(25px, 4vw, 100px)",
+              fontSize: "clamp(18px, 4vw, 100px)",
               margin: 0,
+              paddingTop: "14px",
+              paddingBottom: "14px",
+              display: "inline-block",
+              transformOrigin: "left center",
+              cursor: "pointer",
+              whiteSpace: "nowrap",
             }}
           >
             {text}
-          </h1>
-          <p>{text2}</p>
+          </motion.h1>
         </div>
       </div>
-
-      {/* Second Column */}
-      {/*         <div style={{ flex: "1", textAlign: "left" }}>
-          <h4
-            style={{
-              fontSize: "clamp(14px, 1vw, 100px)",
-              margin: 0,
-            }}
-            className="pl-2 pr-1"
-          >
-            
-          </h4>
-        </div> */}
 
       {/* Third Column */}
       <div style={{ flex: "1", textAlign: "right" }}>
         {link ? (
-          <Button className="btn-dark text-white">
+          <Button
+            className="btn-dark text-white"
+            onMouseEnter={() => setBtnHover(true)}
+            onMouseLeave={() => setBtnHover(false)}
+          >
             <a
               href={link}
               target="_blank"
@@ -105,14 +160,18 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
                 textDecoration: "none",
                 display: "flex",
                 alignItems: "center",
-                gap: "8px", // Keeps the text and icon perfectly spaced
+                gap: "8px",
               }}
             >
               Launch <i className="fa fa-external-link" aria-hidden="true"></i>
             </a>
           </Button>
         ) : (
-          <Button className="btn-dark text-white">
+          <Button
+            className="btn-dark text-white"
+            onMouseEnter={() => setBtnHover(true)}
+            onMouseLeave={() => setBtnHover(false)}
+          >
             <Link to={to} style={{ color: "inherit", textDecoration: "none" }}>
               Show
             </Link>
@@ -120,8 +179,8 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
         )}
       </div>
 
-      <AnimatePresence mode="wait">
-        {yeet && (
+      <AnimatePresence>
+        {yeet && !btnHover && (
           <motion.div
             variants={Appear}
             initial="hidden"
@@ -129,30 +188,64 @@ function HovRev({ text, text2, src, src1, src2, link, to }) {
             exit="exit"
             style={{
               position: "absolute",
-              top: -70,
-              left: "15%",
-              zIndex: 100,
+              top: 0,
+              left: 0,
+              x: cursorX,
+              y: cursorY,
+              pointerEvents: "none",
+              zIndex: 1000,
             }}
           >
-            <MediaQuery maxWidth={639}>
-              <img
-                style={{
-                  marginTop: "50px",
-                  width: "150px",
-                  borderRadius: "5px",
-                }}
-                src={src}
-              />
-            </MediaQuery>
-            <MediaQuery minWidth={640}>
-              <img
-                style={{
-                  width: "300px",
-                  borderRadius: "10px",
-                }}
-                src={src}
-              />
-            </MediaQuery>
+            <div
+              style={{
+                transform: "translate(calc(-100% - 20px), -50%)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                pointerEvents: "none",
+              }}
+            >
+              <MediaQuery maxWidth={639}>
+                <img
+                  style={{
+                    width: "160px",
+                    borderRadius: "8px",
+                    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
+                  }}
+                  src={src}
+                  alt={text}
+                />
+              </MediaQuery>
+              <MediaQuery minWidth={640}>
+                <img
+                  style={{
+                    width: "300px",
+                    borderRadius: "10px",
+                    boxShadow: "0 12px 32px rgba(0, 0, 0, 0.6)",
+                  }}
+                  src={src}
+                  alt={text}
+                />
+              </MediaQuery>
+              {text2 && (
+                <div
+                  style={{
+                    marginTop: "8px",
+                    color: "#ffffff",
+                    backgroundColor: "rgba(20, 20, 20, 0.85)",
+                    padding: "3px 12px",
+                    borderRadius: "6px",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    textAlign: "center",
+                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.4)",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {text2}
+                </div>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -165,7 +258,7 @@ function RenderItem() {
   const isInview = useInView(ref, { once: true });
 
   return (
-    <>
+    <div style={{ overflowX: "hidden" }}>
       <Container style={{ maxWidth: "95%" }}>
         <h2
           className="headerdec pt-3 pb-3"
@@ -201,7 +294,7 @@ function RenderItem() {
           <Row className="no-gutters align-items-start flex-nowrap">
             {/* Quote Content */}
             <Col style={{ width: "fit-content" }}>
-              <div className="py-1">
+              <div className="pb-1">
                 <h5
                   style={{
                     color: "#DD6410",
@@ -290,7 +383,7 @@ function RenderItem() {
         src2={Json}
         to={"/codex"}
       />
-    </>
+    </div>
   );
 }
 

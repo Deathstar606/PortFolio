@@ -52,7 +52,7 @@ function Topics() {
     <>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-3 pb-3"
+          className="headerdec pt-5 pb-3"
           id="learn"
           style={{
             color: "#DD6410",

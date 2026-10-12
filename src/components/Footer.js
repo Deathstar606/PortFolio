@@ -10,9 +10,15 @@ import { Link } from "react-scroll";
 
 function Footer() {
   return (
-    <div style={{ backgroundColor: "darkgrey" }}>
+    <div
+      style={{
+        backgroundColor: "darkgrey",
+        paddingTop: "5vh",
+        paddingBottom: "5vh",
+      }}
+    >
       <Contact />
-      <Container className="lg-container">
+      <Container className="lg-container" style={{ maxWidth: "95%" }}>
         <Row>
           <Col xs={4} className="d-flex justify-content-center p-5">
             <Link

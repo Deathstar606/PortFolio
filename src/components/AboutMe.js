@@ -3,7 +3,7 @@ import { SectionXPos, SectionXNeg, StaggeredText } from "./Animations";
 import { useInView as InObs } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import intro from "../images/Introduction.mp4";
-import MediaQuery from "react-responsive";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 
 const SliderRev = {
   hidden: {
@@ -23,9 +23,12 @@ function AboutMe() {
     threshold: 0.5,
     triggerOnce: true,
   });
+  const isMobile = useMediaQuery({ maxWidth: 639 });
 
   return (
-    <Container style={{ maxWidth: "95%" }}>
+    <Container
+      style={{ maxWidth: "95%", paddingBottom: isMobile ? "0px" : "5vh" }}
+    >
       <h2
         className="headerdec pt-3 pb-3" // You can now safely reduce padding here
         id="about"
@@ -79,26 +82,39 @@ function AboutMe() {
           </div>
         </Col>
         <Col
-          className="d-flex align-items-center text-center pb-4" // Removed 'border-right' class
+          className="d-flex justify-content-end text-right pb-4 pr-3 pr-md-4"
           md={4}
           style={{
             color: "#BCBAB8",
             fontWeight: "400",
-            fontSize: "20px",
+            paddingTop: isMobile ? "0px" : "30px",
+            fontSize: isMobile ? "13px" : "18px",
+            lineHeight: isMobile ? "1.5" : "1.6",
+            justifyContent: "flex-end",
+            textAlign: "right",
             borderWidth: "0 2px 0 0", // Sets width only for the right border (Top Right Bottom Left)
             borderStyle: "solid",
             borderImage: "linear-gradient(to bottom, #BCBAB8, #DD6410) 1", // Applies the gradient
           }}
         >
-          <SectionXNeg>
-            I have 4 years of experience as a full-stack developer, ready to
-            give life to your imagination. I’ve never achieved or learned
-            anything easily. Instead, I’ve found that I often need more time and
-            effort to accomplish something than the people around me. Through
-            these hardships, I realized how stubborn I am, the never-giving-up
-            mentality, the unyielding patience and the sheer will to stay
-            focused until I reach my goal.
-          </SectionXNeg>
+          <SectionXPos>
+            <div
+              className="text-right"
+              style={{
+                textAlign: "right",
+                fontSize: isMobile ? "13px" : "18px",
+                lineHeight: isMobile ? "1.5" : "1.6",
+              }}
+            >
+              I have 4 years of experience as a full-stack developer, ready to
+              give life to your imagination. I’ve never achieved or learned
+              anything easily. Instead, I’ve found that I often need more time
+              and effort to accomplish something than the people around me.
+              Through these hardships, I realized how stubborn I am, the
+              never-giving-up mentality, the unyielding patience and the sheer
+              will to stay focused until I reach my goal.
+            </div>
+          </SectionXPos>
         </Col>
         <Col
           md={4}
@@ -106,58 +122,47 @@ function AboutMe() {
           style={{
             color: "#BCBAB8",
             fontWeight: "400",
-            fontSize: "20px",
+            fontSize: isMobile ? "13px" : "17px",
             overflow: "hidden",
           }}
         >
-          <SectionXPos>
+          <SectionXNeg>
             <div>
-              <MediaQuery maxWidth={639}>
-                <h3
-                  className="mt-3 text-center"
-                  style={{ fontWeight: "500", color: "#DD6410" }}
+              <h3
+                className="pl-3 mt-3"
+                style={{
+                  fontWeight: "500",
+                  color: "#DD6410",
+                  paddingTop: isMobile ? "0px" : "150px",
+                }}
+              >
+                Core Competencies
+              </h3>
+              <ul className="list-group list-group-flush d-flex">
+                <li
+                  className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8 py-1"
+                  style={{ paddingTop: "4px", paddingBottom: "4px" }}
                 >
-                  Core Competencies
-                </h3>
-                <ul className="list-group list-group-flush d-flex text-center">
-                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                    High work ethic, not able to rest until I am satisfied with
-                    my progress.
-                  </li>
-                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                    Quick learner, easily able to adapt to new situations and
-                    thrive in dynamic work environments.
-                  </li>
-                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                    Skilled problem solver, finding out new ways of thinking and
-                    implementing the best solution.
-                  </li>
-                </ul>
-              </MediaQuery>
-              <MediaQuery minWidth={640}>
-                <h3
-                  className="pl-3 mt-3"
-                  style={{ fontWeight: "500", color: "#DD6410" }}
+                  High work ethic, not able to rest until I am satisfied with my
+                  progress.
+                </li>
+                <li
+                  className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8 py-1"
+                  style={{ paddingTop: "4px", paddingBottom: "4px" }}
                 >
-                  Core Competencies
-                </h3>
-                <ul className="list-group list-group-flush d-flex">
-                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                    High work ethic, not able to rest until I am satisfied with
-                    my progress.
-                  </li>
-                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                    Quick learner, easily able to adapt to new situations and
-                    thrive in dynamic work environments.
-                  </li>
-                  <li className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8">
-                    Skilled problem solver, finding out new ways of thinking and
-                    implementing the best solution.
-                  </li>
-                </ul>
-              </MediaQuery>
+                  Quick learner, easily able to adapt to new situations and
+                  thrive in dynamic work environments.
+                </li>
+                <li
+                  className="list-group-item bg-transparent text-BCBAB8 border-BCBAB8 py-1"
+                  style={{ paddingTop: "4px", paddingBottom: "4px" }}
+                >
+                  Skilled problem solver, finding out new ways of thinking and
+                  implementing the best solution.
+                </li>
+              </ul>
             </div>
-          </SectionXPos>
+          </SectionXNeg>
         </Col>
       </Row>
     </Container>

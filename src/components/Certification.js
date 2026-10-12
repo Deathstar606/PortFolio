@@ -133,9 +133,23 @@ export const Cert = ({ initialView = "first" }) => {
   };
 
   return (
-    <Container className="pb-5 pt-3 mt-5 mb-5">
+    <Container className="pb-5 pt-3 mt-5 mb-5" style={{ maxWidth: "80%" }}>
       <Row>
-        <Col>
+        <Col
+          md={6}
+          sm={12}
+          xs={12}
+          style={{
+            display: "flex",
+            justifyContent: "end",
+            alignItems: "center",
+          }}
+        >
+          <h5>
+            <StaggeredText texts={textArray} />
+          </h5>
+        </Col>
+        <Col md={6} sm={12} xs={12}>
           <div style={{ position: "relative", width: "100%", height: "100%" }}>
             {currentView === "first" && (
               <motion.svg
@@ -362,18 +376,6 @@ export const Cert = ({ initialView = "first" }) => {
               </motion.svg>
             )}
           </div>
-        </Col>
-        <Col
-          md={6}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <h5>
-            <StaggeredText texts={textArray} />
-          </h5>
         </Col>
       </Row>
     </Container>
