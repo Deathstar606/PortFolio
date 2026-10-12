@@ -52,7 +52,7 @@ function Skills() {
                 hide: true,
               }}
               modules={[Scrollbar]}
-              slidesPerView={4}
+              slidesPerView={5}
               className="mySwiper"
             >
               <SwiperSlide>

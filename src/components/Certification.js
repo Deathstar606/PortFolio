@@ -54,6 +54,10 @@ export const StaggeredText = ({ texts }) => {
         justifyContent: "center", // Centers the text horizontally
         textAlign: "center", // Ensures text is centered
         flexWrap: "wrap", // Handles long text wrapping gracefully
+        fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)",
+        fontWeight: "600",
+        letterSpacing: "0.4px",
+        lineHeight: "1.4",
       }}
     >
       {texts[currentIndex].split(" ").map((word, wordIndex) => (
@@ -126,22 +130,36 @@ export const Cert = ({ initialView = "first" }) => {
   };
 
   const svgStyle = {
-    position: "relative", // Ensures both SVGs occupy the same space
+    position: "relative",
     top: 0,
     left: 0,
     right: 0,
+    width: "100%",
+    maxWidth: "460px",
+    height: "auto",
+    display: "block",
+    margin: "0 auto",
   };
 
   return (
-    <Container className="md-container pb-5 pt-3 pt-md-5 mt-5 mb-5">
-      <Row>
+    <Container className="md-container pb-5 pt-3 pt-md-5 mt-4 mb-4">
+      <Row className="align-items-center gy-4">
         <Col
           md={6}
           sm={12}
           xs={12}
-          style={{ display: "flex", justifyContent: "end" }}
+          className="d-flex justify-content-center justify-content-md-end mb-4 mb-md-0"
         >
-          <div style={{ position: "relative", width: "100%", height: "100%" }}>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: "460px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             {currentView === "first" && (
               <motion.svg
                 ref={reWeb}
@@ -372,14 +390,24 @@ export const Cert = ({ initialView = "first" }) => {
           md={6}
           sm={12}
           xs={12}
+          className="d-flex justify-content-center justify-content-md-start align-items-center"
           style={{
-            display: "flex",
-            alignItems: "center",
+            paddingLeft: "clamp(15px, 3vw, 40px)",
+            paddingRight: "clamp(15px, 3vw, 20px)",
           }}
         >
-          <h5>
+          <div
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              minHeight: "120px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <StaggeredText texts={textArray} />
-          </h5>
+          </div>
         </Col>
       </Row>
     </Container>
