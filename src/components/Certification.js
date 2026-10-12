@@ -51,8 +51,7 @@ export const StaggeredText = ({ texts }) => {
       style={{
         color: "#DD6410",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center", // Aligns text vertically in the parent container
+        justifyContent: "center", // Centers the text horizontally
         textAlign: "center", // Ensures text is centered
         flexWrap: "wrap", // Handles long text wrapping gracefully
       }}
@@ -130,26 +129,18 @@ export const Cert = ({ initialView = "first" }) => {
     position: "relative", // Ensures both SVGs occupy the same space
     top: 0,
     left: 0,
+    right: 0,
   };
 
   return (
-    <Container className="pb-5 pt-3 mt-5 mb-5" style={{ maxWidth: "80%" }}>
+    <Container className="md-container pb-5 pt-3 pt-md-5 mt-5 mb-5">
       <Row>
         <Col
           md={6}
           sm={12}
           xs={12}
-          style={{
-            display: "flex",
-            justifyContent: "end",
-            alignItems: "center",
-          }}
+          style={{ display: "flex", justifyContent: "end" }}
         >
-          <h5>
-            <StaggeredText texts={textArray} />
-          </h5>
-        </Col>
-        <Col md={6} sm={12} xs={12}>
           <div style={{ position: "relative", width: "100%", height: "100%" }}>
             {currentView === "first" && (
               <motion.svg
@@ -376,6 +367,19 @@ export const Cert = ({ initialView = "first" }) => {
               </motion.svg>
             )}
           </div>
+        </Col>
+        <Col
+          md={6}
+          sm={12}
+          xs={12}
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <h5>
+            <StaggeredText texts={textArray} />
+          </h5>
         </Col>
       </Row>
     </Container>
