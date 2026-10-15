@@ -68,7 +68,7 @@ function TestimonialCard({ data }) {
     <Card
       className="acrd"
       style={{
-        border: "3px solid #BCBAB8",
+        border: "3px solid #DD6410",
         backgroundColor: "transparent",
         position: "relative",
         overflow: "hidden",
@@ -102,7 +102,7 @@ function TestimonialCardPhn({ data }) {
   return (
     <Card
       style={{
-        border: "3px solid #BCBAB8",
+        border: "3px solid #DD6410",
         backgroundColor: "transparent",
       }}
     >
@@ -138,7 +138,7 @@ function TestiPhn() {
       <Container className="pb-5" style={{ maxWidth: "95%" }}>
         <Row
           className="d-flex justify-content-center mb-3"
-          style={{ color: "#BCBAB8" }}
+          style={{ color: "#DD6410" }}
         >
           <h5>Thoughts Shared by </h5>
         </Row>
