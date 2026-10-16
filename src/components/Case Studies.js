@@ -468,9 +468,9 @@ function HovRev({
         )}
       </AnimatePresence>
 
-      {/* Desktop-Only Hover Image Preview Following Cursor */}
+      {/* Desktop-Only Hover Image Preview Following Cursor (disabled when details panel is open) */}
       <AnimatePresence>
-        {!isMobile && yeet && !btnHover && (
+        {!isMobile && !isOpen && yeet && !btnHover && (
           <motion.div
             variants={Appear}
             initial="hidden"
