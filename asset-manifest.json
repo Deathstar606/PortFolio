@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.e3ef1fbe.css",
-    "main.js": "/PortFolio/static/js/main.c7520b35.js",
+    "main.js": "/PortFolio/static/js/main.ff1bb940.js",
     "static/js/787.bc93fc76.chunk.js": "/PortFolio/static/js/787.bc93fc76.chunk.js",
     "static/media/Introduction.mp4": "/PortFolio/static/media/Introduction.a56c463eeed20a79d49b.mp4",
     "static/media/demo.mp4": "/PortFolio/static/media/demo.92fd2149b997e7c5cd00.mp4",
@@ -25,11 +25,11 @@
     "static/media/TechnoWave.jpg": "/PortFolio/static/media/TechnoWave.21bfbef30f400f8898de.jpg",
     "index.html": "/PortFolio/index.html",
     "main.e3ef1fbe.css.map": "/PortFolio/static/css/main.e3ef1fbe.css.map",
-    "main.c7520b35.js.map": "/PortFolio/static/js/main.c7520b35.js.map",
+    "main.ff1bb940.js.map": "/PortFolio/static/js/main.ff1bb940.js.map",
     "787.bc93fc76.chunk.js.map": "/PortFolio/static/js/787.bc93fc76.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e3ef1fbe.css",
-    "static/js/main.c7520b35.js"
+    "static/js/main.ff1bb940.js"
   ]
 }
