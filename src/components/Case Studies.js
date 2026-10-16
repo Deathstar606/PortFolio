@@ -383,7 +383,13 @@ function HovRev({
               )}
 
               {/* Launch / Show Action inside the Expanded Pane */}
-              <div style={{ paddingTop: "6px" }}>
+              <div
+                style={{
+                  paddingTop: "6px",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
                 {link ? (
                   <Button
                     style={{
