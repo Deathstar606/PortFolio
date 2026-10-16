@@ -62,7 +62,7 @@ const case_disc = [
     src: Digi,
     src1: Rect,
     src2: Json,
-    link: "https://deathstar606.github.io/Digix/#/home",
+    link: "https://deathstar606.github.io/Digi_Port/#/home",
     key_feat:
       "Digital agency platform with dynamic service showcases, client engagement workflows, and interactive service proposal views.",
     tech_stack: "React, JSON Server, Framer Motion, CSS Modules",
