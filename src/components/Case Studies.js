@@ -538,13 +538,15 @@ function RenderItem() {
     <div style={{ overflow: "hidden" }}>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-3 pb-3"
+          className="headerdec pt-5 pb-3"
           id="casestu"
           style={{
             color: "#DD6410",
             position: "relative",
             display: "inline-block",
             overflow: "hidden",
+            lineHeight: "1.2",
+            marginBottom: "30px",
           }}
         >
           <StaggeredText text={"Case Studies"}></StaggeredText>
@@ -556,35 +558,13 @@ function RenderItem() {
             style={{
               position: "absolute",
               width: "100%",
-              height: "100%",
               top: 0,
-              bottom: -7,
+              bottom: 0,
               background: "#A9A9A9",
               zIndex: 20,
             }}
           />
         </h2>
-        <div
-          className="d-flex justify-content-center flex-column pb-5"
-          style={{ width: "fit-content" }}
-        >
-          <Row className="no-gutters align-items-start flex-nowrap">
-            {/* Quote Content */}
-            <Col style={{ width: "fit-content" }}>
-              <div className="pb-1">
-                <h5
-                  style={{
-                    color: "#DD6410",
-                    fontWeight: "500",
-                    fontSize: "clamp(0.9rem, 2vw, 1rem)",
-                    lineHeight: "1.4",
-                    margin: 0,
-                  }}
-                ></h5>
-              </div>
-            </Col>
-          </Row>
-        </div>
       </Container>
 
       {/* Mapped Case Studies List */}

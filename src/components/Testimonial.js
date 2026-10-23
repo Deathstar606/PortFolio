@@ -4,61 +4,58 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, useInView } from "framer-motion";
 import { StaggeredText } from "./Animations";
 import MediaQuery from "react-responsive";
-import Fard from "../images/istockphoto-1495088043-612x612.jpg";
+
+import gr from "../images/people/gr.png";
+import fs from "../images/people/fs.png";
+import grace from "../images/people/grace.png";
+import gs from "../images/people/gs.png";
+import srv from "../images/people/srv.jpg";
+
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "../components/testimonial.css";
-import { Pagination, Navigation, EffectCoverflow } from "swiper/modules";
+import { Pagination, EffectCoverflow, Autoplay } from "swiper/modules";
 
 const testiData = [
   {
-    name: "Fardin Rahman 1",
-    img: Fard,
-    designation: "CEO, Company",
+    name: "Graham Anderson",
+    img: gr,
+    designation: "CEO, Galaxy Renovations & Home Solutions",
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "Working together was effortless from day one. Our old website really didn't do our craftsmanship justice, but the new gallery and instant quote request flow completely turned that around. We actually started getting booking requests within the first week of going live.",
     rating: "5",
   },
   {
-    name: "Fardin Rahman 2",
-    img: Fard,
-    designation: "CEO, Company",
+    name: "Farhan Sadiq Labib",
+    img: fs,
+    designation: "Founder, Veloura",
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "He built a clean, remarkably fast store that our customers genuinely find easy to navigate. The live product filters and checkout flow work seamlessly without lagging, and inventory syncs reliably in the backend. Great communication and solid follow-through.",
     rating: "5",
   },
   {
-    name: "Fardin Rahman 3",
-    img: Fard,
-    designation: "CEO, Company",
+    name: "Sahadat Hossain Saurav",
+    img: srv,
+    designation: "Founder & CEO, DIGIX",
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "As an agency, we’re extremely picky about visual details, but he nailed the exact modern feel we wanted. The interactive proposal viewer has made pitching high-value clients much easier, and the case study layouts look sharp. Highly responsive to feedback throughout the project.",
     rating: "5",
   },
   {
-    name: "Fardin Rahman 4",
-    img: Fard,
-    designation: "CEO, Company",
+    name: "Gracie Robinson",
+    img: grace,
+    designation: "Founder, Retaurante Confusion",
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "Our customers constantly mention how easy it is to browse our menu and dish photos on their phones now. The online reservation flow took a huge load off our staff during busy dinner rushes. Straightforward collaboration and a great final result.",
     rating: "5",
   },
   {
-    name: "Fardin Rahman 5",
-    img: Fard,
-    designation: "CEO, Company",
+    name: "Gregory Smith",
+    img: gs,
+    designation: "",
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    rating: "5",
-  },
-  {
-    name: "Fardin Rahman 6",
-    img: Fard,
-    designation: "CEO, Company",
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "One of the most dependable developers I've worked with. He didn't just build the feature checklist—he actively pointed out edge cases in our user flow that we had missed. The app is snappy, well-structured, and was delivered right on time.",
     rating: "5",
   },
 ];
@@ -73,9 +70,19 @@ function TestimonialCard({ data }) {
         position: "relative",
         overflow: "hidden",
         width: "350px",
+        height: "400px",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <Card.Body>
+      <Card.Body
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          paddingBottom: "50px",
+        }}
+      >
         <div className="d-flex justify-content-center">
           <img
             src={data.img}
@@ -84,13 +91,27 @@ function TestimonialCard({ data }) {
           />
         </div>
 
-        <div className="text-center mt-2 mb-3" style={{ color: "#F5F5F5" }}>
+        <div
+          className="text-center mt-2 mb-3"
+          style={{ color: "#F5F5F5", minHeight: "65px" }}
+        >
           {data.name}
           <p className="mt-2 text-muted">{data.designation}</p>
         </div>
-        <Card.Text style={{ color: "#F5F5F5" }}>{data.description}</Card.Text>
+        <Card.Text style={{ color: "#F5F5F5", flexGrow: 1 }}>
+          {data.description}
+        </Card.Text>
 
-        <Card.Subtitle className="mt-2 text-muted">
+        <Card.Subtitle
+          className="text-muted"
+          style={{
+            position: "absolute",
+            bottom: "16px",
+            right: "20px",
+            margin: 0,
+            fontSize: "0.95rem",
+          }}
+        >
           {data.rating} 🌟
         </Card.Subtitle>
       </Card.Body>
@@ -104,9 +125,22 @@ function TestimonialCardPhn({ data }) {
       style={{
         border: "3px solid #DD6410",
         backgroundColor: "transparent",
+        height: "500px",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
       }}
     >
-      <Card.Body>
+      <Card.Body
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          padding: "1.25rem",
+          paddingBottom: "50px",
+        }}
+      >
         <div className="d-flex justify-content-center">
           <img
             src={data.img}
@@ -115,16 +149,46 @@ function TestimonialCardPhn({ data }) {
           />
         </div>
 
-        <div className="text-center mt-2 mb-2" style={{ color: "#F5F5F5" }}>
-          {data.name}
-          <p className="mt-2 text-muted">{data.designation}</p>
+        <div
+          className="text-center mt-2 mb-2"
+          style={{ color: "#F5F5F5", minHeight: "65px" }}
+        >
+          <div style={{ fontWeight: "600", fontSize: "1.05rem" }}>
+            {data.name}
+          </div>
+          <p
+            className="mt-1 text-muted"
+            style={{ fontSize: "0.88rem", margin: 0 }}
+          >
+            {data.designation}
+          </p>
         </div>
 
-        <Card.Text style={{ color: "#F5F5F5", paddingTop: "20px" }}>
+        {/* Dedicated spacing between designation and description for the swiper arrows */}
+        <div style={{ height: "48px" }} aria-hidden="true" />
+
+        <Card.Text
+          style={{
+            color: "#F5F5F5",
+            fontSize: "0.92rem",
+            lineHeight: "1.6",
+            flexGrow: 1,
+            margin: 0,
+          }}
+        >
           {data.description}
         </Card.Text>
 
-        <Card.Subtitle className="mt-2 text-muted">
+        <Card.Subtitle
+          className="text-muted"
+          style={{
+            position: "absolute",
+            bottom: "16px",
+            left: "20px",
+            margin: 0,
+            fontSize: "0.95rem",
+          }}
+        >
           {data.rating} 🌟
         </Card.Subtitle>
       </Card.Body>
@@ -150,6 +214,12 @@ function TestiPhn() {
               slidesPerView={"1"}
               spaceBetween={15}
               centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
@@ -161,7 +231,7 @@ function TestiPhn() {
                 clickable: true,
               }}
               navigation={true}
-              modules={[Pagination, Navigation, EffectCoverflow]}
+              modules={[Pagination, EffectCoverflow, Autoplay]}
               className="mySwiper"
             >
               {testiData.map((item, index) => (
@@ -215,12 +285,14 @@ function TestiSlide() {
     <div className="pb-5" style={{ overflow: "hidden" }}>
       <Container style={{ maxWidth: "95%" }}>
         <h2
-          className="headerdec pt-5 pb-3 mb-4"
+          className="headerdec pt-5 pb-3"
           style={{
             color: "#DD6410",
             position: "relative",
             display: "inline-block",
             overflow: "hidden",
+            lineHeight: "1.2",
+            marginBottom: "30px",
           }}
         >
           <StaggeredText text={"Testimonials"}></StaggeredText>
@@ -233,7 +305,7 @@ function TestiSlide() {
               position: "absolute",
               width: "100%",
               top: 0,
-              bottom: -7,
+              bottom: 0,
               background: "#A9A9A9",
               zIndex: 20,
             }}

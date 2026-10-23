@@ -59,6 +59,8 @@ function Topics() {
             position: "relative",
             display: "inline-block",
             overflow: "hidden",
+            lineHeight: "1.2",
+            marginBottom: "30px",
           }}
         >
           <StaggeredText text={"Learn"}></StaggeredText>
@@ -71,7 +73,7 @@ function Topics() {
               position: "absolute",
               width: "100%",
               top: 0,
-              bottom: -7,
+              bottom: 0,
               background: "#A9A9A9",
               zIndex: 20,
             }}

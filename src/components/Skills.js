@@ -26,24 +26,30 @@ function Skills() {
     <div
       style={{
         backgroundColor: "#DD6410",
-        paddingTop: "30px",
+        paddingTop: "0px",
         paddingBottom: "30px",
       }}
     >
       <Container style={{ maxWidth: "95%" }}>
-        <h2 className="headerdec d-flex align-items-center">
+        <h2
+          className="headerdec d-flex align-items-center pt-5 pb-3"
+          style={{
+            lineHeight: "1.2",
+            marginBottom: "30px",
+          }}
+        >
           <StaggeredText text={"Skills"}></StaggeredText>
           <img
             src={arrowGif}
             alt="Arrow"
             className="ml-auto"
-            style={{ width: "100px" }}
+            style={{ width: "100px", cursor: "pointer" }}
             onClick={() => swiperRef.current?.slideNext()}
           />
         </h2>
         <MediaQuery minWidth={639}>
           <Row
-            className="mt-5 mb-3"
+            className="mb-3"
             style={{ paddingRight: "10%", paddingLeft: "10%" }}
           >
             <Swiper
@@ -248,7 +254,7 @@ function Skills() {
           </Row>
         </MediaQuery>
         <MediaQuery maxWidth={638}>
-          <Row className="mt-5 mb-3">
+          <Row className="mb-3">
             <Swiper
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               scrollbar={{

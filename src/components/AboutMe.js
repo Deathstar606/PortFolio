@@ -30,15 +30,15 @@ function AboutMe() {
       style={{ maxWidth: "95%", paddingBottom: isMobile ? "0px" : "5vh" }}
     >
       <h2
-        className="headerdec pt-3 pb-3" // You can now safely reduce padding here
+        className="headerdec pt-5 pb-3"
         id="about"
         style={{
           color: "#DD6410",
           position: "relative",
           display: "inline-block",
           overflow: "hidden",
-          lineHeight: "1.2", // FIX 1: Ensures the bounding box calculates the text height correctly
-          marginBottom: "0", // FIX 2: Prevents margin collapse from clipping inside hidden overflow
+          lineHeight: "1.2",
+          marginBottom: "30px",
         }}
       >
         <StaggeredText text={"Know Me..."}></StaggeredText>
@@ -51,13 +51,13 @@ function AboutMe() {
             position: "absolute",
             width: "100%",
             top: 0,
-            bottom: 0, // FIX 3: Removed the -7 hack. It now perfectly aligns with the h2 boundaries
+            bottom: 0,
             background: "#A9A9A9",
             zIndex: 20,
           }}
         />
       </h2>
-      <Row style={{ padding: "5vh 0px 5vh 0px" }}>
+      <Row style={{ padding: "0px 0px 5vh 0px" }}>
         <Col md={4} className="pb-4">
           <div
             style={{
