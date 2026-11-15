@@ -24,7 +24,7 @@ const testiData = [
     designation: "CEO, Galaxy Renovations & Home Solutions",
     description:
       "Working together was effortless from day one. Our old website really didn't do our craftsmanship justice, but the new gallery and instant quote request flow completely turned that around. We actually started getting booking requests within the first week of going live.",
-    rating: "5",
+    rating: "4.9",
   },
   {
     name: "Farhan Sadiq Labib",
@@ -32,7 +32,7 @@ const testiData = [
     designation: "Founder, Veloura",
     description:
       "He built a clean, remarkably fast store that our customers genuinely find easy to navigate. The live product filters and checkout flow work seamlessly without lagging, and inventory syncs reliably in the backend. Great communication and solid follow-through.",
-    rating: "5",
+    rating: "4.5",
   },
   {
     name: "Sahadat Hossain Saurav",
@@ -56,7 +56,7 @@ const testiData = [
     designation: "",
     description:
       "One of the most dependable developers I've worked with. He didn't just build the feature checklist—he actively pointed out edge cases in our user flow that we had missed. The app is snappy, well-structured, and was delivered right on time.",
-    rating: "5",
+    rating: "4.8",
   },
 ];
 

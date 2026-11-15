@@ -48,7 +48,7 @@ export const SectionXNeg = ({ children }) => {
   const isInView = FMotion(ref, { once: true });
 
   return (
-    <section ref={ref}>
+    <section ref={ref} style={{ overflow: "hidden" }}>
       <span
         className="animeX"
         style={{
@@ -68,7 +68,7 @@ export const SectionXPos = ({ children }) => {
   const isInView = FMotion(ref, { once: true });
 
   return (
-    <section ref={ref}>
+    <section ref={ref} style={{ overflow: "hidden" }}>
       <span
         className="animeX2"
         style={{

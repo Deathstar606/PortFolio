@@ -1,12 +1,6 @@
 import { useState, useRef } from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
-import {
-  motion,
-  AnimatePresence,
-  useInView,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
+import { Container } from "react-bootstrap";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { StaggeredText } from "./Animations";
 import Rect from "../images/Comprised Off/React.png";
@@ -14,82 +8,198 @@ import Json from "../images/Comprised Off/Json.png";
 import fire from "../images/Comprised Off/fire.png";
 import mongo from "../images/Comprised Off/Mongo.png";
 import wp from "../images/Skill_Icons/icons8-wordpress-50.png";
-import ConFu from "../images/Case Logo/ConFusion.png";
-import Digi from "../images/Case Logo/Digixwhitelogo.png";
-import Vergo from "../images/Case Logo/Vergo.png";
-import Gren from "../images/Case Logo/galaxyreno.png";
-import Velou from "../images/Case Logo/velou.png";
-import Techno from "../images/Case Logo/TechnoWave.jpg";
-import { useMediaQuery } from "react-responsive";
 
-const case_disc = [
+const CASE_CATEGORIES = [
   {
-    text: "ConFusion",
-    text2: "Restaurant Application",
-    src: ConFu,
-    src1: Rect,
-    src2: mongo,
-    link: "https://deathstar606.github.io/ConFusion/#/home",
-    key_feat:
-      "Interactive dish catalog, reservation management, dynamic customer feedback system, and full responsive menu filtering.",
-    tech_stack: "React, Redux, Node.js, Express, MongoDB, Bootstrap",
+    id: "research",
+    label: "Research Papers",
+    iconClass: "fa fa-file-text-o",
   },
   {
-    text: "Galaxy Reno",
-    text2: "Renovation Corporation",
-    src: Gren,
-    src1: Rect,
-    src2: mongo,
-    link: "https://galaxyreno-git-main-deathstar606s-projects.vercel.app/#/home",
-    key_feat:
-      "Full-service renovation portfolio, project estimation requests, modern image gallery showcase, and client consultation bookings.",
-    tech_stack: "React, Node.js, MongoDB, Framer Motion, Bootstrap",
+    id: "fullstack",
+    label: "Full-Stack Applications",
+    iconClass: "fa fa-code",
   },
   {
-    text: "Veloura",
-    text2: "Ecommerce Web Application",
-    src: Velou,
-    src1: Rect,
-    src2: mongo,
-    link: "https://www.velourabd.com/",
-    key_feat:
-      "Modern e-commerce storefront featuring real-time product filtering, secure multi-step cart & checkout, dynamic inventory tracking, and client account management.",
-    tech_stack: "React, Redux Toolkit, Node.js, Express, MongoDB, RESTful APIs",
-  },
-  {
-    text: "Digix",
-    text2: "Ongoing project",
-    src: Digi,
-    src1: Rect,
-    src2: Json,
-    link: "https://deathstar606.github.io/Digi_Port/#/home",
-    key_feat:
-      "Digital agency platform with dynamic service showcases, client engagement workflows, and interactive service proposal views.",
-    tech_stack: "React, JSON Server, Framer Motion, CSS Modules",
-  },
-  {
-    text: "VerGo",
-    text2: "Clothing Brand App",
-    src: Vergo,
-    src1: Rect,
-    src2: fire,
-    link: "https://deathstar606.github.io/VerGo/#/home",
-    key_feat:
-      "Curated apparel collections, real-time Firebase cloud data synchronization, user authentication, and responsive product discovery.",
-    tech_stack: "React, Firebase Realtime Database, Firestore, Bootstrap",
-  },
-  {
-    text: "TechnoWave",
-    text2: "Project Built on WordPress",
-    src: Techno,
-    src1: wp,
-    src2: null,
-    to: "/techno-wave",
-    key_feat:
-      "Dynamic tech store application designed for custom PC builds and laptops, featuring WooCommerce product management, customizable carts, and category sorting.",
-    tech_stack: "WordPress, WooCommerce, PHP, Elementor, Custom CSS",
+    id: "rag",
+    label: "RAG Applications",
+    iconClass: "fa fa-database",
   },
 ];
+
+const CASE_DATA = {
+  fullstack: [
+    {
+      id: "confusion",
+      text: "ConFusion",
+      text2: "Restaurant Application",
+      icons: [
+        { src: Rect, alt: "React", invert: true },
+        { src: mongo, alt: "MongoDB", invert: false },
+      ],
+      tags: ["Full-Stack", "MERN Stack", "Restaurant App"],
+      link: "https://deathstar606.github.io/ConFusion/#/home",
+      key_feat:
+        "Interactive dish catalog, reservation management, dynamic customer feedback system, and full responsive menu filtering.",
+      tech_stack: "React, Redux, Node.js, Express, MongoDB, Bootstrap",
+    },
+    {
+      id: "galaxy-reno",
+      text: "Galaxy Reno",
+      text2: "Renovation Corporation",
+      icons: [
+        { src: Rect, alt: "React", invert: true },
+        { src: mongo, alt: "MongoDB", invert: false },
+      ],
+      tags: ["Full-Stack", "MERN Stack", "Renovation Portal"],
+      link: "https://galaxyreno-git-main-deathstar606s-projects.vercel.app/#/home",
+      key_feat:
+        "Full-service renovation portfolio, project estimation requests, modern image gallery showcase, and client consultation bookings.",
+      tech_stack: "React, Node.js, MongoDB, Framer Motion, Bootstrap",
+    },
+    {
+      id: "veloura",
+      text: "Veloura",
+      text2: "Ecommerce Web Application",
+      icons: [
+        { src: Rect, alt: "React", invert: true },
+        { src: mongo, alt: "MongoDB", invert: false },
+      ],
+      tags: ["Full-Stack", "E-Commerce", "RESTful APIs"],
+      link: "https://www.velourabd.com/",
+      key_feat:
+        "Modern e-commerce storefront featuring real-time product filtering, secure multi-step cart & checkout, dynamic inventory tracking, and client account management.",
+      tech_stack:
+        "React, Redux Toolkit, Node.js, Express, MongoDB, RESTful APIs",
+    },
+    {
+      id: "digix",
+      text: "Digix",
+      text2: "Ongoing project",
+      icons: [
+        { src: Rect, alt: "React", invert: true },
+        { src: Json, alt: "JSON Server", invert: true },
+      ],
+      tags: ["Full-Stack", "Agency Platform", "Ongoing Project"],
+      link: "https://deathstar606.github.io/Digi_Port/#/home",
+      key_feat:
+        "Digital agency platform with dynamic service showcases, client engagement workflows, and interactive service proposal views.",
+      tech_stack: "React, JSON Server, Framer Motion, CSS Modules",
+    },
+    {
+      id: "vergo",
+      text: "VerGo",
+      text2: "Clothing Brand App",
+      icons: [
+        { src: Rect, alt: "React", invert: true },
+        { src: fire, alt: "Firebase", invert: false },
+      ],
+      tags: ["Full-Stack", "Cloud / Firebase", "Clothing Brand"],
+      link: "https://deathstar606.github.io/VerGo/#/home",
+      key_feat:
+        "Curated apparel collections, real-time Firebase cloud data synchronization, user authentication, and responsive product discovery.",
+      tech_stack:
+        "React, Firebase Realtime Database, Firestore, Bootstrap",
+    },
+    {
+      id: "technowave",
+      text: "TechnoWave",
+      text2: "Project Built on WordPress",
+      icons: [{ src: wp, alt: "WordPress", invert: true }],
+      tags: ["WordPress", "WooCommerce", "Tech Store"],
+      to: "/techno-wave",
+      key_feat:
+        "Dynamic tech store application designed for custom PC builds and laptops, featuring WooCommerce product management, customizable carts, and category sorting.",
+      tech_stack: "WordPress, WooCommerce, PHP, Elementor, Custom CSS",
+    },
+  ],
+  research: [
+    {
+      id: "research-hybrid-retrieval",
+      text: "Hybrid Dense-Sparse Retrieval for Domain QA",
+      text2: "Research Paper Placeholder — Upcoming Publication",
+      iconClasses: ["fa fa-file-text-o", "fa fa-flask"],
+      tags: ["AI / NLP", "Retrieval-Augmented", "Research Paper", "Placeholder"],
+      key_feat:
+        "Placeholder study examining reciprocal rank fusion across dense bi-encoder embeddings, BM25 sparse scoring, and cross-encoder reranking pipelines for technical corpora.",
+      tech_stack: "PyTorch, HuggingFace Transformers, FAISS, Python, LaTeX",
+      isPlaceholder: true,
+    },
+    {
+      id: "research-peft-slm",
+      text: "Parameter-Efficient Adaptation of Small Language Models",
+      text2: "Research Paper Placeholder — Working Manuscript",
+      iconClasses: ["fa fa-graduation-cap", "fa fa-line-chart"],
+      tags: ["AI / LLM", "PEFT / LoRA", "Research Paper", "Coming Soon"],
+      key_feat:
+        "Placeholder manuscript benchmarking QLoRA and adapter tuning trade-offs across inference latency, memory footprint, and downstream task generalization.",
+      tech_stack: "PyTorch, PEFT, BitsAndBytes, Weights & Biases, Python",
+      isPlaceholder: true,
+    },
+    {
+      id: "research-multimodal-docs",
+      text: "Layout-Aware Multimodal Parsing for Structured Documents",
+      text2: "Research Paper Placeholder — Experimental Notes",
+      iconClasses: ["fa fa-book", "fa fa-sitemap"],
+      tags: ["Multimodal AI", "Document Parsing", "Research Paper", "Placeholder"],
+      key_feat:
+        "Placeholder research exploring vision-language alignment and hierarchical table reconstruction to reduce extraction errors in complex PDFs.",
+      tech_stack: "Python, Vision Transformers, PyTorch, OpenCV, LaTeX",
+      isPlaceholder: true,
+    },
+  ],
+  rag: [
+    {
+      id: "rag-enterprise-kb",
+      text: "Enterprise Knowledge Base RAG Assistant",
+      text2: "RAG Application Placeholder — Architecture Showcase",
+      iconClasses: ["fa fa-database", "fa fa-search"],
+      tags: [
+        "AI / NLP",
+        "Retrieval-Augmented",
+        "Vector Search",
+        "Placeholder",
+      ],
+      key_feat:
+        "Placeholder RAG workspace demonstrating semantic document chunking, hybrid metadata filtering, citation-grounded synthesis, and query latency telemetry.",
+      tech_stack: "Python, FastAPI, LangChain, Qdrant, React",
+      isPlaceholder: true,
+    },
+    {
+      id: "rag-multi-pdf",
+      text: "Multi-Document Research & PDF Query Engine",
+      text2: "RAG Application Placeholder — In Development",
+      iconClasses: ["fa fa-file-text-o", "fa fa-cogs"],
+      tags: [
+        "AI / NLP",
+        "Document QA",
+        "Reranking Pipeline",
+        "Coming Soon",
+      ],
+      key_feat:
+        "Placeholder retrieval pipeline built for cross-paper synthesis with table-aware ingestion, multi-query expansion, cross-encoder reranking, and inline citations.",
+      tech_stack:
+        "Next.js, Python, pgvector, Cross-Encoder, OpenAI / Local LLM",
+      isPlaceholder: true,
+    },
+    {
+      id: "rag-code-copilot",
+      text: "Codebase-Aware Technical Support Copilot",
+      text2: "RAG Application Placeholder — Prototype",
+      iconClasses: ["fa fa-code", "fa fa-database"],
+      tags: [
+        "AI / NLP",
+        "Retrieval-Augmented",
+        "AST Chunking",
+        "Placeholder",
+      ],
+      key_feat:
+        "Placeholder developer assistant indexing syntax-tree symbol boundaries alongside technical guides for grounded troubleshooting and architecture explanations.",
+      tech_stack: "TypeScript, React, FastAPI, ChromaDB, Tree-sitter",
+      isPlaceholder: true,
+    },
+  ],
+};
 
 const SliderRev = {
   hidden: {
@@ -104,438 +214,145 @@ const SliderRev = {
   },
 };
 
-const Appear = {
-  hidden: { opacity: 0, scale: 0.6 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.25, ease: "easeOut" },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.6,
-    transition: { duration: 0.2, ease: "easeIn" },
-  },
-};
-
-function HovRev({
-  text,
-  text2,
-  src,
-  src1,
-  src2,
-  link,
-  to,
-  key_feat,
-  tech_stack,
-}) {
-  const isMobile = useMediaQuery({ maxWidth: 639 });
-  const [yeet, setYeet] = useState(false);
-  const [btnHover, setBtnHover] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
-  const cursorX = useSpring(mouseX, springConfig);
-  const cursorY = useSpring(mouseY, springConfig);
-
-  const handleMouseEnter = (e) => {
-    if (isMobile) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    mouseX.jump(x);
-    mouseY.jump(y);
-    setYeet(true);
-  };
-
-  const handleMouseMove = (e) => {
-    if (isMobile) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    mouseX.set(x);
-    mouseY.set(y);
-  };
-
-  const handleMouseLeave = () => {
-    setYeet(false);
-  };
-
-  const toggleOpen = (e) => {
-    e.stopPropagation();
-    setIsOpen((prev) => !prev);
-  };
+function CaseCard({ item, index }) {
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <motion.div
-      className="case-sec"
-      onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      animate={{
-        y: yeet && !isMobile ? -4 : 0,
-        boxShadow:
-          yeet && !isMobile
-            ? "0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3)"
-            : "0 0px 0px rgba(0, 0, 0, 0)",
-        zIndex: yeet ? 1000 : 1,
-      }}
-      transition={{
-        y: { duration: 0.25, ease: "easeOut" },
-        boxShadow: { duration: 0.25, ease: "easeOut" },
-      }}
-      style={{
-        position: "relative",
-        zIndex: yeet ? 1000 : 1,
-        flexDirection: "column",
-        alignItems: "stretch",
-        padding: 0,
-      }}
+    <motion.article
+      className={`case-card${isExpanded ? " expanded" : ""}`}
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.32, delay: index * 0.05, ease: "easeOut" }}
     >
-      {/* Top Header Row of the Case Study Item */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "10px 20px",
-          width: "100%",
-        }}
-      >
-        {/* Left Column: Tech Icons & Title */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "3px",
-            flex: "1",
-            minWidth: 0,
-          }}
-        >
-          {src1 && (
-            <img
-              style={{ height: "30px", width: "30px", flexShrink: 0 }}
-              src={src1}
-              alt=""
-            />
-          )}
-          {src2 && (
-            <img
-              style={{ height: "30px", width: "30px", flexShrink: 0 }}
-              src={src2}
-              alt=""
-            />
-          )}
-          <div className="pl-2 pl-md-4">
-            <motion.h1
-              animate={{
-                color: yeet ? "#DD6410" : "#000000",
-                scale: yeet && !isMobile ? 1.04 : 1,
-              }}
-              transition={{
-                duration: 0.3,
-                ease: "easeOut",
-              }}
-              style={{
-                fontWeight: "520",
-                fontSize: "clamp(18px, 4vw, 100px)",
-                margin: 0,
-                paddingTop: "14px",
-                paddingBottom: "14px",
-                display: "inline-block",
-                transformOrigin: "left center",
-                cursor: "pointer",
-                whiteSpace: "nowrap",
-              }}
-              onClick={toggleOpen}
-            >
-              {text}
-            </motion.h1>
+      <div className="case-card-top">
+        <div className="case-card-identity">
+          <div className="case-card-icons">
+            {item.icons &&
+              item.icons.map((icon, iconIndex) => (
+                <img
+                  key={iconIndex}
+                  src={icon.src}
+                  alt={icon.alt}
+                  className={`case-stack-icon${
+                    icon.invert ? " invert-dark" : ""
+                  }`}
+                />
+              ))}
+            {item.iconClasses &&
+              item.iconClasses.map((iconCls, iconIndex) => (
+                <span
+                  key={iconIndex}
+                  className="case-fa-icon-badge"
+                  aria-hidden="true"
+                >
+                  <i className={iconCls} />
+                </span>
+              ))}
           </div>
+          <h3 className="case-card-title">{item.text}</h3>
         </div>
 
-        {/* Right Column: Details Expand Button */}
-        <div style={{ flexShrink: 0, textAlign: "right" }}>
-          <Button
-            className="btn-dark text-white d-flex align-items-center"
-            onClick={toggleOpen}
-            onMouseEnter={() => setBtnHover(true)}
-            onMouseLeave={() => setBtnHover(false)}
-            style={{
-              padding: "7px 16px",
-              fontSize: "14px",
-              fontWeight: "600",
-              letterSpacing: "0.4px",
-              borderRadius: "6px",
-              gap: "8px",
-              border: "none",
-              backgroundColor: "#181818",
-              cursor: "pointer",
-              boxShadow: "0 2px 6px rgba(0, 0, 0, 0.25)",
-            }}
+        <button
+          type="button"
+          className="case-details-btn"
+          aria-expanded={isExpanded}
+          onClick={() => setIsExpanded((prev) => !prev)}
+        >
+          <span>Details</span>
+          <motion.span
+            aria-hidden="true"
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.25 }}
+            style={{ display: "inline-flex", alignItems: "center" }}
           >
-            <span>Details</span>
-            <motion.i
-              className="fa fa-chevron-down"
-              aria-hidden="true"
-              animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              style={{ fontSize: "12px", display: "inline-block" }}
-            />
-          </Button>
-        </div>
+            <i className="fa fa-chevron-down" />
+          </motion.span>
+        </button>
       </div>
 
-      {/* Downward Expandable Details Pane */}
-      <AnimatePresence>
-        {isOpen && (
+      <div className="case-divider" />
+
+      <div className="case-tags-row">
+        {item.tags.map((tag, tagIdx) => (
+          <span key={tagIdx} className="case-tag-pill">
+            <i className="fa fa-tag case-tag-icon" aria-hidden="true" />
+            <span>{tag}</span>
+          </span>
+        ))}
+      </div>
+
+      <AnimatePresence initial={false}>
+        {isExpanded && (
           <motion.div
+            key="details"
+            className="case-details-panel"
             initial={{ height: 0, opacity: 0 }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-              transition: {
-                height: { duration: 0.35, ease: "easeInOut" },
-                opacity: { duration: 0.25, delay: 0.1 },
-              },
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-              transition: {
-                opacity: { duration: 0.15 },
-                height: { duration: 0.3, ease: "easeInOut" },
-              },
-            }}
-            style={{
-              overflow: "hidden",
-              backgroundColor: "#202020",
-              color: "#f0f0f0",
-              borderTop: "1px solid rgba(255, 255, 255, 0.12)",
-            }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div
-              style={{
-                padding: "20px 24px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "14px",
-              }}
-            >
-              {key_feat && (
+            <div className="case-details-inner">
+              {item.text2 && (
                 <div>
-                  <span
-                    style={{
-                      color: "#DD6410",
-                      fontSize: "0.85rem",
-                      fontWeight: "700",
-                      letterSpacing: "0.8px",
-                      textTransform: "uppercase",
-                      display: "block",
-                      marginBottom: "4px",
-                    }}
-                  >
-                    Key Features
-                  </span>
-                  <p
-                    style={{
-                      color: "#d4d4d4",
-                      fontSize: "0.95rem",
-                      lineHeight: "1.6",
-                      margin: 0,
-                    }}
-                  >
-                    {key_feat}
-                  </p>
+                  <span className="case-detail-block-label">Category / Role</span>
+                  <p className="case-detail-copy">{item.text2}</p>
                 </div>
               )}
 
-              {tech_stack && (
+              {item.key_feat && (
                 <div>
-                  <span
-                    style={{
-                      color: "#DD6410",
-                      fontSize: "0.85rem",
-                      fontWeight: "700",
-                      letterSpacing: "0.8px",
-                      textTransform: "uppercase",
-                      display: "block",
-                      marginBottom: "4px",
-                    }}
-                  >
-                    Tech Stack
-                  </span>
-                  <p
-                    style={{
-                      color: "#b0b0b0",
-                      fontSize: "0.92rem",
-                      lineHeight: "1.5",
-                      margin: 0,
-                      fontWeight: "500",
-                    }}
-                  >
-                    {tech_stack}
-                  </p>
+                  <span className="case-detail-block-label">Key Features</span>
+                  <p className="case-detail-copy">{item.key_feat}</p>
                 </div>
               )}
 
-              {/* Launch / Show Action inside the Expanded Pane */}
-              <div
-                style={{
-                  paddingTop: "6px",
-                  display: "flex",
-                  justifyContent: "flex-end",
-                }}
-              >
-                {link ? (
-                  <Button
-                    style={{
-                      backgroundColor: "#DD6410",
-                      borderColor: "#DD6410",
-                      color: "#ffffff",
-                      fontWeight: "600",
-                      padding: "8px 22px",
-                      borderRadius: "6px",
-                      boxShadow: "0 3px 10px rgba(221, 100, 16, 0.3)",
-                      transition: "all 0.2s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "#c45408";
-                      e.currentTarget.style.borderColor = "#c45408";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "#DD6410";
-                      e.currentTarget.style.borderColor = "#DD6410";
-                    }}
+              {item.tech_stack && (
+                <div>
+                  <span className="case-detail-block-label">Tech Stack</span>
+                  <p className="case-detail-copy">{item.tech_stack}</p>
+                </div>
+              )}
+
+              <div className="case-detail-footer">
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="case-cta-btn"
                   >
-                    <a
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        color: "inherit",
-                        textDecoration: "none",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      }}
-                    >
-                      Launch{" "}
-                      <i className="fa fa-external-link" aria-hidden="true"></i>
-                    </a>
-                  </Button>
+                    <span>Launch</span>
+                    <i className="fa fa-external-link" aria-hidden="true" />
+                  </a>
+                ) : item.to ? (
+                  <Link to={item.to} className="case-cta-btn">
+                    <span>Show Case Study</span>
+                    <i className="fa fa-arrow-right" aria-hidden="true" />
+                  </Link>
                 ) : (
-                  <Button
-                    style={{
-                      backgroundColor: "#DD6410",
-                      borderColor: "#DD6410",
-                      color: "#ffffff",
-                      fontWeight: "600",
-                      padding: "8px 22px",
-                      borderRadius: "6px",
-                      boxShadow: "0 3px 10px rgba(221, 100, 16, 0.3)",
-                      transition: "all 0.2s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "#c45408";
-                      e.currentTarget.style.borderColor = "#c45408";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "#DD6410";
-                      e.currentTarget.style.borderColor = "#DD6410";
-                    }}
-                  >
-                    <Link
-                      to={to}
-                      style={{
-                        color: "inherit",
-                        textDecoration: "none",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      }}
-                    >
-                      Show Case Study →
-                    </Link>
-                  </Button>
+                  <span className="case-placeholder-badge">
+                    <i className="fa fa-clock-o" aria-hidden="true" />
+                    <span>Placeholder Entry · Preview Coming Soon</span>
+                  </span>
                 )}
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Desktop-Only Hover Image Preview Following Cursor (disabled when details panel is open) */}
-      <AnimatePresence>
-        {!isMobile && !isOpen && yeet && !btnHover && (
-          <motion.div
-            variants={Appear}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              x: cursorX,
-              y: cursorY,
-              pointerEvents: "none",
-              zIndex: 1000,
-            }}
-          >
-            <div
-              style={{
-                transform: "translate(calc(-100% - 20px), -50%)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                pointerEvents: "none",
-              }}
-            >
-              <img
-                style={{
-                  width: "300px",
-                  borderRadius: "10px",
-                  boxShadow: "0 12px 32px rgba(0, 0, 0, 0.6)",
-                }}
-                src={src}
-                alt={text}
-              />
-              {text2 && (
-                <div
-                  style={{
-                    marginTop: "8px",
-                    color: "#ffffff",
-                    backgroundColor: "rgba(20, 20, 20, 0.85)",
-                    padding: "3px 12px",
-                    borderRadius: "6px",
-                    fontSize: "14px",
-                    fontWeight: "500",
-                    textAlign: "center",
-                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.4)",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {text2}
-                </div>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+    </motion.article>
   );
 }
 
 function RenderItem() {
   const ref = useRef(null);
   const isInview = useInView(ref, { once: true });
+  const [activeCategory, setActiveCategory] = useState("fullstack");
+
+  const activeItems = CASE_DATA[activeCategory] || [];
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <section className="case-studies-wrapper">
       <Container style={{ maxWidth: "95%" }}>
         <h2
           className="headerdec pt-5 pb-3"
@@ -546,10 +363,10 @@ function RenderItem() {
             display: "inline-block",
             overflow: "hidden",
             lineHeight: "1.2",
-            marginBottom: "30px",
+            marginBottom: "28px",
           }}
         >
-          <StaggeredText text={"Case Studies"}></StaggeredText>
+          <StaggeredText text={"Case Studies"} />
           <motion.div
             ref={ref}
             variants={SliderRev}
@@ -565,24 +382,68 @@ function RenderItem() {
             }}
           />
         </h2>
-      </Container>
 
-      {/* Mapped Case Studies List */}
-      {case_disc.map((item, index) => (
-        <HovRev
-          key={item.text || index}
-          text={item.text}
-          text2={item.text2}
-          src={item.src}
-          src1={item.src1}
-          src2={item.src2}
-          link={item.link}
-          to={item.to}
-          key_feat={item.key_feat}
-          tech_stack={item.tech_stack}
-        />
-      ))}
-    </div>
+        <div className="case-tabs-shell">
+          <div
+            className="case-tabs-bar"
+            role="tablist"
+            aria-label="Case study categories"
+          >
+            {CASE_CATEGORIES.map((category) => {
+              const isActive = activeCategory === category.id;
+              const count = (CASE_DATA[category.id] || []).length;
+
+              return (
+                <button
+                  key={category.id}
+                  type="button"
+                  role="tab"
+                  id={`case-tab-${category.id}`}
+                  aria-selected={isActive}
+                  aria-controls={`case-panel-${category.id}`}
+                  className={`case-tab-btn${isActive ? " active" : ""}`}
+                  onClick={() => setActiveCategory(category.id)}
+                >
+                  <span className="case-tab-label-wrap">
+                    <i className={category.iconClass} aria-hidden="true" />
+                    <span>{category.label}</span>
+                  </span>
+                  <span className="case-tab-count">{count}</span>
+                  {isActive && (
+                    <motion.span
+                      layoutId="caseActiveTabBar"
+                      className="case-tab-active-bar"
+                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                      aria-hidden="true"
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            role="tabpanel"
+            id={`case-panel-${activeCategory}`}
+            aria-labelledby={`case-tab-${activeCategory}`}
+            className="case-tab-panel"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.22, ease: "easeOut" }}
+          >
+            <div className="case-cards-list">
+              {activeItems.map((item, index) => (
+                <CaseCard key={item.id} item={item} index={index} />
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </Container>
+    </section>
   );
 }
 

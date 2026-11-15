@@ -17,6 +17,7 @@ function Footer() {
         paddingBottom: "3vh",
         borderTop: "3px solid #DD6410",
         color: "#2b2b2b",
+        overflowX: "clip",
       }}
     >
       <Contact />

@@ -23,6 +23,7 @@ function Home() {
           backgroundColor: "#181818",
           position: "relative",
           zIndex: 10,
+          overflowX: "clip",
         }}
       >
         <AboutMe />

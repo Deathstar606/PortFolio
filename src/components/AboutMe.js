@@ -92,6 +92,7 @@ function AboutMe() {
             lineHeight: isMobile ? "1.5" : "1.6",
             justifyContent: "flex-end",
             textAlign: "right",
+            overflow: "hidden",
             borderWidth: "0 2px 0 0", // Sets width only for the right border (Top Right Bottom Left)
             borderStyle: "solid",
             borderImage: "linear-gradient(to bottom, #BCBAB8, #DD6410) 1", // Applies the gradient
