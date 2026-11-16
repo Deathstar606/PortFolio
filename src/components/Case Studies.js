@@ -98,8 +98,7 @@ const CASE_DATA = {
       link: "https://deathstar606.github.io/VerGo/#/home",
       key_feat:
         "Curated apparel collections, real-time Firebase cloud data synchronization, user authentication, and responsive product discovery.",
-      tech_stack:
-        "React, Firebase Realtime Database, Firestore, Bootstrap",
+      tech_stack: "React, Firebase Realtime Database, Firestore, Bootstrap",
     },
     {
       id: "technowave",
@@ -116,87 +115,35 @@ const CASE_DATA = {
   research: [
     {
       id: "research-hybrid-retrieval",
-      text: "Hybrid Dense-Sparse Retrieval for Domain QA",
-      text2: "Research Paper Placeholder — Upcoming Publication",
+      text: "Testing General Relativeity using Nural Posterior Estimation",
+      text2:
+        "Mapping first order post newtonian approximations to the Einstein field equations using neural posterior estimation and hybrid retrieval pipelines.",
       iconClasses: ["fa fa-file-text-o", "fa fa-flask"],
-      tags: ["AI / NLP", "Retrieval-Augmented", "Research Paper", "Placeholder"],
+      tags: [
+        "Gravitational Waves",
+        "Retrieval-Augmented",
+        "Research Paper",
+        "Placeholder",
+      ],
       key_feat:
         "Placeholder study examining reciprocal rank fusion across dense bi-encoder embeddings, BM25 sparse scoring, and cross-encoder reranking pipelines for technical corpora.",
-      tech_stack: "PyTorch, HuggingFace Transformers, FAISS, Python, LaTeX",
-      isPlaceholder: true,
-    },
-    {
-      id: "research-peft-slm",
-      text: "Parameter-Efficient Adaptation of Small Language Models",
-      text2: "Research Paper Placeholder — Working Manuscript",
-      iconClasses: ["fa fa-graduation-cap", "fa fa-line-chart"],
-      tags: ["AI / LLM", "PEFT / LoRA", "Research Paper", "Coming Soon"],
-      key_feat:
-        "Placeholder manuscript benchmarking QLoRA and adapter tuning trade-offs across inference latency, memory footprint, and downstream task generalization.",
-      tech_stack: "PyTorch, PEFT, BitsAndBytes, Weights & Biases, Python",
-      isPlaceholder: true,
-    },
-    {
-      id: "research-multimodal-docs",
-      text: "Layout-Aware Multimodal Parsing for Structured Documents",
-      text2: "Research Paper Placeholder — Experimental Notes",
-      iconClasses: ["fa fa-book", "fa fa-sitemap"],
-      tags: ["Multimodal AI", "Document Parsing", "Research Paper", "Placeholder"],
-      key_feat:
-        "Placeholder research exploring vision-language alignment and hierarchical table reconstruction to reduce extraction errors in complex PDFs.",
-      tech_stack: "Python, Vision Transformers, PyTorch, OpenCV, LaTeX",
+      tech_stack:
+        "PyTorch, Transformers, Normalizing Flows, Neural Posterior Estimation",
       isPlaceholder: true,
     },
   ],
   rag: [
     {
-      id: "rag-enterprise-kb",
-      text: "Enterprise Knowledge Base RAG Assistant",
-      text2: "RAG Application Placeholder — Architecture Showcase",
-      iconClasses: ["fa fa-database", "fa fa-search"],
-      tags: [
-        "AI / NLP",
-        "Retrieval-Augmented",
-        "Vector Search",
-        "Placeholder",
-      ],
+      id: "echo-maxitext-rag",
+      text: "Echo (MaxiText AI Studio)",
+      text2: "Autonomous B2B Operations & Multi-Source RAG Platform",
+      iconClasses: ["fa fa-database", "fa fa-cogs"],
+      tags: ["RAG", "B2B Operations", "Human-in-the-Loop", "Multi-Source AI"],
+      link: "https://echo-oyzy.vercel.app/",
       key_feat:
-        "Placeholder RAG workspace demonstrating semantic document chunking, hybrid metadata filtering, citation-grounded synthesis, and query latency telemetry.",
-      tech_stack: "Python, FastAPI, LangChain, Qdrant, React",
-      isPlaceholder: true,
-    },
-    {
-      id: "rag-multi-pdf",
-      text: "Multi-Document Research & PDF Query Engine",
-      text2: "RAG Application Placeholder — In Development",
-      iconClasses: ["fa fa-file-text-o", "fa fa-cogs"],
-      tags: [
-        "AI / NLP",
-        "Document QA",
-        "Reranking Pipeline",
-        "Coming Soon",
-      ],
-      key_feat:
-        "Placeholder retrieval pipeline built for cross-paper synthesis with table-aware ingestion, multi-query expansion, cross-encoder reranking, and inline citations.",
+        "Unites customer support queues (Gmail, Slack, Toleto), live operational tables (Google Sheets, CSVs, DB), and chunked policy docs (PDF, Markdown, Google Docs) in one multi-tenant workspace. Features 5-turn conversational memory, full-provenance row/chunk citations, Socratic conflict disambiguation, and a two-stage pipeline (Stage 1 diff & draft previews -> Stage 2 atomic live commits).",
       tech_stack:
-        "Next.js, Python, pgvector, Cross-Encoder, OpenAI / Local LLM",
-      isPlaceholder: true,
-    },
-    {
-      id: "rag-code-copilot",
-      text: "Codebase-Aware Technical Support Copilot",
-      text2: "RAG Application Placeholder — Prototype",
-      iconClasses: ["fa fa-code", "fa fa-database"],
-      tags: [
-        "AI / NLP",
-        "Retrieval-Augmented",
-        "AST Chunking",
-        "Placeholder",
-      ],
-      key_feat:
-        "Placeholder developer assistant indexing syntax-tree symbol boundaries alongside technical guides for grounded troubleshooting and architecture explanations.",
-      tech_stack: "TypeScript, React, FastAPI, ChromaDB, Tree-sitter",
-      isPlaceholder: true,
+        "Retrieval-Augmented Generation (RAG), Document Chunking, Google Workspace APIs (Gmail, Sheets, Docs), Multi-Tenant RBAC, Vercel",
     },
   ],
 };
@@ -294,7 +241,9 @@ function CaseCard({ item, index }) {
             <div className="case-details-inner">
               {item.text2 && (
                 <div>
-                  <span className="case-detail-block-label">Category / Role</span>
+                  <span className="case-detail-block-label">
+                    Category / Role
+                  </span>
                   <p className="case-detail-copy">{item.text2}</p>
                 </div>
               )}
@@ -413,7 +362,11 @@ function RenderItem() {
                     <motion.span
                       layoutId="caseActiveTabBar"
                       className="case-tab-active-bar"
-                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 32,
+                      }}
                       aria-hidden="true"
                     />
                   )}
