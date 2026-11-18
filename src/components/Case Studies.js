@@ -45,14 +45,14 @@ const CASE_DATA = {
     },
     {
       id: "galaxy-reno",
-      text: "Galaxy Reno",
+      text: "Galaxy Home Solutions",
       text2: "Renovation Corporation",
       icons: [
         { src: Rect, alt: "React", invert: true },
         { src: mongo, alt: "MongoDB", invert: false },
       ],
       tags: ["Full-Stack", "MERN Stack", "Renovation Portal"],
-      link: "https://galaxyreno-git-main-deathstar606s-projects.vercel.app/#/home",
+      link: "https://galaxyhomesolutions.ca/",
       key_feat:
         "Full-service renovation portfolio, project estimation requests, modern image gallery showcase, and client consultation bookings.",
       tech_stack: "React, Node.js, MongoDB, Framer Motion, Bootstrap",
