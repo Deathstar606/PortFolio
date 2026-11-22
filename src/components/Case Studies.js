@@ -30,20 +30,6 @@ const CASE_CATEGORIES = [
 const CASE_DATA = {
   fullstack: [
     {
-      id: "confusion",
-      text: "ConFusion",
-      text2: "Restaurant Application",
-      icons: [
-        { src: Rect, alt: "React", invert: true },
-        { src: mongo, alt: "MongoDB", invert: false },
-      ],
-      tags: ["Full-Stack", "MERN Stack", "Restaurant App"],
-      link: "https://deathstar606.github.io/ConFusion/#/home",
-      key_feat:
-        "Interactive dish catalog, reservation management, dynamic customer feedback system, and full responsive menu filtering.",
-      tech_stack: "React, Redux, Node.js, Express, MongoDB, Bootstrap",
-    },
-    {
       id: "galaxy-reno",
       text: "Galaxy Home Solutions",
       text2: "Renovation Corporation",
@@ -51,8 +37,8 @@ const CASE_DATA = {
         { src: Rect, alt: "React", invert: true },
         { src: mongo, alt: "MongoDB", invert: false },
       ],
-      tags: ["Full-Stack", "MERN Stack", "Renovation Portal"],
-      link: "https://galaxyhomesolutions.ca/",
+      tags: ["Renovation Portal", "SaaS"],
+      link: "https://galaxyhomesolutions.ca",
       key_feat:
         "Full-service renovation portfolio, project estimation requests, modern image gallery showcase, and client consultation bookings.",
       tech_stack: "React, Node.js, MongoDB, Framer Motion, Bootstrap",
@@ -65,8 +51,8 @@ const CASE_DATA = {
         { src: Rect, alt: "React", invert: true },
         { src: mongo, alt: "MongoDB", invert: false },
       ],
-      tags: ["Full-Stack", "E-Commerce", "RESTful APIs"],
-      link: "https://www.velourabd.com/",
+      tags: ["E-Commerce", "RESTful APIs"],
+      link: "https://www.velourabd.com",
       key_feat:
         "Modern e-commerce storefront featuring real-time product filtering, secure multi-step cart & checkout, dynamic inventory tracking, and client account management.",
       tech_stack:
@@ -75,18 +61,32 @@ const CASE_DATA = {
     {
       id: "digix",
       text: "Digix",
-      text2: "Ongoing project",
+      text2: "Agency Platform",
       icons: [
         { src: Rect, alt: "React", invert: true },
         { src: Json, alt: "JSON Server", invert: true },
       ],
-      tags: ["Full-Stack", "Agency Platform", "Ongoing Project"],
+      tags: ["Company Portfolio", "Content Showcases"],
       link: "https://deathstar606.github.io/Digi_Port/#/home",
       key_feat:
         "Digital agency platform with dynamic service showcases, client engagement workflows, and interactive service proposal views.",
       tech_stack: "React, JSON Server, Framer Motion, CSS Modules",
     },
     {
+      id: "confusion",
+      text: "ConFusion",
+      text2: "Restaurant Application",
+      icons: [
+        { src: Rect, alt: "React", invert: true },
+        { src: mongo, alt: "MongoDB", invert: false },
+      ],
+      tags: ["Food Ordering", "Reservation System"],
+      link: "https://deathstar606.github.io/ConFusion/#/home",
+      key_feat:
+        "Interactive dish catalog, reservation management, dynamic customer feedback system, and full responsive menu filtering.",
+      tech_stack: "React, Redux, Node.js, Express, MongoDB, Bootstrap",
+    },
+    /* {
       id: "vergo",
       text: "VerGo",
       text2: "Clothing Brand App",
@@ -110,7 +110,7 @@ const CASE_DATA = {
       key_feat:
         "Dynamic tech store application designed for custom PC builds and laptops, featuring WooCommerce product management, customizable carts, and category sorting.",
       tech_stack: "WordPress, WooCommerce, PHP, Elementor, Custom CSS",
-    },
+    }, */
   ],
   research: [
     {
